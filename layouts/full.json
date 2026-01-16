@@ -1,4 +1,18 @@
 ﻿{
+  "settings_popup": {
+    "type": "array",
+    "margin": "0, 0",
+    "content": [
+      {
+        "type": "group",
+        "header": "Autotracking",
+        "header_background": "#3e4b57",
+        "content": [
+          { "type": "item", "item": "opt_auto_map_switch" }
+        ]
+      }
+    ]
+  },
   "tracker_full": {
     "type": "container",
     "background": "#000000",
@@ -8,6 +22,12 @@
         {
           "type": "group",
           "header": "Items",
+          "header_content": {
+            "type": "button_popup",
+            "style": "settings",
+            "popup_background": "#55212121",
+            "layout": "settings_popup"
+          },
           "content": {
             "type": "layout",
             "key": "shared_item_grid"

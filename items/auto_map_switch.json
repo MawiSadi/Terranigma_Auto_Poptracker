@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Auto Map",
+    "type": "progressive",
+    "loop": true,
+    "codes": "opt_auto_map_switch",
+    "initial_stage_idx": 1,
+    "allow_disabled": false,
+    "stages": [
+      { "img": "images/settings_auto_map_off.png", "inherit_codes": false, "codes": "opt_auto_map_switch_off" },
+      { "img": "images/settings_auto_map_on.png",  "inherit_codes": false, "codes": "opt_auto_map_switch_on"  }
+    ]
+  }
+]
