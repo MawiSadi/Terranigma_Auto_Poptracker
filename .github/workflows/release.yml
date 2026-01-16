@@ -1,0 +1,95 @@
+name: Build & Release Pack
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main (so versions.json URL auf main stimmt)
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - name: Derive version from tag
+        run: |
+          TAG="${GITHUB_REF_NAME}"          # z.B. v0.0.2
+          VERSION="${TAG#v}"                # z.B. 0.0.2
+          echo "TAG=$TAG" >> $GITHUB_ENV
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+
+      - name: Update manifest.json package_version
+        run: |
+          tmp=$(mktemp)
+          jq --arg v "$VERSION" '.package_version = $v' manifest.json > "$tmp"
+          mv "$tmp" manifest.json
+
+      - name: Build ZIP (manifest.json muss im ZIP-Root sein)
+        run: |
+          ASSET="Terranigma_Auto_PopTracker.zip"
+          rm -f "$ASSET"
+
+          zip -r "$ASSET" \
+            manifest.json settings.json versions.json LICENSE \
+            images/ items/ layouts/ locations/ maps/ scripts/ 2>/dev/null || true
+
+          echo "ASSET=$ASSET" >> $GITHUB_ENV
+
+      - name: Compute SHA256
+        run: |
+          SHA256=$(sha256sum "$ASSET" | awk '{print $1}')
+          echo "SHA256=$SHA256" >> $GITHUB_ENV
+          echo "$SHA256  $ASSET" > "${ASSET}.sha256"
+
+      - name: Update versions.json (latest + upsert entry)
+        run: |
+          URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/${ASSET}"
+
+          if [ ! -f versions.json ]; then
+            echo '{"latest":"","versions":[]}' > versions.json
+          fi
+
+          tmp=$(mktemp)
+          jq --arg latest "$VERSION" \
+             --arg pv "$VERSION" \
+             --arg asset "$ASSET" \
+             --arg url "$URL" \
+             --arg sha "$SHA256" \
+             '
+             .latest = $latest
+             | .versions = (
+                 [ .versions[] | select(.package_version != $pv) ] +
+                 [ {
+                     package_version: $pv,
+                     asset: $asset,
+                     download_url: $url,
+                     sha256: $sha,
+                     changelog: ( .versions[]? | select(.package_version == $pv) | .changelog ) // []
+                   } ]
+               )
+             ' versions.json > "$tmp"
+          mv "$tmp" versions.json
+
+      - name: Commit manifest.json + versions.json back to main
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add manifest.json versions.json
+          git commit -m "Release ${VERSION}" || exit 0
+          git push
+
+      - name: Create/Update GitHub Release and upload assets
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ env.TAG }}
+          files: |
+            ${{ env.ASSET }}
+            ${{ env.ASSET }}.sha256
