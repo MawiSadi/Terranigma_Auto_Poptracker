@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Mermaid Tower",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_mermaid_unknown.png",
+                "codes": "mermaidtower, mermaidunknown"
+            },
+            {
+                "img": "images/dungeon_mermaid_starstone.png",
+                "codes": "mermaidtower, mermaidstarstone"
+            }
+        ]
+    }
+]

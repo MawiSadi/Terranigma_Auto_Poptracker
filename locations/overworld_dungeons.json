@@ -1,0 +1,306 @@
+[
+    {
+        "name": "Overworld_dungeons",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Norfest Forest",
+                "sections": [
+                    { "name": "Ring Mail", "item_count": 1 },
+
+                    { "name": "Chest behind tree", "access_rules": ["ProtectBell"], "item_count": 1 },
+                    { "name": "Dark Place Chest", "access_rules": ["ProtectBell"], "item_count": 1 },
+                    { "name": "Dog Whistle Chest", "access_rules": ["ProtectBell"], "item_count": 1 },
+                    { "name": "Before Bridge Chest", "access_rules": ["ProtectBell"], "item_count": 1 },
+
+                    { "name": "Storkolm Chest", "access_rules": ["ProtectBell, DogWhistle"], "item_count": 1 },
+                    { "name": "Storkolm Portrait", "access_rules": ["ProtectBell, DogWhistle"], "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 600, "y": 1040 }
+                ]
+            },
+
+            {
+                "name": "Sylvain Castle",
+                "sections": [
+                    { "name": "Basement Chest", "item_count": 1 },
+                    { "name": "Outside Chest", "item_count": 1 },
+                    { "name": "1st Floor West Side Chest", "item_count": 1 },
+                    { "name": "1st Floor North Side Chest", "item_count": 1 },
+                    { "name": "Back Room 1 Guard Left", "item_count": 1 },
+                    { "name": "Back Room 1 Guard Top", "item_count": 1 },
+                    { "name": "Back Room 1 Black Opal", "item_count": 1 },
+                    { "name": "1st Floor South Side Chest 1", "item_count": 1 },
+                    { "name": "1st Floor South Side Chest 2", "item_count": 1 },
+
+                    { "name": "Topaz Outside", "access_rules": ["towerkey"], "item_count": 1 },
+                    { "name": "Back Room 2 Chest", "access_rules": ["towerkey"], "item_count": 1 },
+                    { "name": "Courtyard Sapphire", "access_rules": ["towerkey"], "item_count": 1 },
+
+                    { "name": "Bloody Mary", "access_rules": ["Ruby, Topaz, Sapphire, BlackOpal"], "capture_item": true, "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 470, "y": 1430 }
+                ]
+            },
+
+            {
+                "name": "Louran",
+                "sections": [
+                    { "name": "Inn", "item_count": 1 },
+                    { "name": "Red Scarf", "item_count": 1 },
+                    { "name": "Storage Chest 1", "item_count": 1 },
+                    { "name": "Storage Chest 2", "item_count": 1 },
+                    { "name": "Light Rod", "item_count": 1 },
+                    { "name": "Holy Seal", "item_count": 1 },
+
+                    { "name": "North House 1", "access_rules": ["HolySeal"], "item_count": 1 },
+                    { "name": "North House 2", "access_rules": ["HolySeal"], "item_count": 1 },
+                    { "name": "Outside Chest", "access_rules": ["HolySeal"], "item_count": 1 },
+
+                    { "name": "Talk to Meilin", "access_rules": ["HolySeal, redscarf"], "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 1600, "y": 1230 }
+                ]
+            },
+
+            {
+                "name": "Eklamata",
+                "sections": [
+                    { "name": "Smash the wall", "item_count": 1 },
+                    { "name": "Drop down the hole", "item_count": 1 },
+                    { "name": "Snowgrass Leaf", "item_count": 1 },
+
+                    { "name": "Outside Leaf 1", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+                    { "name": "Rando Cave Chest 1", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+                    { "name": "Rando Cave Chest 2", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+                    { "name": "Rando Cave Chest 3", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+                    { "name": "Outside Leaf 2", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+                    { "name": "Inside Leaf 1", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+                    { "name": "Inside Leaf 2", "access_rules": ["SnowgrassLeaf"], "item_count": 1 },
+
+                    { "name": "Dark Morph", "access_rules": ["SnowgrassLeaf"], "capture_item": true, "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 1340, "y": 1560 }
+                ]
+            },
+
+            {
+                "name": "Zue",
+                "sections": [
+                    { "name": "Without Giant Leaves 1", "item_count": 1 },
+                    { "name": "Without Giant Leaves 2", "item_count": 1 },
+
+                    { "name": "Swimming after Giant Leaves", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "Crawl space 1", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "Crawl space 2", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "North of swimming Chest", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "Crawl space after swimming", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "Swimming before Storm Keeper 1", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "Swimming before Storm Keeper 2", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+                    { "name": "Swimming near the start", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 },
+
+                    { "name": "Storm Keeper", "access_rules": ["GiantLeaves, sharpclaws"], "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 600, "y": 1980 }
+                ]
+            },
+
+            {
+                "name": "Berugas Lab",
+                "sections": [
+                    { "name": "1F Chest", "access_rules": ["airplane"], "item_count": 1 },
+                    { "name": "B2F Chest", "access_rules": ["airplane"], "item_count": 1 },
+                    { "name": "Security Robot", "access_rules": ["airplane"], "item_count": 1 }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1020,
+                        "y": 1310
+                    }
+                ]
+            },
+
+            {
+                "name": "Neotokio Sewers",
+                "sections": [
+                    { "name": "Dungeon", "item_count": 1 },
+
+                    { "name": "After sewer key door Chest", "access_rules": ["SewerKey"], "item_count": 1 },
+                    { "name": "Sewers 2 Chest 1", "access_rules": ["SewerKey"], "item_count": 1 },
+                    { "name": "Sewers 2 Chest 2", "access_rules": ["SewerKey"], "item_count": 1 },
+                    { "name": "Sewers 3 Chest", "access_rules": ["SewerKey"], "item_count": 1 },
+
+                    { "name": "Save the girl", "access_rules": ["SewerKey"], "item_count": 1 }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1850,
+                        "y": 1540
+                    }
+                ]
+            },
+
+            {
+                "name": "Dragoon Castle",
+                "sections": [
+                    { "name": "Right 1", "item_count": 1 },
+                    { "name": "Right 2", "item_count": 1 },
+                    { "name": "Right 3", "item_count": 1 },
+                    { "name": "Right 4", "item_count": 1 },
+
+                    { "name": "Left 1", "item_count": 1 },
+                    { "name": "Left 2", "item_count": 1 },
+                    { "name": "Left 3", "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 1540, "y": 1680 }
+                ]
+            },
+
+            {
+                "name": "Astarika",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    },
+
+                    {
+                        "name": "Spirit Trip",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3150,
+                        "y": 2150
+                    }
+                ]
+            },
+
+            {
+                "name": "Mermaid Tower",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Talk to the mermaid",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3990,
+                        "y": 2400
+                    }
+                ]
+            },
+
+            {
+                "name": "Ra Tree",
+                "sections": [
+                    { "name": "Before Tree Chest", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 1 Chest 1", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 1 Chest 2", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 1 Chest 3", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 1 Chest 4", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 1 Chest 5", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 2 Chest 6", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 2 Chest 7", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 2 Chest 8", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 3 Chest 9", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 3 Chest 10", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 3 Chest 11", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 5 Chest 12", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Cave 5 Chest 13", "access_rules": ["giantleaves"], "item_count": 1 },
+                    { "name": "Giant Leaves", "access_rules": ["giantleaves"], "item_count": 1 },
+
+                    { "name": "Parasite", "access_rules": ["giantleaves", "radewdrop"], "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 3330, "y": 2230 }
+                ]
+            },
+
+
+            {
+                "name": "Great Cliff",
+                "sections": [
+                    { "name": "Cave after climbing vine", "item_count": 1 },
+                    { "name": "Roc Spear", "item_count": 1 },
+                    { "name": "Hold Left for final drop", "item_count": 1 },
+
+                    { "name": "Claw Climb near start", "access_rules": ["SharpClaws"], "item_count": 1 },
+                    { "name": "Claw climb after Sharp Claws", "access_rules": ["SharpClaws"], "item_count": 1 },
+                    { "name": "Claw Climb before final drop", "access_rules": ["SharpClaws"], "item_count": 1 },
+                    { "name": "Cave to left of final drop", "access_rules": ["SharpClaws"], "item_count": 1 },
+
+                    { "name": "Dark Twins", "access_rules": ["SharpClaws"], "capture_item": true, "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 2900, "y": 1380 }
+                ]
+            },
+
+            {
+                "name": "Great Lakes",
+                "sections": [
+                    {
+                        "name": "Air Herb",
+                        "access_rules": ["engagementring"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Magic Anchor",
+                        "access_rules": ["engagementring", "GiantLeaves", "AirHerb"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Waterfall Chest",
+                        "access_rules": ["engagementring", "GiantLeaves", "AirHerb"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Stairs Chest",
+                        "access_rules": ["engagementring", "GiantLeaves", "AirHerb"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Diving Chest",
+                        "access_rules": ["engagementring", "GiantLeaves", "AirHerb", "MagicAnchor"],
+                        "item_count": 1
+                    },
+
+                    {
+                        "name": "Hitoderon",
+                        "access_rules": ["engagementring", "GiantLeaves", "AirHerb", "MagicAnchor"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3170,
+                        "y": 1280
+                    }
+                ]
+            }
+        ]
+    }
+]

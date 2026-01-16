@@ -1,0 +1,59 @@
+[
+    {
+        "name": "Louran Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/9.png",
+                "codes": "louranchest, louran9"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/8.png",
+                "codes": "louranchest, louran8"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/7.png",
+                "codes": "louranchest, louran7"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/6.png",
+                "codes": "louranchest, louran6"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/5.png",
+                "codes": "louranchest, louran5"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/4.png",
+                "codes": "louranchest, louran4"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/3.png",
+                "codes": "louranchest, louran3"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "louranchest, louran2"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "louranchest, louran1"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "openchest"
+            }
+        ]
+    }
+]

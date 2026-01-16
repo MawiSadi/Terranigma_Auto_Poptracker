@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Sewer Key",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/4B_SewerKey.png",
+        "codes": "sewerkey"
+    }
+]

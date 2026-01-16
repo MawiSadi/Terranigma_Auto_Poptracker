@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Ra Dewdrop",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/3F_RaDewdrop.png",
+        "codes": "dewdrop, radewdrop, radew"
+    }
+]

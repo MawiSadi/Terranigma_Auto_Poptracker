@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Sapphire",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/sapphire.png",
+        "codes": "sapphire, sylvainsapphire"
+    }
+]

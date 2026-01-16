@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Holy Seal",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/35_HolySeal.png",
+        "codes": "seal, holyseal, holyzheal"
+    }
+]

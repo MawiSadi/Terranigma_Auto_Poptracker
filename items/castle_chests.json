@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Castle Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/castleguard.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "guardchest, castle"
+            },
+            {
+                "img": "images/castleguard.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "guardchest, castle"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "openchest"
+            }
+        ]
+    }
+]

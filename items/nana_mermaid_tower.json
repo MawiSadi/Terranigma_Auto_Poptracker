@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Nana Mermaid Tower",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/nana_closed.png",
+                "codes": "nanamermaidtower, nanaclosed"
+            },
+            {
+                "img": "images/nana_open.png",
+                "codes": "nanamermaidtower, nanaopen"
+            }
+        ]
+    }
+]

@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Sharp Claws",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/7D_SharpClaws.png",
+        "codes": "claws, sharpclaws, birdclaws"
+    }
+]

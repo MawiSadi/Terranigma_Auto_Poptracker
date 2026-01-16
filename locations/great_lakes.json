@@ -1,0 +1,116 @@
+[
+    {
+        "name": "Great Lakes",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Air Herb",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["engagementring"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatLakesCave1",
+                        "x": 120,
+                        "y": 120
+                    }
+                ]
+            },
+
+            {
+                "name": "Magic Anchor",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["engagementring, GiantLeaves, AirHerb"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatLakesCave2",
+                        "x": 490,
+                        "y": 830
+                    }
+                ]
+            },
+
+            {
+                "name": "Waterfall",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["engagementring, GiantLeaves, AirHerb"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatLakesCave2",
+                        "x": 860,
+                        "y": 110
+                    }
+                ]
+            },
+
+            {
+                "name": "Stairs",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["engagementring, GiantLeaves, AirHerb"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatLakesCave3",
+                        "x": 200,
+                        "y": 90
+                    }
+                ]
+            },
+
+            {
+                "name": "Diving",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["engagementring, GiantLeaves, AirHerb, MagicAnchor"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatLakesCave4",
+                        "x": 920,
+                        "y": 120
+                    }
+                ]
+            },
+
+            {
+                "name": "Hitoderon",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["engagementring, GiantLeaves, AirHerb, MagicAnchor"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatLakesCave4",
+                        "x": 920,
+                        "y": 950
+                    }
+                ]
+            }
+        ]
+    }
+]

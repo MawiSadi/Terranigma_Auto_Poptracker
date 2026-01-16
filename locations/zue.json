@@ -1,0 +1,164 @@
+[
+    {
+        "name": "Zue",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Chests by Rocks",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 980,
+                        "y": 1200
+                    }
+                ]
+            },
+
+            {
+                "name": "Crawl space",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 960,
+                        "y": 70
+                    }
+                ]
+            },
+
+            {
+                "name": "Swimming after Giant Leaves",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 250,
+                        "y": 520
+                    }
+                ]
+            },
+
+            {
+                "name": "Swimming near the start",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 950,
+                        "y": 1740
+                    }
+                ]
+            },
+
+            {
+                "name": "North of swimming",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 1100,
+                        "y": 420
+                    }
+                ]
+            },
+
+            {
+                "name": "Crawl space after swimming",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 1320,
+                        "y": 600
+                    }
+                ]
+            },
+
+            {
+                "name": "Swimming before Storm Keeper",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    },{
+                        "name": "Chest 2",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 1940,
+                        "y": 440
+                    }
+                ]
+            },
+
+            {
+                "name": "Storm Keeper",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Zue",
+                        "x": 1940,
+                        "y": 1780
+                    }
+                ]
+            }
+        ]
+    }
+]

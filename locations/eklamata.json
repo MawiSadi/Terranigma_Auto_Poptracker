@@ -1,0 +1,177 @@
+[
+    {
+        "name": "Eklamata",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Smash the wall",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataInside",
+                        "x": 460,
+                        "y": 140
+                    }
+                ]
+            },
+
+            {
+                "name": "Drop down the hole",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataInside",
+                        "x": 170,
+                        "y": 810
+                    }
+                ]
+            },
+
+            {
+                "name": "Snowgrass Leaf",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataOutside1",
+                        "x": 890,
+                        "y": 170
+                    }
+                ]
+            },
+
+            {
+                "name": "Outside Leaf 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataOutside2",
+                        "x": 980,
+                        "y": 1670
+                    }
+                ]
+            },
+
+            {
+                "name": "Outside Leaf 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataOutside2",
+                        "x": 310,
+                        "y": 490
+                    }
+                ]
+            },
+
+            {
+                "name": "Rando Cave",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 3",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataOutside2",
+                        "x": 980,
+                        "y": 1180
+                    }
+                ]
+            },
+
+            {
+                "name": "Inside Leaf 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataInside",
+                        "x": 1220,
+                        "y": 390
+                    }
+                ]
+            },
+
+            {
+                "name": "Inside Leaf 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataInside",
+                        "x": 1460,
+                        "y": 590
+                    }
+                ]
+            },
+
+            {
+                "name": "Dark Morph",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["SnowgrassLeaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataOutside2",
+                        "x": 1320,
+                        "y": 100
+                    }
+                ]
+            }
+        ]
+    }
+]

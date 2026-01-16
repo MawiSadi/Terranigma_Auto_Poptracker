@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Norfest Forest Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/7.png",
+                "codes": "forestchest, forest7"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/6.png",
+                "codes": "forestchest, forest6"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/5.png",
+                "codes": "forestchest, forest5"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/4.png",
+                "codes": "forestchest, forest4"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/3.png",
+                "codes": "forestchest, forest3"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "forestchest, forest2"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "forestchest, forest1"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "openchest"
+            }
+        ]
+    }
+]

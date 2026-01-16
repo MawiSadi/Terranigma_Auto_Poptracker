@@ -1,0 +1,29 @@
+﻿{
+  "tracker_full": {
+    "type": "container",
+    "background": "#000000",
+    "content": {
+      "type": "row",
+      "content": [
+        {
+          "type": "group",
+          "header": "Items",
+          "content": {
+            "type": "layout",
+            "key": "shared_item_grid"
+          }
+        },
+        {
+          "type": "group",
+          "header": "Map",
+          "content": {
+            "type": "mapimage",
+            "image_key": "current_map",
+            "images_path": "images/maps/",
+            "default_image": "Overworld.png"
+          }
+        }
+      ]
+    }
+  }
+}

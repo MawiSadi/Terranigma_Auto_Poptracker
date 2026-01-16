@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Neotokio Sewers Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/5.png",
+                "codes": "neotokiochest, sewers5"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/4.png",
+                "codes": "neotokiochest, sewers4"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/3.png",
+                "codes": "neotokiochest, sewers3"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "neotokiochest, sewers2"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "neotokiochest, sewers1"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "openchest"
+            }
+        ]
+    }
+]

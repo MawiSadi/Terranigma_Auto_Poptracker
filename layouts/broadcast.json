@@ -1,0 +1,7 @@
+﻿{
+	"tracker_broadcast": {
+		"background": "#100e0e",
+		"type": "layout",
+		"key": "shared_item_grid"
+	}
+}

@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Snowgrass Leaf",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/33_SnowgrassLeaf.png",
+        "codes": "snowleaf, snowgrass, snowgrassleaf"
+    }
+]

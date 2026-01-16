@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Penguina",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_penguina_unknown.png",
+                "codes": "penguina, penguinaunknown"
+            },
+            {
+                "img": "images/dungeon_penguina_starstone.png",
+                "codes": "penguina, penguinastarstone"
+            }
+        ]
+    }
+]

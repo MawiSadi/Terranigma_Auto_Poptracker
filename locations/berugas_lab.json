@@ -1,0 +1,62 @@
+[
+    {
+        "name": "Berugas Lab",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "1F",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "BerugasLab1F",
+                        "x": 1300,
+                        "y": 180
+                    }
+                ]
+            },
+
+            {
+                "name": "B2F",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "BerugasLabB2F",
+                        "x": 200,
+                        "y": 970
+                    }
+                ]
+            },
+
+            {
+                "name": "Security Robot",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "BerugasLabB99F",
+                        "x": 290,
+                        "y": 300
+                    }
+                ]
+            }
+        ]
+    }
+]

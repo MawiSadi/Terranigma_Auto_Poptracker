@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Tower Key",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/3E_TowerKey.png",
+        "codes": "towerkey"
+    }
+]

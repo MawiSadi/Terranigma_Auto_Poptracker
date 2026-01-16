@@ -1,0 +1,101 @@
+[
+    {
+        "name": "Dragoon Castle",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Right Side 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "DragoonCastle1stFloorRoom1",
+                        "x": 710,
+                        "y": 100
+                    }
+                ]
+            },
+
+            {
+                "name": "Right Side 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "DragoonCastle1stFloorRoom2",
+                        "x": 520,
+                        "y": 270
+                    }
+                ]
+            },
+
+            {
+                "name": "Right Side 3",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "DragoonCastle1stFloorRoom2",
+                        "x": 550,
+                        "y": 150
+                    }
+                ]
+            },
+
+            {
+                "name": "Right Side 4",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "DragoonCastle1stFloorRoom3",
+                        "x": 760,
+                        "y": 700
+                    }
+                ]
+            },
+
+            {
+                "name": "Rando Room",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 3",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "DragoonCastleLeftSide",
+                        "x": 350,
+                        "y": 480
+                    }
+                ]
+            }
+        ]
+    }
+]

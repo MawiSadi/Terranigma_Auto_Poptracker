@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Sylvain",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_sylvain_unknown.png",
+                "codes": "sylvain, sylvainunknown"
+            },
+            {
+                "img": "images/dungeon_sylvain_starstone.png",
+                "codes": "sylvain, sylvainstarstone"
+            }
+        ]
+    }
+]

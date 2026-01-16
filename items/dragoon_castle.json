@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Dragoon Castle",
+        "type": "toggle",
+        "loop": false,
+        "img": "images/dungeon_dragoon.png",
+        "codes": "dragoon, dragooncastle"
+    }
+]

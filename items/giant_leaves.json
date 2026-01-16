@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Giant Leaves",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/7C_GiantLeaves.png",
+        "codes": "flippers, giantleaves, swimmingleave"
+    }
+]

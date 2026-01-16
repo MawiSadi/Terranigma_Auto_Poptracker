@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Ra Tree",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_Ra_Tree_Unknown.png",
+                "codes": "ratree, ratreeunknown"
+            },
+            {
+                "img": "images/dungeon_Ra_Tree_Starstone.png",
+                "codes": "ratree, ratreestarstone"
+            }
+        ]
+    }
+]

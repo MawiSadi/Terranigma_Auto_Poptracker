@@ -1,0 +1,49 @@
+[
+    {
+        "name": "Great Cliff Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/7.png",
+                "codes": "greatcliffchest, greatcliff7"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/6.png",
+                "codes": "greatcliffchest, greatcliff6"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/5.png",
+                "codes": "greatcliffchest, greatcliff5"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/4.png",
+                "codes": "greatcliffchest, greatcliff4"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/3.png",
+                "codes": "greatcliffchest, greatcliff3"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "greatcliffchest, greatcliff2"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "greatcliffchest, greatcliff1"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "openchest"
+            }
+        ]
+    }
+]

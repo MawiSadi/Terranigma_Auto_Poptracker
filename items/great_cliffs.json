@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Great Cliffs",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_great_cliff_unknown.png",
+                "codes": "greatcliff, greatcliffunknown"
+            },
+            {
+                "img": "images/dungeon_great_cliff_starstone.png",
+                "codes": "greatcliff, greatcliffstarstone"
+            }
+        ]
+    }
+]

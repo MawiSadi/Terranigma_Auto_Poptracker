@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Dog Whistle",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/43_DogWhistle.png",
+        "codes": "whistle, dogwhistle, flute, dogflute"
+    }
+]

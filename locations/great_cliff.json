@@ -1,0 +1,149 @@
+[
+    {
+        "name": "Great Cliff",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Cave after climbing vine",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffInside",
+                        "x": 960,
+                        "y": 120
+                    }
+                ]
+            },
+
+            {
+                "name": "Roc Spear",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffInside",
+                        "x": 110,
+                        "y": 100
+                    }
+                ]
+            },
+
+            {
+                "name": "Hold Left for final drop",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffOutside",
+                        "x": 1220,
+                        "y": 1080
+                    }
+                ]
+            },
+            
+            {
+                "name": "Claw climb after Sharp Claws",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SharpClaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffOutside",
+                        "x": 460,
+                        "y": 810
+                    }
+                ]
+            },
+
+            {
+                "name": "Claw Climb near start",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SharpClaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffOutside",
+                        "x": 2060,
+                        "y": 960
+                    }
+                ]
+            },
+
+            {
+                "name": "Claw Climb before final drop",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SharpClaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffOutside",
+                        "x": 2370,
+                        "y": 640
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave to left of final drop",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SharpClaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffInside",
+                        "x": 1790,
+                        "y": 430
+                    }
+                ]
+            },
+            
+            {
+                "name": "Dark Twins",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["SharpClaws"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "GreatCliffOutside",
+                        "x": 2800,
+                        "y": 400
+                    }
+                ]
+            }
+        ]
+    }
+]

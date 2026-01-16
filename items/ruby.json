@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Ruby",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/ruby.png",
+        "codes": "ruby, sylvainruby"
+    }
+]

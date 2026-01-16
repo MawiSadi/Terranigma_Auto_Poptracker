@@ -1,0 +1,13 @@
+{
+    "latest": "0.0.1",
+    "versions": [
+        {
+            "package_version": "0.0.1",
+            "download_url": "https://github.com/mawisadi/Terranigma_Auto_PopTracker/releases/download/v0.0.1/Terranigma_Auto_PopTracker.zip",
+            "sha256": "2bf204b841a4520a5206f7043d7b98aa60cc85d2f76d159ee33ce70bd927f165",
+            "changelog": [
+                "Initial version on the way to autotracking with debug logging"
+            ]
+        }
+    ]
+}

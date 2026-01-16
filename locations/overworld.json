@@ -1,0 +1,407 @@
+[
+    {
+        "name": "Overworld",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Mushroom Forest",
+                "sections": [
+                    { "name": "Chest 1", "item_count": 1 },
+                    { "name": "Chest 2", "item_count": 1 },
+                    { "name": "Mushroom", "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 870, "y": 860 }
+                ]
+            },
+
+            {
+                "name": "Loire Castle",
+                "sections": [
+                    { "name": "Thief", "item_count": 1 },
+                    { "name": "Protect Bell", "item_count": 1 }
+                ],
+                "map_locations": [
+                    { "map": "Overworld", "x": 580, "y": 1280 }
+                ]
+            },
+
+            {
+                "name": "Litz",
+                "sections": [
+                    {
+                        "name": "Top Left",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 400,
+                        "y": 1470
+                    }
+                ]
+            },
+
+            {
+                "name": "Sahara (Top Left)",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "clear_as_group": true,
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "clear_as_group": true,
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 450,
+                        "y": 1630
+                    }
+                ]
+            },
+			
+			{
+                "name": "Sahara (Skeleton)",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 570,
+                        "y": 1620
+                    }
+                ]
+            },
+
+            {
+                "name": "Siberia Cave",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1460,
+                        "y": 740
+                    }
+                ]
+            },
+
+            {
+                "name": "Misc Island 1",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1580,
+                        "y": 2030
+                    }
+                ]
+            },
+
+            {
+                "name": "Misc Island 2",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "access_rules": ["GiantLeaves"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "access_rules": ["GiantLeaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1460,
+                        "y": 2100
+                    }
+                ]
+            },
+
+            {
+                "name": "Airs Rock",
+                "sections": [
+                    {
+                        "name": "Old Man (Starstone only)",
+                        "access_rules": ["SharpClaws, airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1770,
+                        "y": 2370
+                    }
+                ]
+            },
+
+            {
+                "name": "Australia Mountain",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1640,
+                        "y": 2480
+                    }
+                ]
+            },
+
+            {
+                "name": "Australia Forest",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["airplane, GiantLeaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 1890,
+                        "y": 2560
+                    }
+                ]
+            },
+
+            {
+                "name": "South Pole",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 2050,
+                        "y": 3590
+                    }
+                ]
+            },
+
+            {
+                "name": "Mu",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 2500,
+                        "y": 2330
+                    }
+                ]
+            },
+
+            {
+                "name": "Santiago Forest",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3270,
+                        "y": 2560
+                    }
+                ]
+            },
+
+            {
+                "name": "Colorado Forest",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3000,
+                        "y": 1670
+                    }
+                ]
+            },
+
+            {
+                "name": "Nirlake",
+                "sections": [
+                    {
+                        "name": "Chest in house",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Metal piece",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3110,
+                        "y": 1360
+                    }
+                ]
+            },
+
+            {
+                "name": "Alaska Forest",
+                "sections": [
+                    {
+                        "name": "Chest",
+
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 2820,
+                        "y": 1070
+                    }
+                ]
+            },
+			
+			{
+                "name": "Alaska Cave",
+                "sections": [
+                    {
+                        "name": "Chest",
+
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 2480,
+                        "y": 1070
+                    }
+                ]
+            },
+
+            {
+                "name": "Baffin Bay",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3320,
+                        "y": 640
+                    }
+                ]
+            },
+			
+			{
+                "name": "Penguinea (Starstone only)",
+                "sections": [
+                    {
+                        "name": "Penguin",
+                        "access_rules": ["flower"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 3520,
+                        "y": 740
+                    }
+                ]
+            },
+			
+			{
+                "name": "Lab Tower",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["airplane"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Overworld",
+                        "x": 2140,
+                        "y": 920
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,121 @@
+[
+    {
+        "name": "Norfest Forest",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Ring Mail",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NorfestForest1",
+                        "x": 438,
+                        "y": 850
+                    }
+                ]
+            },
+			
+			{
+                "name": "Behind Tree",
+                "sections": [
+                    {
+                        "name": "Chest",
+						"access_rules": ["protectbell"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NorfestForest5",
+                        "x": 120,
+                        "y": 810
+                    }
+                ]
+            },
+			
+			{
+                "name": "Dark Place",
+                "sections": [
+                    {
+                        "name": "Chest",
+						"access_rules": ["protectbell"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NorfestForest2",
+                        "x": 330,
+                        "y": 200
+                    }
+                ]
+            },
+			
+			{
+                "name": "Dog Whistle",
+                "sections": [
+                    {
+                        "name": "Chest",
+						"access_rules": ["protectbell"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NorfestForest3",
+                        "x": 260,
+                        "y": 400
+                    }
+                ]
+            },
+			
+			{
+                "name": "Before Bridge",
+                "sections": [
+                    {
+                        "name": "Chest",
+						"access_rules": ["protectbell"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NorfestForest4",
+                        "x": 360,
+                        "y": 100
+                    }
+                ]
+            },
+			
+			{
+                "name": "Storkolm",
+                "sections": [
+                    {
+                        "name": "Chest",
+						"access_rules": ["protectbell, DogWhistle"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Portrait",
+						"access_rules": ["protectbell, DogWhistle"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NorfestForestS",
+                        "x": 505,
+                        "y": 720
+                    }
+                ]
+            }
+			
+        ]
+    }
+]

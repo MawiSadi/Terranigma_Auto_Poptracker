@@ -1,0 +1,169 @@
+[
+    {
+        "name": "Louran",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Inn",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 320,
+                        "y": 1400
+                    }
+                ]
+            },
+
+            {
+                "name": "Red Scarf",
+                "sections": [
+                    {
+                        "name": "Scarf",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 130,
+                        "y": 1170
+                    }
+                ]
+            },
+
+            {
+                "name": "Holy Seal",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 1680,
+                        "y": 1400
+                    }
+                ]
+            },
+
+            {
+                "name": "Light Rod",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 1200,
+                        "y": 1360
+                    }
+                ]
+            },
+
+            {
+                "name": "Storage Chests",
+                "sections": [
+                    {
+                        "name": "1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 740,
+                        "y": 1180
+                    }
+                ]
+            },
+
+            {
+                "name": "Outside",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["HolySeal"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 780,
+                        "y": 660
+                    }
+                ]
+            },
+
+            {
+                "name": "North House 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["HolySeal"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 620,
+                        "y": 620
+                    }
+                ]
+            },
+
+            {
+                "name": "North House 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["HolySeal"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 1110,
+                        "y": 150
+                    }
+                ]
+            },
+
+            {
+                "name": "Talk to",
+                "sections": [
+                    {
+                        "name": "Meilin",
+                        "access_rules": ["HolySeal, redscarf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "Louran",
+                        "x": 860,
+                        "y": 250
+                    }
+                ]
+            }
+        ]
+    }
+]

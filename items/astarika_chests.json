@@ -1,0 +1,24 @@
+[
+    {
+        "name": "Astarika Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "astarikachest"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "astarikachest"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "astarikachest"
+            }
+        ]
+    }
+]

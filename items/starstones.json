@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Starstones",
+        "type": "progressive",
+        "loop": false,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/4C_Starstone.png",
+                "img_mods": "@disabled"
+            },
+            {
+                "img": "images/4C_Starstone_1.png",
+                "codes": "starstones"
+            },
+            {
+                "img": "images/4C_Starstone_2.png"
+            },
+            {
+                "img": "images/4C_Starstone_3.png"
+            },
+            {
+                "img": "images/4C_Starstone_4.png"
+            },
+            {
+                "img": "images/4C_Starstone_5.png"
+            }
+        ]
+    }
+]

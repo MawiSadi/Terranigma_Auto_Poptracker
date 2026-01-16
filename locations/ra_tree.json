@@ -1,0 +1,283 @@
+[
+    {
+        "name": "Ra Tree",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Before Tree",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeBeforeTree",
+                        "x": 920,
+                        "y": 660
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 1 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave1",
+                        "x": 730,
+                        "y": 120
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 1 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave1",
+                        "x": 330,
+                        "y": 90
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 1 3",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave1",
+                        "x": 70,
+                        "y": 70
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 1 4",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave1",
+                        "x": 40,
+                        "y": 460
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 1 5",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave1",
+                        "x": 440,
+                        "y": 490
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 2 6_7",
+                "sections": [
+                    {
+                        "name": "Chest 6",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 7",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave2",
+                        "x": 280,
+                        "y": 70
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 2 8",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave2",
+                        "x": 500,
+                        "y": 120
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 3 9",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave3",
+                        "x": 210,
+                        "y": 100
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 3 10",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave3",
+                        "x": 140,
+                        "y": 200
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 3 11",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave3",
+                        "x": 50,
+                        "y": 150
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 4",
+                "sections": [
+                    {
+                        "name": "Giant Leaves",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave4",
+                        "x": 270,
+                        "y": 280
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 5 12",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave5",
+                        "x": 130,
+                        "y": 160
+                    }
+                ]
+            },
+
+            {
+                "name": "Cave 5 13",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["giantleaves"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave5",
+                        "x": 600,
+                        "y": 70
+                    }
+                ]
+            },
+
+            {
+                "name": "Parasite",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["giantleaves, radewdrop"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "RaTreeCave2",
+                        "x": 650,
+                        "y": 70
+                    }
+                ]
+            }
+        ]
+    }
+]

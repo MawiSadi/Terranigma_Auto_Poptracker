@@ -1,0 +1,39 @@
+[
+    {
+        "name": "Great Lakes Chests",
+        "type": "progressive",
+        "loop": true,
+        "allow_disabled": false,
+        "stages": [
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/5.png",
+                "codes": "greatlakeschest, greatlakes5"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/4.png",
+                "codes": "greatlakeschest, greatlakes4"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/3.png",
+                "codes": "greatlakeschest, greatlakes3"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/2.png",
+                "codes": "greatlakeschest, greatlakes2"
+            },
+            {
+                "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/1.png",
+                "codes": "greatlakeschest, greatlakes1"
+            },
+            {
+                "img": "images/Chest_Open.png",
+                "codes": "openchest"
+            }
+        ]
+    }
+]

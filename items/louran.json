@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Louran",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_louran_unknown.png",
+                "codes": "louran, louranunknown"
+            },
+            {
+                "img": "images/dungeon_louran_starstone.png",
+                "codes": "louran, louranstarstone"
+            }
+        ]
+    }
+]

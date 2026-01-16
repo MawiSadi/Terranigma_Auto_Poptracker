@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Great Lakes",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_greatlakes_unknown.png",
+                "codes": "greatlakes, greatlakesunknown"
+            },
+            {
+                "img": "images/dungeon_greatlakes_starstone.png",
+                "codes": "greatlakes, greatlakesstarstone"
+            }
+        ]
+    }
+]

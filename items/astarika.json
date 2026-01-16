@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Astarika",
+        "type": "toggle",
+        "loop": false,
+        "img": "images/dungeon_astarika.png",
+        "codes": "astarika"
+    }
+]

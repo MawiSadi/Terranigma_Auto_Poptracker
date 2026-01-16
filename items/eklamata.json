@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Eklamata",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_eklamata_unknown.png",
+                "codes": "eklamata, eklamataunknown"
+            },
+            {
+                "img": "images/dungeon_eklamata_starstone.png",
+                "codes": "eklamata, eklamatastarstone"
+            }
+        ]
+    }
+]

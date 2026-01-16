@@ -1,0 +1,468 @@
+﻿{
+  "tracker_default": {
+    "type": "container",
+    "background": "#000000",
+    "content": {
+      "type": "dock",
+      "dropshadow": true,
+      "content": [
+        {
+          "type": "dock",
+          "dock": "left",
+          "v_alignment": "stretch",
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "dock": "top",
+              "content": {
+                "type": "layout",
+                "key": "shared_item_grid"
+              }
+            },
+            {
+              "type": "group",
+              "header": "Pinned Locations",
+              "content": {
+                "type": "recentpins",
+                "style": "wrap",
+                "h_alignment": "stretch",
+                "v_alignment": "stretch",
+                "orientation": "vertical",
+                "width": 200,
+                "compact": true
+              }
+            }
+          ]
+        },
+        {
+          "type": "tabbed",
+          "tabs": [
+            {
+              "title": "Overworld",
+              "content": {
+                "type": "map",
+                "maps": ["Overworld"]
+              }
+            },
+            {
+              "title": "Dungeons",
+              "content": {
+                "type": "tabbed",
+                "tabs": [
+                  {
+                    "title": "Berugas Lab",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "1F",
+                          "content": {
+                            "type": "map",
+                            "maps": ["BerugasLab1F"]
+                          }
+                        },
+
+                        {
+                          "title": "B1F",
+                          "content": {
+                            "type": "map",
+                            "maps": ["BerugasLabB1F"]
+                          }
+                        },
+
+                        {
+                          "title": "B2F",
+                          "content": {
+                            "type": "map",
+                            "maps": ["BerugasLabB2F"]
+                          }
+                        },
+
+                        {
+                          "title": "B99F",
+                          "content": {
+                            "type": "map",
+                            "maps": ["BerugasLabB99F"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "title": "Dragoon Castle",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "1st Floor Room 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["DragoonCastle1stFloorRoom1"]
+                          }
+                        },
+
+                        {
+                          "title": "1st Floor Room 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["DragoonCastle1stFloorRoom2"]
+                          }
+                        },
+
+                        {
+                          "title": "1st Floor Room 3",
+                          "content": {
+                            "type": "map",
+                            "maps": ["DragoonCastle1stFloorRoom3"]
+                          }
+                        },
+
+                        {
+                          "title": "Left Side",
+                          "content": {
+                            "type": "map",
+                            "maps": ["DragoonCastleLeftSide"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                    
+                  {
+                    "title": "Eklamata",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "Outside 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["EklamataOutside1"]
+                          }
+                        },
+
+                        {
+                          "title": "Inside",
+                          "content": {
+                            "type": "map",
+                            "maps": ["EklamataInside"]
+                          }
+                        },
+
+                        {
+                          "title": "Outside 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["EklamataOutside2"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "title": "Great Cliff",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "Outside",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffOutside"]
+                          }
+                        },
+
+                        {
+                          "title": "Inside",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffInside"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+				   {
+                    "title": "Norfest Forest",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                         {
+                          "title": "Entrance",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NorfestForest1"]
+                          }
+                        },
+						
+						{
+                          "title": "Before Dark Place",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NorfestForest5"]
+                          }
+						},
+
+                        {
+                          "title": "Dark Place",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NorfestForest2"]
+                          }
+						},
+						  
+						  {
+                          "title": "Dark Place 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NorfestForest3"]
+                          }
+                        },
+						
+						{
+                          "title": "Before Bridge",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NorfestForest4"]
+                          }
+                        },
+						
+						{
+                          "title": "Storkolm",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NorfestForestS"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "title": "Great Lakes",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "Cave 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatLakesCave1"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatLakesCave2"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 3",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatLakesCave3"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 4",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatLakesCave4"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "title": "Louran",
+                    "content": {
+                      "type": "map",
+                      "maps": ["Louran"]
+                    }
+                  },
+
+                  {
+                    "title": "Neotokio Sewers",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "Sewers 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NeotokioSewers1"]
+                          }
+                        },
+
+                        {
+                          "title": "Sewers 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NeotokioSewers2"]
+                          }
+                        },
+
+                        {
+                          "title": "Sewers 3",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NeotokioSewers3"]
+                          }
+                        },
+
+                        {
+                          "title": "Sewers 4",
+                          "content": {
+                            "type": "map",
+                            "maps": ["NeotokioSewers4"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "title": "Ra Tree",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "Before Tree",
+                          "content": {
+                            "type": "map",
+                            "maps": ["RaTreeBeforeTree"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["RaTreeCave1"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["RaTreeCave2"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 3",
+                          "content": {
+                            "type": "map",
+                            "maps": ["RaTreeCave3"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 4",
+                          "content": {
+                            "type": "map",
+                            "maps": ["RaTreeCave4"]
+                          }
+                        },
+
+                        {
+                          "title": "Cave 5",
+                          "content": {
+                            "type": "map",
+                            "maps": ["RaTreeCave5"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+
+                  {
+                    "title": "Sylvain Castle",
+                    "content": {
+                      "type": "tabbed",
+                      "tabs": [
+                        {
+                          "title": "Courtyard",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastleCourtyard"]
+                          }
+                        },
+
+                        {
+                          "title": "Entrance",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastleEntrance"]
+                          }
+                        },
+
+                        {
+                          "title": "1st Floor",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastle1stFloor"]
+                          }
+                        },
+
+                        {
+                          "title": "Basement",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastleBasement"]
+                          }
+                        },
+
+                        {
+                          "title": "Back Room 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastleBackRoom1"]
+                          }
+                        },
+
+                        {
+                          "title": "Back Room 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastleBackRoom2"]
+                          }
+                        },
+
+                        {
+                          "title": "Outside",
+                          "content": {
+                            "type": "map",
+                            "maps": ["SylvainCastleOutside"]
+                          }
+                        }
+                      ]
+                    }
+                  },
+                  
+                  {
+                    "title": "Zue",
+                    "content": {
+                      "type": "map",
+                      "maps": ["Zue"]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

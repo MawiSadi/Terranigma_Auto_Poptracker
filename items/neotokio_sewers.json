@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Neotokio Sewers",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_neotokio_unknown.png",
+                "codes": "neotokiosewers, neotokiosewersunknown"
+            },
+            {
+                "img": "images/dungeon_neotokio_starstone.png",
+                "codes": "neotokiosewers, neotokiosewersstarstone"
+            }
+        ]
+    }
+]

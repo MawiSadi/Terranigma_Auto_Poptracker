@@ -1,0 +1,206 @@
+[
+    {
+        "name": "Sylvain Castle",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "1st Floor West Side",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastle1stFloor",
+                        "x": 180,
+                        "y": 710
+                    }
+                ]
+            },
+
+            {
+                "name": "1st Floor North Side",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastle1stFloor",
+                        "x": 580,
+                        "y": 120
+                    }
+                ]
+            },
+
+            {
+                "name": "1st Floor South Side",
+                "sections": [
+                    {
+                        "name": "Chest 1",
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Chest 2",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastle1stFloor",
+                        "x": 1200,
+                        "y": 1440
+                    }
+                ]
+            },
+
+            {
+                "name": "Basement",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleBasement",
+                        "x": 460,
+                        "y": 280
+                    }
+                ]
+            },
+
+            {
+                "name": "Outside",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleOutside",
+                        "x": 740,
+                        "y": 830
+                    }
+                ]
+            },
+			{
+                "name": "Topaz",
+                "sections": [
+                    {
+                        "name": "Outside",
+                        "access_rules": ["towerkey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleOutside",
+                        "x": 900,
+                        "y": 190
+                    }
+                ]
+            },
+
+            {
+                "name": "Back Room 1",
+                "sections": [
+                    {
+                        "name": "Black Opal",
+                        "clear_as_group": true,
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Guard Left",
+                        "clear_as_group": true,
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Guard Top",
+                        "clear_as_group": true,
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleBackRoom1",
+                        "x": 875,
+                        "y": 110
+                    },
+                    {
+                        "map": "SylvainCastleBackRoom1",
+                        "x": 100,
+                        "y": 150
+                    },
+                    {
+                        "map": "SylvainCastleBackRoom1",
+                        "x": 120,
+                        "y": 130
+                    }
+                ]
+            },
+
+            {
+                "name": "Back Room 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["towerkey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleBackRoom2",
+                        "x": 340,
+                        "y": 630
+                    }
+                ]
+            },
+			
+			{
+                "name": "Courtyard",
+                "sections": [
+                    {
+                        "name": "Sapphire",
+                        "access_rules": ["towerkey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleCourtyard",
+                        "x": 515,
+                        "y": 500
+                    }
+                ]
+            },
+
+            {
+                "name": "Bloody Mary",
+                "sections": [
+                    {
+                        "name": "Boss",
+                        "access_rules": ["Ruby, Topaz, Sapphire, BlackOpal"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "SylvainCastleEntrance",
+                        "x": 510,
+                        "y": 790
+                    }
+                ]
+            }
+        ]
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Berugas Lab",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_berugaslab_unknown.png",
+                "codes": "berugaslab, berugaslabunknown"
+            },
+            {
+                "img": "images/dungeon_berugaslab_starstone.png",
+                "codes": "berugaslab, berugaslabstarstone"
+            }
+        ]
+    }
+]

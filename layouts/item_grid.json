@@ -1,0 +1,26 @@
+{
+  "shared_item_grid": {
+    "type":"array",
+    "orientation": "horizontal",
+    "content": [
+      {
+        "type": "itemgrid",
+        "h_alignment": "left",
+        "item_margin": "4,4",
+        "rows": [
+          [ ],
+          [ ],
+          [ "topaz", "dewdrop", "flippers", "claws", "plane", "", "", "ratree", "rachests" ],
+          [ "sapphire", "seal", "scarf", "snowleaf", "starstones", "", "", "greatcliff", "greatcliffchest" ],
+          [ "ruby", "sewerkey",  "airherb", "ring", "anchor", "", "", "zue", "zuechest" ],
+          [ "blackopal", "protectbell", "flute", "boots", "flower", "", "", "eklamata", "eklamatachest" ],
+          [ "towerkey", "", "", "", "", "penguina", "airsrock", "louran", "louranchest" ],
+          [ "", "mermaidtower", "sylvain", "greatlakes", "berugaslab", "neotokiosewers", "astarika", "norfest", "dragooncastle" ],
+          [ "guardchest", "mermaidschest", "sylvainchest", "greatlakeschest", "berugaslabchest", "neotokiochest", "astarikachest", "forestchest", "dragoonchest" ],
+          [],
+          []
+        ]
+      }
+    ]
+  }
+}

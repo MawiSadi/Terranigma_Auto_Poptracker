@@ -1,0 +1,215 @@
+[
+    {
+        "name": "Overworld",
+        "img": "images/maps/Overworld.png"
+    },
+
+    {
+        "name": "BerugasLab1F",
+        "img": "images/maps/berugas_lab/1F.png"
+    },
+
+    {
+        "name": "BerugasLabB1F",
+        "img": "images/maps/berugas_lab/B1F.png"
+    },
+
+    {
+        "name": "BerugasLabB2F",
+        "img": "images/maps/berugas_lab/B2F.png"
+    },
+
+    {
+        "name": "BerugasLabB99F",
+        "img": "images/maps/berugas_lab/B99F.png"
+    },
+
+    {
+        "name": "DragoonCastle1stFloorRoom1",
+        "img": "images/maps/dragoon_castle/1stFloorRoom1.png"
+    },
+
+    {
+        "name": "DragoonCastle1stFloorRoom2",
+        "img": "images/maps/dragoon_castle/1stFloorRoom2.png"
+    },
+
+    {
+        "name": "DragoonCastle1stFloorRoom3",
+        "img": "images/maps/dragoon_castle/1stFloorRoom3.png"
+    },
+
+    {
+        "name": "DragoonCastleLeftSide",
+        "img": "images/maps/dragoon_castle/LeftSide.png"
+    },
+
+    {
+        "name": "EklamataOutside1",
+        "img": "images/maps/eklamata/Outside1.png"
+    },
+
+    {
+        "name": "EklamataOutside2",
+        "img": "images/maps/eklamata/Outside2.png"
+    },
+
+    {
+        "name": "EklamataInside",
+        "img": "images/maps/eklamata/Inside.png"
+    },
+
+    {
+        "name": "GreatCliffOutside",
+        "img": "images/maps/great_cliff/Outside.png"
+    },
+
+    {
+        "name": "GreatCliffInside",
+        "img": "images/maps/great_cliff/Inside.png"
+    },
+
+    {
+        "name": "GreatLakesCave1",
+        "img": "images/maps/great_lakes/Cave1.png"
+    },
+
+    {
+        "name": "GreatLakesCave2",
+        "img": "images/maps/great_lakes/Cave2.png"
+    },
+
+    {
+        "name": "GreatLakesCave3",
+        "img": "images/maps/great_lakes/Cave3.png"
+    },
+
+    {
+        "name": "GreatLakesCave4",
+        "img": "images/maps/great_lakes/Cave4.png"
+    },
+
+    {
+        "name": "Louran",
+        "img": "images/maps/louran/louran.png"
+    },
+
+    {
+        "name": "NeotokioSewers1",
+        "img": "images/maps/neo_tokio/Sewers1.png"
+    },
+
+    {
+        "name": "NeotokioSewers2",
+        "img": "images/maps/neo_tokio/Sewers2.png"
+    },
+
+    {
+        "name": "NeotokioSewers3",
+        "img": "images/maps/neo_tokio/Sewers3.png"
+    },
+
+    {
+        "name": "NeotokioSewers4",
+        "img": "images/maps/neo_tokio/Sewers4.png"
+    },
+	
+	{
+        "name": "NorfestForest1",
+        "img": "images/maps/norfest_forest/Norfest1.png"
+    },
+	
+	{
+        "name": "NorfestForest2",
+        "img": "images/maps/norfest_forest/Norfest2.png"
+    },
+	
+	{
+        "name": "NorfestForest3",
+        "img": "images/maps/norfest_forest/Norfest3.png"
+    },
+	
+	{
+        "name": "NorfestForest4",
+        "img": "images/maps/norfest_forest/Norfest4.png"
+    },
+	
+	{
+        "name": "NorfestForest5",
+        "img": "images/maps/norfest_forest/Norfest5.png"
+    },
+	
+	{
+        "name": "NorfestForestS",
+        "img": "images/maps/norfest_forest/Storkolm.png"
+    },
+
+    {
+        "name": "RaTreeBeforeTree",
+        "img": "images/maps/ra_tree/Before_tree.png"
+    },
+    {
+        "name": "RaTreeCave1",
+        "img": "images/maps/ra_tree/Cave1.png"
+    },
+
+    {
+        "name": "RaTreeCave2",
+        "img": "images/maps/ra_tree/Cave2.png"
+    },
+
+    {
+        "name": "RaTreeCave3",
+        "img": "images/maps/ra_tree/Cave3.png"
+    },
+
+    {
+        "name": "RaTreeCave4",
+        "img": "images/maps/ra_tree/Cave4.png"
+    },
+
+    {
+        "name": "RaTreeCave5",
+        "img": "images/maps/ra_tree/Cave5.png"
+    },
+
+    {
+        "name": "SylvainCastleCourtyard",
+        "img": "images/maps/sylvain_castle/Courtyard.png"
+    },
+
+    {
+        "name": "SylvainCastleEntrance",
+        "img": "images/maps/sylvain_castle/Entrance.png"
+    },
+
+    {
+        "name": "SylvainCastleOutside",
+        "img": "images/maps/sylvain_castle/Outside.png"
+    },
+
+    {
+        "name": "SylvainCastle1stFloor",
+        "img": "images/maps/sylvain_castle/1stFloor.png"
+    },
+
+    {
+        "name": "SylvainCastleBasement",
+        "img": "images/maps/sylvain_castle/Basement.png"
+    },
+
+    {
+        "name": "SylvainCastleBackRoom1",
+        "img": "images/maps/sylvain_castle/BackRoom1.png"
+    },
+
+    {
+        "name": "SylvainCastleBackRoom2",
+        "img": "images/maps/sylvain_castle/BackRoom2.png"
+    },
+
+    {
+        "name": "Zue",
+        "img": "images/maps/zue/Zue.png"
+    }
+]

@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Airsrock",
+        "type": "progressive_toggle",
+        "stages": [
+            {
+                "img": "images/dungeon_airsrock_unknown.png",
+                "codes": "airsrock, airsrockunknown"
+            },
+            {
+                "img": "images/dungeon_airsrock_starstone.png",
+                "codes": "airsrock, airsrockstarstone"
+            }
+        ]
+    }
+]

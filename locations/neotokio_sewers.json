@@ -1,0 +1,115 @@
+[
+    {
+        "name": "Neotokio Sewers",
+        "chest_unopened_img": "images/Chest_Closed.png",
+        "chest_opened_img": "images/Chest_Open.png",
+        "children": [
+            {
+                "name": "Sewer Key",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NeotokioSewers1",
+                        "x": 890,
+                        "y": 420
+                    }
+                ]
+            },
+
+            {
+                "name": "After sewer key door",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SewerKey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NeotokioSewers1",
+                        "x": 880,
+                        "y": 70
+                    }
+                ]
+            },
+
+            {
+                "name": "Sewers 2 Chest 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SewerKey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NeotokioSewers2",
+                        "x": 340,
+                        "y": 600
+                    }
+                ]
+            },
+
+            {
+                "name": "Sewers 2 Chest 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SewerKey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NeotokioSewers2",
+                        "x": 630,
+                        "y": 80
+                    }
+                ]
+            },
+
+            {
+                "name": "Sewers 3",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["SewerKey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NeotokioSewers3",
+                        "x": 90,
+                        "y": 410
+                    }
+                ]
+            },
+
+            {
+                "name": "Save the girl",
+                "sections": [
+                    {
+                        "name": "Starstone",
+                        "access_rules": ["SewerKey"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "NeotokioSewers4",
+                        "x": 130,
+                        "y": 130
+                    }
+                ]
+            }
+        ]
+    }
+]

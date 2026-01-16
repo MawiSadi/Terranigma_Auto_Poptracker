@@ -1,0 +1,9 @@
+[
+    {
+        "name": "Protect Bell",
+        "type": "toggle",
+        "loop": true,
+        "img": "images/36_ProtectBell.png",
+        "codes": "bell, protectbell"
+    }
+]
