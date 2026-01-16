@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout main (so versions.json URL auf main stimmt)
+      - name: Checkout main
         uses: actions/checkout@v4
         with:
           ref: main
@@ -38,8 +38,8 @@ jobs:
           rm -f "$ASSET"
 
           zip -r "$ASSET" \
-            manifest.json settings.json versions.json LICENSE \
-            images/ items/ layouts/ locations/ maps/ scripts/ 2>/dev/null || true
+            manifest.json settings.json LICENSE \
+            images/ items/ layouts/ locations/ maps/ scripts/
 
           echo "ASSET=$ASSET" >> $GITHUB_ENV
 
@@ -56,23 +56,27 @@ jobs:
           if [ ! -f versions.json ]; then
             echo '{"latest":"","versions":[]}' > versions.json
           fi
-
+          
+          CHANGELOG_JSON=$(jq -c --arg version "$VERSION" \
+            '[ .versions[] | select(.package_version == $version) | .changelog ][0] // []' \
+            versions.json)
+  
+  
           tmp=$(mktemp)
           jq --arg latest "$VERSION" \
-             --arg pv "$VERSION" \
-             --arg asset "$ASSET" \
+             --arg version "$VERSION" \
              --arg url "$URL" \
              --arg sha "$SHA256" \
+             --argjson changelog "$CHANGELOG_JSON" \
              '
              .latest = $latest
              | .versions = (
-                 [ .versions[] | select(.package_version != $pv) ] +
+                 [ .versions[] | select(.package_version != $version) ] +
                  [ {
-                     package_version: $pv,
-                     asset: $asset,
+                     package_version: $version,
                      download_url: $url,
                      sha256: $sha,
-                     changelog: ( .versions[]? | select(.package_version == $pv) | .changelog ) // []
+                     changelog: $changelog
                    } ]
                )
              ' versions.json > "$tmp"
