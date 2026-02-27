@@ -30,6 +30,9 @@
           },
           "content": {
             "type": "layout",
+            "orientation": "horizontal",
+            "h_alignment": "stretch",
+            "item_h_alignment": "center",
             "key": "shared_item_grid"
           }
         },

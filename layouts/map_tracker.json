@@ -7,35 +7,6 @@
       "dropshadow": true,
       "content": [
         {
-          "type": "dock",
-          "dock": "left",
-          "v_alignment": "stretch",
-          "content": [
-            {
-              "type": "group",
-              "header": "Items",
-              "dock": "top",
-              "content": {
-                "type": "layout",
-                "key": "shared_item_grid"
-              }
-            },
-            {
-              "type": "group",
-              "header": "Pinned Locations",
-              "content": {
-                "type": "recentpins",
-                "style": "wrap",
-                "h_alignment": "stretch",
-                "v_alignment": "stretch",
-                "orientation": "vertical",
-                "width": 200,
-                "compact": true
-              }
-            }
-          ]
-        },
-        {
           "type": "tabbed",
           "tabs": [
             {
@@ -129,7 +100,7 @@
                       ]
                     }
                   },
-                    
+
                   {
                     "title": "Eklamata",
                     "content": {
@@ -186,26 +157,26 @@
                     }
                   },
 
-				   {
+                  {
                     "title": "Norfest Forest",
                     "content": {
                       "type": "tabbed",
                       "tabs": [
-                         {
+                        {
                           "title": "Entrance",
                           "content": {
                             "type": "map",
                             "maps": ["NorfestForest1"]
                           }
                         },
-						
-						{
+
+                        {
                           "title": "Before Dark Place",
                           "content": {
                             "type": "map",
                             "maps": ["NorfestForest5"]
                           }
-						},
+                        },
 
                         {
                           "title": "Dark Place",
@@ -213,25 +184,25 @@
                             "type": "map",
                             "maps": ["NorfestForest2"]
                           }
-						},
-						  
-						  {
+                        },
+
+                        {
                           "title": "Dark Place 2",
                           "content": {
                             "type": "map",
                             "maps": ["NorfestForest3"]
                           }
                         },
-						
-						{
+
+                        {
                           "title": "Before Bridge",
                           "content": {
                             "type": "map",
                             "maps": ["NorfestForest4"]
                           }
                         },
-						
-						{
+
+                        {
                           "title": "Storkolm",
                           "content": {
                             "type": "map",
@@ -449,7 +420,7 @@
                       ]
                     }
                   },
-                  
+
                   {
                     "title": "Zue",
                     "content": {
@@ -458,6 +429,22 @@
                     }
                   }
                 ]
+              }
+            }
+          ]
+        },
+        {
+          "type": "dock",
+          "content": [
+            {
+              "type": "group",
+              "header": "Items",
+              "orientation": "horizontal",
+              "h_alignment": "stretch",
+              "item_h_alignment": "center",
+              "content": {
+                "type": "layout",
+                "key": "shared_item_grid"
               }
             }
           ]
