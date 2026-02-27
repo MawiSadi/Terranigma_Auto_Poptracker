@@ -49,36 +49,33 @@ jobs:
           echo "SHA256=$SHA256" >> $GITHUB_ENV
           echo "$SHA256  $ASSET" > "${ASSET}.sha256"
 
-      - name: Update versions.json (latest + upsert entry)
+      - name: Update versions.json (upsert entry)
         run: |
           URL="https://github.com/${GITHUB_REPOSITORY}/releases/download/${TAG}/${ASSET}"
 
           if [ ! -f versions.json ]; then
-            echo '{"latest":"","versions":[]}' > versions.json
+            echo '{"versions":[]}' > versions.json
           fi
-          
+
           CHANGELOG_JSON=$(jq -c --arg version "$VERSION" \
             '[ .versions[] | select(.package_version == $version) | .changelog ][0] // []' \
             versions.json)
-          
-          
+
           tmp=$(mktemp)
-          jq --arg latest "$VERSION" \
-          --arg version "$VERSION" \
-          --arg url "$URL" \
-          --arg sha "$SHA256" \
-          --argjson changelog "$CHANGELOG_JSON" \
-          '
-           .latest = $latest
-           | .versions = (
-               [ {
-                   package_version: $version,
-                   download_url: $url,
-                   sha256: $sha,
-                   changelog: $changelog
-                 } ]
-               + [ .versions[] | select(.package_version != $version) ]
-             )
+          jq --arg version "$VERSION" \
+             --arg url "$URL" \
+             --arg sha "$SHA256" \
+             --argjson changelog "$CHANGELOG_JSON" \
+             '
+            .versions = (
+              [ {
+                  package_version: $version,
+                  download_url: $url,
+                  sha256: $sha,
+                  changelog: $changelog
+                } ]
+              + [ .versions[] | select(.package_version != $version) ]
+            )
            ' versions.json > "$tmp"
           mv "$tmp" versions.json
 
