@@ -1,27 +1,37 @@
 function terranigma_sync_chest_groups()
     if type(CHEST_GROUP_MAPPING) ~= "table" then return end
 
-    TERRA_AT = TERRA_AT or {}
-    TERRA_AT.loc_cache = TERRA_AT.loc_cache or {}
-    TERRA_AT.missing_codes = TERRA_AT.missing_codes or {} -- Warn nur einmal
+    local AT = terranigma_state()
+    AT.loc_cache = AT.loc_cache or {}
+    AT.chest_stage_cache = AT.chest_stage_cache or {}
 
     local function set_done_cached(code, done)
         if type(code) ~= "string" then return false end
-        local prev = TERRA_AT.loc_cache[code]
-        if prev == done then return false end
-        TERRA_AT.loc_cache[code] = done
-        terranigma_set_done_for_code(code, done)
+        local old = AT.loc_cache[code]
+        if old == done then return false end
+        AT.loc_cache[code] = done
+        set_item_by_qty_or_done(code, done and 1 or 0, { mode="toggle" })
         return true
     end
 
+    local function set_stage_cached(code, stage)
+        if type(code) ~= "string" then return false end
+        local k = "stage:" .. code
+        local old = AT.chest_stage_cache[k]
+        if old == stage then return false end
+        AT.chest_stage_cache[k] = stage
+        return set_item_by_qty_or_done(code, stage, { mode="stage" }) -- WICHTIG: explizit stage
+    end
+
     for _, g in ipairs(CHEST_GROUP_MAPPING) do
-        local opened = 0
+        local opened, total = 0, 0
 
         for _, e in ipairs(g.checks or {}) do
+            total = total + 1
             local v = terranigma_read_u8_abs(e.addr)
             local isOpen = terranigma_is_flag_set(v, e.mask)
+            if isOpen then opened = opened + 1 end
 
-            -- ✅ unified: e.codes (neu) oder fallback e.map/e.loc (alt)
             local list = nil
             if type(e.codes) == "string" then
                 list = { e.codes }
@@ -34,32 +44,19 @@ function terranigma_sync_chest_groups()
                 if type(e.loc) == "string" then list[#list+1] = e.loc end
             end
 
-            local any = false
             for _, code in ipairs(list) do
-                if type(code) == "string" and Tracker:FindObjectForCode(code) then
-                    set_done_cached(code, isOpen) -- ✅ KEIN break → alle Codes setzen
-                    any = true
-                end
+                set_done_cached(code, isOpen)
             end
-
-            if not any then
-                local k = string.format("%s:%06X:%02X", tostring(g.id), tonumber(e.addr) or 0, tonumber(e.mask) or 0)
-                if not TERRA_AT.missing_codes[k] then
-                    TERRA_AT.missing_codes[k] = true
-                    dbg("WARN: chest_group codes nicht gefunden (group=%s addr=%06X mask=%02X)",
-                            tostring(g.id), tonumber(e.addr) or 0, tonumber(e.mask) or 0)
-                end
-            end
-
-            if isOpen then opened = opened + 1 end
         end
 
-        -- stage/progress overlay
         if g.item_code then
+            local stage = math.min(opened, total) -- 0..total (bei total => open stage)
             if type(g.item_code) == "table" then
-                for _, code in ipairs(g.item_code) do terranigma_set_stage(code, opened) end
+                for _, code in ipairs(g.item_code) do
+                    set_stage_cached(code, stage)
+                end
             else
-                terranigma_set_stage(g.item_code, opened)
+                set_stage_cached(g.item_code, stage)
             end
         end
     end

@@ -1,16 +1,16 @@
 -- scripts/autotracking.lua
-ScriptHost:LoadScript("scripts/autotracking/utils.lua")
 ScriptHost:LoadScript("scripts/autotracking/constants.lua")
+ScriptHost:LoadScript("scripts/autotracking/utils.lua")
 
-ScriptHost:LoadScript("scripts/autotracking/mappings/locations_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/mappings/tab_mapping.lua")
 ScriptHost:LoadScript("scripts/autotracking/mappings/chest_groups.lua")
+ScriptHost:LoadScript("scripts/autotracking/mappings/inventory_items.lua")
 
-ScriptHost:LoadScript("scripts/autotracking/inventory_items.lua")
+ScriptHost:LoadScript("scripts/autotracking/tracker_apply.lua")
+ScriptHost:LoadScript("scripts/autotracking/reset.lua")
 ScriptHost:LoadScript("scripts/autotracking/location_sync.lua")
 ScriptHost:LoadScript("scripts/autotracking/flags.lua")
 ScriptHost:LoadScript("scripts/autotracking/map_tabs.lua")
-ScriptHost:LoadScript("scripts/autotracking/debug_scan.lua")
 
 local WATCHES_REGISTERED = (_G.__TERRANIGMA_WATCHES_REGISTERED == true)
 
@@ -63,20 +63,8 @@ local function register_all_watches_once()
         interval_ms=250
     })
 
-    register_watch({
-        name="terra_inventory_items",
-        addr=INVENTORY_ITEMS_ADDR,
-        length=INVENTORY_ITEMS_LEN,
-        callback="autotracker_update_inventory_items",
-        interval_ms=250
-    })
-
     if AUTOTRACKER_ENABLE and type(LOCATION_WATCHES) == "table" then
         for _, def in ipairs(LOCATION_WATCHES) do register_watch(def) end
-    end
-
-    if AUTOTRACKER_ENABLE_DEBUG_SCAN and type(DEBUG_SCAN_WATCHES) == "table" then
-        for _, def in ipairs(DEBUG_SCAN_WATCHES) do register_watch(def) end
     end
 end
 
@@ -84,28 +72,22 @@ register_all_watches_once()
 
 function autotracker_started()
     pcall(function()
-        if AUTOTRACKER_LOG_TO_FILE then
-            local f = io.open(AUTOTRACKER_LOG_FILE, "w")
-            if f then f:write("") f:close() end
+        if type(terranigma_mark_session_start) == "function" then
+            terranigma_mark_session_start()
         end
     end)
 
     dbg("autotracker_started()")
-    dbg("START state snowleaf=%s ruby=%s",
-            tostring(Tracker:FindObjectForCode("snowleaf") and Tracker:FindObjectForCode("snowleaf").Active),
-            tostring(Tracker:FindObjectForCode("ruby") and Tracker:FindObjectForCode("ruby").Active)
-    )
 
     local mapId = AutoTracker:ReadU16(CURRENT_MAP_ID_ADDR)
     dbg("MapId initial: %s", mapId and string.format("%04X", mapId) or "nil")
 
     pcall(terranigma_reset_flag_snapshots)
-    pcall(terranigma_reset_debug_scan)
 
     -- Initialer Sync, damit dein Tracker direkt “richtig” ist
     pcall(function() updateCurrentMap(nil) end)
     pcall(function() terranigma_sync_chest_groups() end)
-    pcall(terranigma_reset_inventory_snapshot)
+
 end
 
 function autotracker_stopped()

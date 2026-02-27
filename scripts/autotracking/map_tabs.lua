@@ -28,32 +28,24 @@ function terranigma_tab_for_mapid(mapId)
     return tab_for_mapid(mapId)
 end
 
+
 function updateCurrentMap(_)
-    if is_auto_map_switch_enabled() then
-        local mapId = AutoTracker:ReadU16(CURRENT_MAP_ID_ADDR)
-        if mapId == nil then return end
+    local mapId = AutoTracker:ReadU16(CURRENT_MAP_ID_ADDR)
+    if mapId == nil then return end
 
-        local tabPath = tab_for_mapid(mapId)
-        dbg("mapId=%04X -> tab=%s", mapId, tabPath)
+    -- RUN START debounce (2 Ticks > menu_max)
+    if type(terranigma_runstart_tick) == "function" then
+        terranigma_runstart_tick(mapId)
+    end
 
-        if tabPath ~= _lastTab then
-            activateTabPath(tabPath)
-            _lastTab = tabPath
-        end
+    -- UI Tab switching nur wenn Option aktiv
+    if not is_auto_map_switch_enabled() then return end
 
-        if mapId == 0x02CD and not TERRA_AT.litz_capture_armed then
-            TERRA_AT.litz_capture_armed = true
+    local tabPath = tab_for_mapid(mapId)
+    dbg("mapId=%04X -> tab=%s", mapId, tabPath)
 
-            -- misc watcher baseline neu setzen (wichtig!)
-            if terranigma_reset_chest_snapshot_misc then terranigma_reset_chest_snapshot_misc() end
-
-            -- seen bucket für misc leeren (damit Rising-Edges wieder kommen)
-            TERRA_AT.seen_flags = TERRA_AT.seen_flags or {}
-            TERRA_AT.seen_flags["chest_misc"] = {}
-
-            -- jetzt die nächsten X misc-rising logs zulassen
-            MISC_CAPTURE_MAP = 0x02CD
-            MISC_CAPTURE_LEFT = 30
-        end
+    if tabPath ~= _lastTab then
+        activateTabPath(tabPath)
+        _lastTab = tabPath
     end
 end
