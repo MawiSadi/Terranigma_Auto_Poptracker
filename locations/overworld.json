@@ -128,12 +128,12 @@
                 "sections": [
                     {
                         "name": "Chest 1",
-                        "access_rules": ["GiantLeaves"],
+                        "access_rules": ["giantleaves"],
                         "item_count": 1
                     },
                     {
                         "name": "Chest 2",
-                        "access_rules": ["GiantLeaves"],
+                        "access_rules": ["giantleaves"],
                         "item_count": 1
                     }
                 ],
@@ -151,7 +151,7 @@
                 "sections": [
                     {
                         "name": "Old Man (Starstone only)",
-                        "access_rules": ["SharpClaws, airplane"],
+                        "access_rules": ["sharpclaws, airplane"],
                         "item_count": 1
                     }
                 ],
@@ -192,7 +192,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["airplane, GiantLeaves"],
+                        "access_rules": ["airplane, giantleaves"],
                         "item_count": 1
                     }
                 ],

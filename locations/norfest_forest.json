@@ -98,12 +98,12 @@
                 "sections": [
                     {
                         "name": "Chest",
-						"access_rules": ["protectbell, DogWhistle"],
+						"access_rules": ["protectbell, dogwhistle"],
                         "item_count": 1
                     },
                     {
                         "name": "Portrait",
-						"access_rules": ["protectbell, DogWhistle"],
+						"access_rules": ["protectbell, dogwhistle"],
                         "item_count": 1
                     }
                 ],

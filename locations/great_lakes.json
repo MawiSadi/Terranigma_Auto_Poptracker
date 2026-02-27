@@ -27,7 +27,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["engagementring, GiantLeaves, AirHerb"],
+                        "access_rules": ["engagementring, giantleaves, airherb"],
                         "item_count": 1
                     }
                 ],
@@ -45,7 +45,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["engagementring, GiantLeaves, AirHerb"],
+                        "access_rules": ["engagementring, giantleaves, airherb"],
                         "item_count": 1
                     }
                 ],
@@ -63,7 +63,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["engagementring, GiantLeaves, AirHerb"],
+                        "access_rules": ["engagementring, giantleaves, airherb"],
                         "item_count": 1
                     }
                 ],
@@ -81,7 +81,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["engagementring, GiantLeaves, AirHerb, MagicAnchor"],
+                        "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
                         "item_count": 1
                     }
                 ],
@@ -99,7 +99,7 @@
                 "sections": [
                     {
                         "name": "Boss",
-                        "access_rules": ["engagementring, GiantLeaves, AirHerb, MagicAnchor"],
+                        "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
                         "item_count": 1
                     }
                 ],

@@ -189,7 +189,7 @@
                 "sections": [
                     {
                         "name": "Boss",
-                        "access_rules": ["Ruby, Topaz, Sapphire, BlackOpal"],
+                        "access_rules": ["ruby, topaz, sapphire, blackopal"],
                         "item_count": 1
                     }
                 ],

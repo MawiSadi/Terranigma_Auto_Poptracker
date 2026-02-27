@@ -30,12 +30,12 @@
                 "sections": [
                     {
                         "name": "Chest 1",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     },
                     {
                         "name": "Chest 2",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -53,7 +53,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -71,7 +71,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -89,7 +89,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -107,7 +107,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -125,11 +125,11 @@
                 "sections": [
                     {
                         "name": "Chest 1",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     },{
                         "name": "Chest 2",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -147,7 +147,7 @@
                 "sections": [
                     {
                         "name": "Boss",
-                        "access_rules": ["GiantLeaves, sharpclaws"],
+                        "access_rules": ["giantleaves, sharpclaws"],
                         "item_count": 1
                     }
                 ],

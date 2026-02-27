@@ -60,7 +60,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SharpClaws"],
+                        "access_rules": ["sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -78,7 +78,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SharpClaws"],
+                        "access_rules": ["sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -96,7 +96,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SharpClaws"],
+                        "access_rules": ["sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -114,7 +114,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SharpClaws"],
+                        "access_rules": ["sharpclaws"],
                         "item_count": 1
                     }
                 ],
@@ -132,7 +132,7 @@
                 "sections": [
                     {
                         "name": "Boss",
-                        "access_rules": ["SharpClaws"],
+                        "access_rules": ["sharpclaws"],
                         "item_count": 1
                     }
                 ],

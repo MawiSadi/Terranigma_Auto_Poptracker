@@ -26,7 +26,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SewerKey"],
+                        "access_rules": ["sewerkey"],
                         "item_count": 1
                     }
                 ],
@@ -44,7 +44,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SewerKey"],
+                        "access_rules": ["sewerkey"],
                         "item_count": 1
                     }
                 ],
@@ -62,7 +62,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SewerKey"],
+                        "access_rules": ["sewerkey"],
                         "item_count": 1
                     }
                 ],
@@ -80,7 +80,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["SewerKey"],
+                        "access_rules": ["sewerkey"],
                         "item_count": 1
                     }
                 ],
@@ -98,7 +98,7 @@
                 "sections": [
                     {
                         "name": "Starstone",
-                        "access_rules": ["SewerKey"],
+                        "access_rules": ["sewerkey"],
                         "item_count": 1
                     }
                 ],

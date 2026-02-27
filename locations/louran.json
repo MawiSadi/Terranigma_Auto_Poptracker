@@ -98,7 +98,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["HolySeal"],
+                        "access_rules": ["holyseal"],
                         "item_count": 1
                     }
                 ],
@@ -116,7 +116,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["HolySeal"],
+                        "access_rules": ["holyseal"],
                         "item_count": 1
                     }
                 ],
@@ -134,7 +134,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["HolySeal"],
+                        "access_rules": ["holyseal"],
                         "item_count": 1
                     }
                 ],
@@ -152,7 +152,7 @@
                 "sections": [
                     {
                         "name": "Meilin",
-                        "access_rules": ["HolySeal, redscarf"],
+                        "access_rules": ["holyseal, redscarf"],
                         "item_count": 1
                     }
                 ],
