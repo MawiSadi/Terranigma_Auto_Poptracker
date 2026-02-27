@@ -66,6 +66,21 @@ function terranigma_set_done_for_code(code, done)
             changed = true
         end
 
+        if (not changed) and AUTOTRACKER_ENABLE_DEBUG_LOGGING and (not _no_effect_codes[code]) then
+            _no_effect_codes[code] = true
+            dbg(
+                    "WARN: @code '%s' gefunden, aber NICHT setzbar. hasActive=%s ChestCount=%s AvChest=%s ItemCount=%s AvItem=%s Count=%s Av=%s",
+                    tostring(code),
+                    tostring(obj.Active ~= nil),
+                    tostring(obj.ChestCount),
+                    tostring(obj.AvailableChestCount),
+                    tostring(obj.ItemCount),
+                    tostring(obj.AvailableItemCount),
+                    tostring(obj.Count),
+                    tostring(obj.AvailableCount)
+            )
+        end
+
         return changed
     end
 
@@ -108,7 +123,10 @@ function terranigma_set_stage(code, stage, opts)
         return true
     end
 
-    dbg("SET STAGE NOOP code=%s bleibt bei %d", tostring(code), old)
+    if obj.CurrentStage == stage then
+        dbg("SET STAGE NOOP code=%s bleibt bei %d", code, old)
+        return true  -- NOOP ist Erfolg, nicht Fehler
+    end
     return false
 end
 
