@@ -4,6 +4,6 @@
         "type": "toggle",
         "loop": true,
         "img": "images/engagementring.png",
-        "codes": "ring, engagementring"
+        "codes": "engagementring"
     }
 ]

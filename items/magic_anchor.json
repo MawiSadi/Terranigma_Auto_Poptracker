@@ -5,6 +5,6 @@
         "loop": true,
         "img": "images/49_MagicAnchor_enabled.png",
         "disabled_img": "images/49_MagicAnchor.png",
-        "codes": "anchor, magicanchor"
+        "codes": "magicanchor"
     }
 ]

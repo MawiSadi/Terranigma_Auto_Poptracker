@@ -5,7 +5,7 @@
         "stages": [
             {
                 "img": "images/dungeon_mermaid_unknown.png",
-                "codes": "mermaidtower, mermaidunknown"
+                "codes": "mermaidtower"
             },
             {
                 "img": "images/dungeon_mermaid_starstone.png",

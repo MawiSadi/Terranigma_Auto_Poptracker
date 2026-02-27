@@ -4,6 +4,6 @@
         "type": "toggle",
         "loop": true,
         "img": "images/34_RedScarf.png",
-        "codes": "scarf, redscarf"
+        "codes": "redscarf"
     }
 ]

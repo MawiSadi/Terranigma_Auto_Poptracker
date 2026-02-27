@@ -4,6 +4,6 @@
         "type": "toggle",
         "loop": true,
         "img": "images/AirplaneCustom16x16.png",
-        "codes": "airplane, plane"
+        "codes": "airplane"
     }
 ]

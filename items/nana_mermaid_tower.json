@@ -7,11 +7,11 @@
         "stages": [
             {
                 "img": "images/nana_closed.png",
-                "codes": "nanamermaidtower, nanaclosed"
+                "codes": "mermaidschest"
             },
             {
                 "img": "images/nana_open.png",
-                "codes": "nanamermaidtower, nanaopen"
+                "codes": "mermaidschest"
             }
         ]
     }

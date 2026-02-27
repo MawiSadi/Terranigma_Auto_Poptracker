@@ -14,16 +14,20 @@
                 "codes": "starstones"
             },
             {
-                "img": "images/4C_Starstone_2.png"
+                "img": "images/4C_Starstone_2.png",
+                "codes": "starstones"
             },
             {
-                "img": "images/4C_Starstone_3.png"
+                "img": "images/4C_Starstone_3.png",
+                "codes": "starstones"
             },
             {
-                "img": "images/4C_Starstone_4.png"
+                "img": "images/4C_Starstone_4.png",
+                "codes": "starstones"
             },
             {
-                "img": "images/4C_Starstone_5.png"
+                "img": "images/4C_Starstone_5.png",
+                "codes": "starstones"
             }
         ]
     }

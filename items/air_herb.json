@@ -4,6 +4,6 @@
         "type": "toggle",
         "loop": true,
         "img": "images/7E_AirHerb.png",
-        "codes": "airherb, herb"
+        "codes": "airherb"
     }
 ]

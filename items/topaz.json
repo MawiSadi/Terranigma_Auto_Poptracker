@@ -4,6 +4,6 @@
         "type": "toggle",
         "loop": true,
         "img": "images/topaz.png",
-        "codes": "topaz, sylvaintopaz"
+        "codes": "topaz"
     }
 ]

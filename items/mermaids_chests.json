@@ -8,16 +8,16 @@
             {
                 "img": "images/nanachest.png",
                 "img_mods": "overlay|images/2.png",
-                "codes": "nanachest, mermaid1"
+                "codes": "mermaidschest"
             },
             {
                 "img": "images/nanachest.png",
                 "img_mods": "overlay|images/1.png",
-                "codes": "mermaidschest, mermaid1"
+                "codes": "mermaidschest"
             },
             {
                 "img": "images/Chest_Open.png",
-                "codes": "openchest"
+                "codes": "mermaidschest"
             }
         ]
     }

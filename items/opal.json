@@ -4,6 +4,6 @@
         "type": "toggle",
         "loop": true,
         "img": "images/blackopal.png",
-        "codes": "blackopal, sylvainblackopal"
+        "codes": "blackopal"
     }
 ]
