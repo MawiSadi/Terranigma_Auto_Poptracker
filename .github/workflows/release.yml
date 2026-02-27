@@ -60,26 +60,26 @@ jobs:
           CHANGELOG_JSON=$(jq -c --arg version "$VERSION" \
             '[ .versions[] | select(.package_version == $version) | .changelog ][0] // []' \
             versions.json)
-  
-  
+          
+          
           tmp=$(mktemp)
           jq --arg latest "$VERSION" \
-             --arg version "$VERSION" \
-             --arg url "$URL" \
-             --arg sha "$SHA256" \
-             --argjson changelog "$CHANGELOG_JSON" \
-             '
-             .latest = $latest
-             | .versions = (
-                 [ .versions[] | select(.package_version != $version) ] +
-                 [ {
-                     package_version: $version,
-                     download_url: $url,
-                     sha256: $sha,
-                     changelog: $changelog
-                   } ]
-               )
-             ' versions.json > "$tmp"
+          --arg version "$VERSION" \
+          --arg url "$URL" \
+          --arg sha "$SHA256" \
+          --argjson changelog "$CHANGELOG_JSON" \
+          '
+           .latest = $latest
+           | .versions = (
+               [ {
+                   package_version: $version,
+                   download_url: $url,
+                   sha256: $sha,
+                   changelog: $changelog
+                 } ]
+               + [ .versions[] | select(.package_version != $version) ]
+             )
+           ' versions.json > "$tmp"
           mv "$tmp" versions.json
 
       - name: Commit manifest.json + versions.json back to main
