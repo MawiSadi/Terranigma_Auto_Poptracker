@@ -6,6 +6,7 @@
         "children": [
             {
                 "name": "Norfest Forest",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Ring Mail",
@@ -29,6 +30,7 @@
 
             {
                 "name": "Sylvain Castle",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon (Without Tower Key)",
@@ -55,6 +57,7 @@
 
             {
                 "name": "Louran",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon (Without Holy Seal)",
@@ -80,6 +83,7 @@
 
             {
                 "name": "Eklamata",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon (Without Snowgrass Leaf)",
@@ -104,6 +108,7 @@
 
             {
                 "name": "Zue",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon (Without Giant Leaves)",
@@ -128,6 +133,7 @@
 
             {
                 "name": "Berugas Lab",
+                "overlay_background": "#80000000",
                 "sections": [
                     { "name": "1F Chest", "access_rules": ["airplane"], "item_count": 1 },
                     { "name": "B2F Chest", "access_rules": ["airplane"], "item_count": 1 },
@@ -144,6 +150,7 @@
 
             {
                 "name": "Neotokio Sewers",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon",
@@ -172,6 +179,7 @@
 
             {
                 "name": "Dragoon Castle",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon (Right)",
@@ -189,6 +197,7 @@
 
             {
                 "name": "Astarika",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Chest",
@@ -210,6 +219,7 @@
 
             {
                 "name": "Mermaid Tower",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Boss",
@@ -235,6 +245,7 @@
 
             {
                 "name": "Ra Tree",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Before and Cave 1",
@@ -270,6 +281,7 @@
 
             {
                 "name": "Great Cliff",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Dungeon (Without Claws)",
@@ -294,6 +306,7 @@
 
             {
                 "name": "Great Lakes",
+                "overlay_background": "#80000000",
                 "sections": [
                     {
                         "name": "Air Herb",
