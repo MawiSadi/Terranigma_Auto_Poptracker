@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_zue_unknown.png",
-                "codes": "zue, zueunknown"
+                "codes": "zue, stormkeeper"
             },
             {
                 "img": "images/dungeon_zue_starstone.png",
-                "codes": "zue, zuestarstone"
+                "codes": "zue, stormkeeper"
             }
         ]
     }

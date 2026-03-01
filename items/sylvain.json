@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_sylvain_unknown.png",
-                "codes": "sylvain, sylvainunknown"
+                "codes": "sylvain, bloodymary"
             },
             {
                 "img": "images/dungeon_sylvain_starstone.png",
-                "codes": "sylvain, sylvainstarstone"
+                "codes": "sylvain, bloodymary"
             }
         ]
     }

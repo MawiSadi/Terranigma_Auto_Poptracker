@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_greatlakes_unknown.png",
-                "codes": "greatlakes, greatlakesunknown"
+                "codes": "greatlakes, hitoderon"
             },
             {
                 "img": "images/dungeon_greatlakes_starstone.png",
-                "codes": "greatlakes, greatlakesstarstone"
+                "codes": "greatlakes, hitoderon"
             }
         ]
     }

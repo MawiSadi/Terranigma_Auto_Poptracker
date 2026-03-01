@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_eklamata_unknown.png",
-                "codes": "eklamata, eklamataunknown"
+                "codes": "eklamata, darkmorph"
             },
             {
                 "img": "images/dungeon_eklamata_starstone.png",
-                "codes": "eklamata, eklamatastarstone"
+                "codes": "eklamata, darkmorph"
             }
         ]
     }

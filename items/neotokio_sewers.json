@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_neotokio_unknown.png",
-                "codes": "neotokiosewers, neotokiosewersunknown"
+                "codes": "neotokiosewers, neotokio"
             },
             {
                 "img": "images/dungeon_neotokio_starstone.png",
-                "codes": "neotokiosewers, neotokiosewersstarstone"
+                "codes": "neotokiosewers, neotokio"
             }
         ]
     }

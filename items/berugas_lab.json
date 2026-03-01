@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_berugaslab_unknown.png",
-                "codes": "berugaslab, berugaslabunknown"
+                "codes": "berugaslab, robot"
             },
             {
                 "img": "images/dungeon_berugaslab_starstone.png",
-                "codes": "berugaslab, berugaslabstarstone"
+                "codes": "berugaslab, robot"
             }
         ]
     }

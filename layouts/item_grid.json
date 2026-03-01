@@ -7,13 +7,13 @@
         "type": "itemgrid",
         "item_margin": "4,4",
         "rows": [
-          [ "topaz", "radewdrop", "giantleaves", "sharpclaws", "airplane", "", "", "ratree", "rachests" ],
-          [ "sapphire", "holyseal", "redscarf", "snowgrassleaf", "starstones", "", "", "greatcliff", "greatcliffchest" ],
-          [ "ruby", "sewerkey",  "airherb", "engagementring", "magicanchor", "", "", "zue", "zuechest" ],
-          [ "blackopal", "protectbell", "dogwhistle", "speedboots", "flower", "", "", "eklamata", "eklamatachest" ],
-          [ "towerkey", "", "", "", "", "penguina", "airsrock", "louran", "louranchest" ],
-          [ "", "mermaidtower", "sylvain", "greatlakes", "berugaslab", "neotokiosewers", "astarika", "norfest", "dragooncastle" ],
-          [ "guardchest", "mermaidschest", "sylvainchest", "greatlakeschest", "berugaslabchest", "neotokiochest", "astarikachest", "forestchest", "dragoonchest" ]
+          [ "topaz", "radewdrop", "giantleaves", "sharpclaws", "airplane", "", "", "parasite", "rachests" ],
+          [ "sapphire", "holyseal", "redscarf", "snowgrassleaf", "starstones", "", "", "darktwins", "greatcliffchest" ],
+          [ "ruby", "sewerkey",  "airherb", "engagementring", "magicanchor", "", "", "stormkeeper", "zuechest" ],
+          [ "blackopal", "protectbell", "dogwhistle", "speedboots", "flower", "", "", "darkmorph", "eklamatachest" ],
+          [ "towerkey", "", "", "", "", "penguinea", "airsrock", "louran", "louranchest" ],
+          [ "", "mermaidtower", "bloodymary", "hitoderon", "robot", "neotokio", "astarika", "norfest", "dragooncastle" ],
+          [ "castle", "mermaidschest", "sylvainchest", "greatlakeschest", "berugaslabchest", "neotokiochest", "astarikachest", "forestchest", "dragoonchest" ]
         ]
       }
     ]

@@ -5,11 +5,11 @@
         "stages": [
             {
                 "img": "images/dungeon_Ra_Tree_Unknown.png",
-                "codes": "ratree, ratreeunknown"
+                "codes": "ratree, parasite"
             },
             {
                 "img": "images/dungeon_Ra_Tree_Starstone.png",
-                "codes": "ratree, ratreestarstone"
+                "codes": "ratree, parasite"
             }
         ]
     }
