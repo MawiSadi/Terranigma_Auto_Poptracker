@@ -12,7 +12,7 @@ TERRANIGMA_TAB_RANGES = {
     { from = 0x0134, to = 0x0136, tab = "Dungeons/Ra Tree/Cave 3" },
     { from = 0x0139, to = 0x0139, tab = "Dungeons/Ra Tree/Cave 3" },
     { from = 0x013A, to = 0x013B, tab = "Dungeons/Ra Tree/Cave 4" },
-    { from = 0x013E, to = 0x013F, tab = "Dungeons/Ra Tree/Cave 5" },
+    { from = 0x013E, to = 0x0140, tab = "Dungeons/Ra Tree/Cave 5" },
 
     -- Great Cliff (Grecliff)
     { from = 0x0145, to = 0x014E, tab = "Dungeons/Great Cliff/Outside" },
@@ -62,7 +62,8 @@ TERRANIGMA_TAB_RANGES = {
     { from = 0x01D8, to = 0x01DB, tab = "Dungeons/Sylvain Castle/Entrance" },
     { from = 0x01DC, to = 0x01E1, tab = "Dungeons/Sylvain Castle/Back Room 1" },
     { from = 0x01E2, to = 0x01EA, tab = "Dungeons/Sylvain Castle/1st Floor" },
-    { from = 0x01EB, to = 0x01EB, tab = "Dungeons/Sylvain Castle/Basement" },
+    { from = 0x01EB, to = 0x01EB, tab = "Dungeons/Sylvain Castle/Back Room 1" },
+    { from = 0x01E9, to = 0x01E9, tab = "Dungeons/Sylvain Castle/Back Room 1" },
     { from = 0x01EF, to = 0x01F2, tab = "Dungeons/Sylvain Castle/Basement" },
     { from = 0x01ED, to = 0x01ED, tab = "Dungeons/Sylvain Castle/Back Room 2" },
     { from = 0x0276, to = 0x0277, tab = "Dungeons/Sylvain Castle" },
