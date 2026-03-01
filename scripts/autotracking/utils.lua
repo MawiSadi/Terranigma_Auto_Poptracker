@@ -51,13 +51,13 @@ function terranigma_clear_tracker_items()
     -- Chest-group progressives auf 0 (wenn vorhanden)
     if type(CHEST_GROUP_MAPPING) == "table" then
         for _, g in ipairs(CHEST_GROUP_MAPPING) do
-            if g.item_code then
-                if type(g.item_code) == "table" then
-                    for _, c in ipairs(g.item_code) do
+            if g.progress_code then
+                if type(g.progress_code) == "table" then
+                    for _, c in ipairs(g.progress_code) do
                         terranigma_set_stage(c, 0)
                     end
                 else
-                    terranigma_set_stage(g.item_code, 0)
+                    terranigma_set_stage(g.progress_code, 0)
                 end
             end
         end

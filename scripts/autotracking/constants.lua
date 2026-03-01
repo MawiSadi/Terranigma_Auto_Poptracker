@@ -39,6 +39,8 @@ LOCATION_WATCHES = {
 }
 
 AUTOTRACKER_RESET_MIN_SESSION_AGE_SEC = 2.0
+PENDING_TTL_CHEST = 2.0
+PENDING_TTL_EVENT = 6.0
 
 -- mapId <= menu_max gilt als "Title/Menu/Before gameplay" (bei dir war z.B. 0004)
 AUTOTRACKER_RESET_MENU_MAX_MAPID = 0x0010

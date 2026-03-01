@@ -1,22 +1,11 @@
-local function is_overworld_section_code(code)
-    return type(code) == "string" and code:sub(1, #("@Overworld_dungeons/")) == "@Overworld_dungeons/"
-end
-
-local function add_codes_split(dst_loc, dst_sec, x)
+local function add_codes(dst, x)
+    if type(dst) ~= "table" then return end
     if type(x) == "string" then
-        if is_overworld_section_code(x) then
-            dst_sec[#dst_sec+1] = x
-        else
-            dst_loc[#dst_loc+1] = x
-        end
+        dst[#dst + 1] = x
     elseif type(x) == "table" then
         for _, c in ipairs(x) do
             if type(c) == "string" then
-                if is_overworld_section_code(c) then
-                    dst_sec[#dst_sec+1] = c
-                else
-                    dst_loc[#dst_loc+1] = c
-                end
+                dst[#dst + 1] = c
             end
         end
     end
@@ -143,30 +132,25 @@ function terranigma_sync_chest_groups()
             local isOpen = terranigma_is_flag_set(v, e.mask)
             if isOpen then opened = opened + 1 end
 
-            local loc_list, sec_list = {}, {}
-            local function add_codes(dst, x)
-                if type(dst) ~= "table" then return end
+            local loc_list, sec_list, reward_list = {}, {}, {}
+            add_codes(loc_list, e.codes)
+            add_codes(loc_list, e.map)
+            add_codes(loc_list, e.loc)
 
-                if type(x) == "string" then
-                    dst[#dst + 1] = x
-                elseif type(x) == "table" then
-                    for _, c in ipairs(x) do
-                        if type(c) == "string" then
-                            dst[#dst + 1] = c
-                        end
-                    end
-                end
-            end
+            add_codes(sec_list, e.section_codes)
 
-            add_codes_split(loc_list, sec_list, e.codes)
-            add_codes_split(loc_list, sec_list, e.map)
-            add_codes_split(loc_list, sec_list, e.loc)
-            add_codes_split(loc_list, sec_list, e.section_codes)
+            add_codes(reward_list, e.reward_codes)
 
-            local ctx = { group_id = g.id or g.name or tostring(g.item_code) or "?", addr = e.addr, mask = e.mask }
+            local ctx = { group_id = g.id or g.name or tostring(g.progress_code) or "?", addr = e.addr, mask = e.mask }
 
             for _, code in ipairs(loc_list) do
                 set_done_cached(code, isOpen, ctx)
+            end
+
+            if isOpen then
+                for _, rcode in ipairs(reward_list) do
+                    set_done_cached(rcode, true, ctx)
+                end
             end
 
             -- 2) Section: nur Stats sammeln (nicht togglen!)
@@ -183,21 +167,21 @@ function terranigma_sync_chest_groups()
             end
         end
 
-        local gctx = { group_id = g.id or g.name or tostring(g.item_code) or "?" }
+        local gctx = { group_id = g.id or g.name or tostring(g.progress_code) or "?" }
 
         for scode, st in pairs(sec_stats) do
             local remaining = math.max(0, st.total - st.opened)
             set_remaining_cached(scode, remaining, st.total, gctx)
         end
 
-        if g.item_code then
+        if g.progress_code then
             local stage = math.min(opened, total) -- 0..total (bei total => open stage)
-            if type(g.item_code) == "table" then
-                for _, code in ipairs(g.item_code) do
+            if type(g.progress_code) == "table" then
+                for _, code in ipairs(g.progress_code) do
                     set_stage_cached(code, stage, gctx)
                 end
             else
-                set_stage_cached(g.item_code, stage, gctx)
+                set_stage_cached(g.progress_code, stage, gctx)
             end
         end
     end

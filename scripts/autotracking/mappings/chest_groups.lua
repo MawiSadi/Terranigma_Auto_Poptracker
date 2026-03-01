@@ -2,17 +2,17 @@ CHEST_GROUP_MAPPING = {
     {
         id = "berugas_lab",
         name = "Berugas Lab",
-        item_code = "berugaslabchest",
+        progress_code = "berugaslabchest",
         checks = {
             { addr=0x7E0778, mask=0x01, codes={"@Berugas Lab/1F/Chest", "@Overworld_dungeons/Berugas Lab/1F Chest"} },
             { addr=0x7E077F, mask=0x10, codes={"@Berugas Lab/B2F/Chest", "@Overworld_dungeons/Berugas Lab/B2F Chest"} },
-            { addr=0x7E06F4, mask=0x20, codes={"@Berugas Lab/Security Robot/Boss", "@Overworld_dungeons/Berugas Lab/Security Robot"} } -- oder addr=0x7E0718, mask=0x04
+            { addr=0x7E06F4, mask=0x20, codes={"@Berugas Lab/Security Robot/Boss", "@Overworld_dungeons/Berugas Lab/Security Robot"}, reward_codes={"robot"} } -- oder addr=0x7E0718, mask=0x04
         },
     },
     {
         id = "dragoon_castle",
         name = "Dragoon Castle",
-        item_code = "dragoonchest",
+        progress_code = "dragoonchest",
         checks = {
             { addr=0x7E0778, mask=0x02, codes={"@Dragoon Castle/Right Side 1/Chest"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Right)"} },
             { addr=0x7E0778, mask=0x08, codes={"@Dragoon Castle/Right Side 2/Chest"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Right)"} },
@@ -20,13 +20,13 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0778, mask=0x10, codes={"@Dragoon Castle/Right Side 4/Chest"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Right)"} },
             { addr=0x7E0773, mask=0x10, codes={"@Dragoon Castle/Rando Room/Chest 1"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Left)"} },
             { addr=0x7E0773, mask=0x08, codes={"@Dragoon Castle/Rando Room/Chest 2"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Left)"} },
-            { addr=0x7E077A, mask=0x40, codes={"@Dragoon Castle/Rando Room/Chest 3"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Left)"} }
+            { addr=0x7E077A, mask=0x40, codes={"@Dragoon Castle/Rando Room/Chest 3"}, section_codes={"@Overworld_dungeons/Dragoon Castle/Dungeon (Left)"}, reward_codes={"dragooncastle"} }
         },
     },
     {
         id = "eklamata",
         name = "Eklamata",
-        item_code = "eklamatachest",
+        progress_code = "eklamatachest",
         checks = {
             { addr=0x7E0775, mask=0x40, codes={"@Eklamata/Smash the wall/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (Without Snowgrass Leaf)"} },
             { addr=0x7E0776, mask=0x01, codes={"@Eklamata/Drop down the hole/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (Without Snowgrass Leaf)"} },
@@ -38,13 +38,13 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0775, mask=0x04, codes={"@Eklamata/Outside Leaf 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x08, codes={"@Eklamata/Inside Leaf 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x20, codes={"@Eklamata/Inside Leaf 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
-            { addr=0x7E06EC, mask=0x02, codes={"@Eklamata/Dark Morph/Boss"}, section_codes={"@Overworld_dungeons/Eklamata/Dark Morph"} }
+            { addr=0x7E06EC, mask=0x02, codes={"@Eklamata/Dark Morph/Boss"}, section_codes={"@Overworld_dungeons/Eklamata/Dark Morph"}, reward_codes={"darkmorph"} }
         },
     },
     {
         id = "great_cliff",
         name = "Great Cliff",
-        item_code = "greatcliffchest",
+        progress_code = "greatcliffchest",
         checks = {
             { addr=0x7E0773, mask=0x20, codes={"@Great Cliff/Cave after climbing vine/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
             { addr=0x7E0774, mask=0x08, codes={"@Great Cliff/Claw Climb near start/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
@@ -53,26 +53,26 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0774, mask=0x01, codes={"@Great Cliff/Claw climb after Sharp Claws/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
             { addr=0x7E0774, mask=0x04, codes={"@Great Cliff/Claw Climb before final drop/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
             { addr=0x7E0773, mask=0x40, codes={"@Great Cliff/Cave to left of final drop/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
-            { addr=0x7E06EB, mask=0x80, codes={"@Great Cliff/Dark Twins/Boss"}, section_codes={"@Overworld_dungeons/Great Cliff/Dark Twins"} }
+            { addr=0x7E06EB, mask=0x80, codes={"@Great Cliff/Dark Twins/Boss"}, section_codes={"@Overworld_dungeons/Great Cliff/Dark Twins"}, reward_codes={"darktwins"} }
         },
     },
     {
         id = "great_lakes",
         name = "Great Lakes",
-        item_code = "greatlakeschest",
+        progress_code = "greatlakeschest",
         checks = {
             { addr=0x7E0779, mask=0x40, codes={"@Great Lakes/Air Herb/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Air Herb"} },
             { addr=0x7E0773, mask=0x01, codes={"@Great Lakes/Magic Anchor/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
             { addr=0x7E0779, mask=0x20, codes={"@Great Lakes/Waterfall/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
             { addr=0x7E0779, mask=0x80, codes={"@Great Lakes/Stairs/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
             { addr=0x7E077B, mask=0x08, codes={"@Great Lakes/Diving/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
-            { addr=0x7E06F4, mask=0x04, codes={"@Great Lakes/Hitoderon/Boss"}, section_codes={"@Overworld_dungeons/Great Lakes/Hitoderon"} },
+            { addr=0x7E06F4, mask=0x02, codes={"@Great Lakes/Hitoderon/Boss"}, section_codes={"@Overworld_dungeons/Great Lakes/Hitoderon"}, reward_codes={"hitoderon"} },
         },
     },
     {
         id = "louran",
         name = "Louran",
-        item_code = "louranchest",
+        progress_code = "louranchest",
         checks = {
             { addr=0x7E0772, mask=0x01, codes={"@Louran/Inn/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0771, mask=0x80, codes={"@Louran/Red Scarf/Scarf"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
@@ -83,15 +83,15 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0777, mask=0x80, codes={"@Louran/North House 1/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },
             { addr=0x7E0777, mask=0x40, codes={"@Louran/North House 2/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },
             { addr=0x7E077F, mask=0x08, codes={"@Louran/Outside/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },
-            { addr=0x7E06EA, mask=0x04, codes={"@Louran/Talk to/Meilin"}, section_codes={"@Overworld_dungeons/Louran/Talk to Meilin"} } -- oder addr=0x7E06E6, mask=0x08 oder addr=0x7E06E8, mask=0x80
+            { addr=0x7E06EA, mask=0x04, codes={"@Louran/Talk to/Meilin"}, section_codes={"@Overworld_dungeons/Louran/Talk to Meilin"}, reward_codes={"louran"} } -- oder addr=0x7E06E6, mask=0x08 oder addr=0x7E06E8, mask=0x80
         },
     },
     {
         id = "mermaid_tower",
         name = "Mermaid Tower",
-        item_code = "mermaidschest",
+        progress_code = "mermaidschest",
         checks = {
-            { addr=0x7E0718, mask=0x40, codes={"@Overworld_dungeons/Mermaid Tower/Boss"} },
+            { addr=0x7E0718, mask=0x40, codes={"@Overworld_dungeons/Mermaid Tower/Boss"}, reward_codes={"mermaidtower"} },
             { addr=0x7E06ED, mask=0x04, codes={"@Overworld_dungeons/Mermaid Tower/Talk to the mermaid"} },
             { addr=0x7E077F, mask=0x80, codes={"@Overworld_dungeons/Mermaid Tower/Chest"} }
         },
@@ -99,20 +99,20 @@ CHEST_GROUP_MAPPING = {
     {
         id = "neotokio_sewers",
         name = "Neotokio Sewers",
-        item_code = "neotokiochest",
+        progress_code = "neotokiochest",
         checks = {
             { addr=0x7E0773, mask=0x02, codes={"@Neotokio Sewers/Sewer Key/Chest"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Dungeon"} },
             { addr=0x7E0778, mask=0x40, codes={"@Neotokio Sewers/After sewer key door/Chest"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Dungeon (With sewerkey)"} },
             { addr=0x7E0779, mask=0x01, codes={"@Neotokio Sewers/Sewers 2 Chest 1/Chest"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Dungeon (With sewerkey)"} },
             { addr=0x7E0778, mask=0x80, codes={"@Neotokio Sewers/Sewers 2 Chest 2/Chest"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Dungeon (With sewerkey)"} },
             { addr=0x7E077A, mask=0x02, codes={"@Neotokio Sewers/Sewers 3/Chest"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Dungeon (With sewerkey)"} },
-            { addr=0x7E06EE, mask=0x04, codes={"@Neotokio Sewers/Save the girl/Starstone"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Save the girl"} },
+            { addr=0x7E06EE, mask=0x04, codes={"@Neotokio Sewers/Save the girl/Starstone"}, section_codes={"@Overworld_dungeons/Neotokio Sewers/Save the girl"}, reward_codes={"neotokio"} },
         },
     },
     {
         id = "norfest_forest",
         name = "Norfest Forest",
-        item_code = "forestchest",
+        progress_code = "forestchest",
         checks = {
             { addr=0x7E0776, mask=0x10, codes={"@Norfest Forest/Ring Mail/Chest"}, section_codes={"@Overworld_dungeons/Norfest Forest/Ring Mail"} },
             { addr=0x7E0779, mask=0x02, codes={"@Norfest Forest/Behind Tree/Chest"}, section_codes={"@Overworld_dungeons/Norfest Forest/Throughout the forest"} },
@@ -120,14 +120,14 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0779, mask=0x08, codes={"@Norfest Forest/Dog Whistle/Chest"}, section_codes={"@Overworld_dungeons/Norfest Forest/Throughout the forest"} },
             { addr=0x7E0779, mask=0x10, codes={"@Norfest Forest/Before Bridge/Chest"}, section_codes={"@Overworld_dungeons/Norfest Forest/Throughout the forest"} },
             { addr=0x7E0772, mask=0x80, codes={"@Norfest Forest/Storkolm/Chest"}, section_codes={"@Overworld_dungeons/Norfest Forest/Storkolm"} },
-            { addr=0x7E0772, mask=0x40, codes={"@Norfest Forest/Storkolm/Portrait"}, section_codes={"@Overworld_dungeons/Norfest Forest/Storkolm"} }
+            { addr=0x7E0772, mask=0x40, codes={"@Norfest Forest/Storkolm/Portrait"}, section_codes={"@Overworld_dungeons/Norfest Forest/Storkolm"}, reward_codes={"norfest"} }
         },
     },
     {
         id = "overworld_airs_rock",
         name = "Airs Rock",
         checks = {
-            { addr=0x7E06EF, mask=0x01, codes={"@Overworld/Airs Rock/Old Man (Starstone only)"}}
+            { addr=0x7E06EF, mask=0x01, codes={"@Overworld/Airs Rock/Old Man (Starstone only)"}, reward_codes={"airsrock"}}
         },
     },{
         id = "overworld_alaska_cave",
@@ -148,10 +148,10 @@ CHEST_GROUP_MAPPING = {
         name = "Astarika",
 
         -- progressive chest overlay (2 -> 1 -> open)
-        item_code = "astarikachest",
+        progress_code = "astarikachest",
         checks = {
             { addr=0x7E077F, mask=0x40, codes={"@Overworld_dungeons/Astarika/Chest"} },
-            { addr=0x7E0778, mask=0x20, codes={"@Overworld_dungeons/Astarika/Spirit Trip"} }
+            { addr=0x7E0778, mask=0x20, codes={"@Overworld_dungeons/Astarika/Spirit Trip"}, reward_codes={"astarika"} }
         },
     },
     {
@@ -201,6 +201,7 @@ CHEST_GROUP_MAPPING = {
     {
         id = "overworld_loire_castle",
         name = "Loire Castle",
+        progress_code = "castle",
         checks = {
             { addr=0x7E06CD, mask=0x01, codes={"@Overworld/Loire Castle/Thief"} },
             { addr=0x7E0761, mask=0x08, codes={"@Overworld/Loire Castle/Protect Bell"} }
@@ -251,7 +252,7 @@ CHEST_GROUP_MAPPING = {
         id = "overworld_penguinea_starstone",
         name = "Penguinea Starstone",
         checks = {
-            { addr=0x7E06DC, mask=0x01, codes={"@Overworld/Penguinea (Starstone only)/Penguin"} }
+            { addr=0x7E06DC, mask=0x01, codes={"@Overworld/Penguinea (Starstone only)/Penguin"}, reward_codes={"penguinea"} }
         },
     },
     {
@@ -295,7 +296,7 @@ CHEST_GROUP_MAPPING = {
     {
         id = "ra_tree",
         name = "Ra Tree",
-        item_code = "rachests",
+        progress_code = "rachests",
         checks = {
             { addr=0x7E0762, mask=0x08, codes={"@Ra Tree/Before Tree/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Before and Cave 1"} },
             { addr=0x7E0776, mask=0x04, codes={"@Ra Tree/Cave 1 1/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Before and Cave 1"} },
@@ -309,16 +310,16 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E077A, mask=0x08, codes={"@Ra Tree/Cave 3 9/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 3"} },
             { addr=0x7E0771, mask=0x08, codes={"@Ra Tree/Cave 3 10/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 3"} },
             { addr=0x7E077A, mask=0x10, codes={"@Ra Tree/Cave 3 11/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 3"} },
+            { addr=0x7E0771, mask=0x10, codes={"@Ra Tree/Cave 4/Giant Leaves"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
             { addr=0x7E0760, mask=0x80, codes={"@Ra Tree/Cave 5 12/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
             { addr=0x7E0771, mask=0x20, codes={"@Ra Tree/Cave 5 13/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
-            { addr=0x7E0771, mask=0x10, codes={"@Ra Tree/Cave 4/Giant Leaves"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
-            { addr=0x7E06F4, mask=0x02, codes={"@Ra Tree/Parasite/Boss"}, section_codes={"@Overworld_dungeons/Ra Tree/Parasite"} }
+            { addr=0x7E06F4, mask=0x02, codes={"@Ra Tree/Parasite/Boss"}, section_codes={"@Overworld_dungeons/Ra Tree/Parasite"}, reward_codes={"parasite"} }
         },
     },
     {
         id = "sylvain_casle",
         name = "Sylvain Castle",
-        item_code = "sylvainchest",
+        progress_code = "sylvainchest",
         checks = {
             { addr=0x7E0776, mask=0x20, codes={"@Sylvain Castle/Basement/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
             { addr=0x7E0777, mask=0x04, codes={"@Sylvain Castle/Outside/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
@@ -332,13 +333,13 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E06E7, mask=0x01, codes={"@Sylvain Castle/Courtyard/Sapphire"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (With Tower Key)"} },
             { addr=0x7E0772, mask=0x20, codes={"@Sylvain Castle/1st Floor South Side/Chest 1"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (With Tower Key)"} },
             { addr=0x7E0776, mask=0x80, codes={"@Sylvain Castle/1st Floor South Side/Chest 2"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (With Tower Key)"} },
-            { addr=0x7E06EC, mask=0x08, codes={"@Sylvain Castle/Bloody Mary/Boss"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Bloody Mary"} }
+            { addr=0x7E06EC, mask=0x08, codes={"@Sylvain Castle/Bloody Mary/Boss"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Bloody Mary"}, reward_codes={"bloodymary"} }
         },
     },
     {
         id = "zue",
         name = "Zue",
-        item_code = "zuechest",
+        progress_code = "zuechest",
         checks = {
             { addr=0x7E077B, mask=0x01, codes={"@Zue/Chests by Rocks/Chest 1"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (Without Giant Leaves)"} },
             { addr=0x7E077B, mask=0x02, codes={"@Zue/Chests by Rocks/Chest 2"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (Without Giant Leaves)"} },
@@ -350,7 +351,7 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0774, mask=0x40, codes={"@Zue/Swimming before Storm Keeper/Chest 1"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
             { addr=0x7E0774, mask=0x80, codes={"@Zue/Swimming before Storm Keeper/Chest 2"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
             { addr=0x7E076C, mask=0x08, codes={"@Zue/Swimming near the start/Chest"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
-            { addr=0x7E0718, mask=0x10, codes={"@Zue/Storm Keeper/Boss"}, section_codes={"@Overworld_dungeons/Zue/Storm Keeper"} }
+            { addr=0x7E0718, mask=0x10, codes={"@Zue/Storm Keeper/Boss"}, section_codes={"@Overworld_dungeons/Zue/Storm Keeper"}, reward_codes={"stormkeeper"} }
         },
     },
     {

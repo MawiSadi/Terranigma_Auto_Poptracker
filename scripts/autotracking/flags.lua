@@ -1,6 +1,5 @@
 -- scripts/autotracking/flags.lua
 local _PENDING_PICKUP = nil  -- { kind="chest"/"event", mapId=..., id=..., ts=..., prev=... }
-local _PENDING_TTL_SEC = 2.0
 local _SEG_INV = nil
 
 local function terranigma_event_id_from_flag(addr, mask)
@@ -126,8 +125,12 @@ local function terranigma_try_finalize_pending()
     local p = _PENDING_PICKUP
     local cur = snapshot_inventory_u16()
 
-    if (os.clock() - (p.ts or 0)) > _PENDING_TTL_SEC then
+    local ttl = (p.kind == "event") and PENDING_TTL_EVENT or PENDING_TTL_CHEST
+
+    if (os.clock() - (p.ts or 0)) > ttl then
         drop_pending("timeout", cur)
+        AT.inv_prev = cur
+        _PENDING_PICKUP = nil
         return
     end
 
