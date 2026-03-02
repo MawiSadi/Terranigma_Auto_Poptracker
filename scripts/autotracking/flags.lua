@@ -2,6 +2,10 @@
 local _PENDING_PICKUP = nil  -- { kind="chest"/"event", mapId=..., id=..., ts=..., prev=... }
 local _SEG_INV = nil
 
+local function flag_matches(def, addr, mask)
+    return def and addr == def.addr and mask == def.mask
+end
+
 local function terranigma_event_id_from_flag(addr, mask)
     local bit = mask_to_bit(mask)
     if bit == nil then return nil end
@@ -238,6 +242,11 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
             dbg("EVENT SEEN map=%04X @%06X mask=%02X -> eventId=nil (ignored)", map, addr, mask)
             return
         end
+
+        if  flag_matches(DEFEATED_SYLVAIN_SOUL_GUARD_EVENT, addr, mask) then
+            set_item_by_qty_or_done(DEFEATED_SYLVAIN_SOUL_GUARD, 1, { mode="toggle" })
+        end
+
         local cur_now = snapshot_inventory_u16()
 
         finalize_or_drop_pending_on_override("event", map, eventId, cur_now)

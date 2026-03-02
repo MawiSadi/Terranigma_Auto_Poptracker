@@ -63,7 +63,11 @@ function terranigma_clear_tracker_items()
         end
     end
 
-    set_item_by_qty_or_done(VISITED_RA_TREE, 0, { mode="toggle" })
+    for _, code in ipairs(RESET_TOGGLE_CODES or {}) do
+        if type(code) == "string" then
+            set_item_by_qty_or_done(code, 0, { mode="toggle" })
+        end
+    end
 
     local AT = terranigma_state()
     AT.visited_maps = {}

@@ -23,6 +23,12 @@ CHEST_FLAGS_BASE = 0x7E0760
 -- String constants
 STARSTONES = "starstones"
 VISITED_RA_TREE = "visited_ra_tree"
+DEFEATED_SYLVAIN_SOUL_GUARD = "defeated_sylvain_soul_guard"
+
+RESET_TOGGLE_CODES = {
+    VISITED_RA_TREE,
+    DEFEATED_SYLVAIN_SOUL_GUARD
+}
 
 -- Watches / Adressen
 EVENT_FLAGS_ADDR = 0x7E06C4
@@ -35,6 +41,7 @@ CHEST_MISC_FLAGS_ADDR = 0x7E0620
 CHEST_MISC_FLAGS_LEN  = 0x20
 
 RA_TREE_ENTRY_MAP = 0x012C
+DEFEATED_SYLVAIN_SOUL_GUARD_EVENT = { addr=0x7E0713, mask=0x01}
 
 LOCATION_WATCHES = {
     { name="terra_event_flags", addr=EVENT_FLAGS_ADDR, length=EVENT_FLAGS_LEN, callback="autotracker_update_event_flags", interval_ms=250 },

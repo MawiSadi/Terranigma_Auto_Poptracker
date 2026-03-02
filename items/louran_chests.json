@@ -7,6 +7,11 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/10.png",
+                "codes": "louranchest, louran10"
+            },
+            {
+                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/9.png",
                 "codes": "louranchest, louran9"
             },
