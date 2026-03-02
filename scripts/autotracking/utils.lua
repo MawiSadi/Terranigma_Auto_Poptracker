@@ -40,13 +40,13 @@ end
 function terranigma_clear_tracker_items()
     -- Inventory toggles: alles aus
     for _, code in pairs(INVENTORY_ID_TO_CODE or {}) do
-        if code ~= "starstones" then
+        if code ~= STARSTONES then
             set_item_by_qty_or_done(code, 0, { mode="toggle" })
         end
     end
 
     -- Starstones stage auf 0
-    set_item_by_qty_or_done("starstones", 0, { mode="stage" })
+    set_item_by_qty_or_done(STARSTONES, 0, { mode="stage" })
 
     -- Chest-group progressives auf 0 (wenn vorhanden)
     if type(CHEST_GROUP_MAPPING) == "table" then
@@ -62,6 +62,11 @@ function terranigma_clear_tracker_items()
             end
         end
     end
+
+    set_item_by_qty_or_done(VISITED_RA_TREE, 0, { mode="toggle" })
+
+    local AT = terranigma_state()
+    AT.visited_maps = {}
 end
 
 function terranigma_state()

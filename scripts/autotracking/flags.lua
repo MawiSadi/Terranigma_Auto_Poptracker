@@ -94,7 +94,7 @@ local function try_pickup_from_inventory_diff(kind, mapId, id, prev, cur_now)
     dbg("%s PICKUP map=%04X id=%04X inv@%06X value=%04X -> item=%02X meta=%02X pick=%s code=%s",
             string.upper(kind), mapId, id, c.addr & 0xFFFFFF, c.value, c.itemId, c.meta, tostring(c.pick), tostring(c.code))
 
-    if c.code == "starstones" then
+    if c.code == STARSTONES then
         local qty = tonumber(c.meta) or 0
         if qty <= 0 then qty = 1 end
         qty = math.min(qty, 5)

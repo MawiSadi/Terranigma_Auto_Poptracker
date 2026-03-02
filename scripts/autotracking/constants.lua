@@ -20,6 +20,9 @@ INVENTORY_KEYITEM_META_STROBE = 0x01
 
 CHEST_FLAGS_BASE = 0x7E0760
 
+-- String constants
+STARSTONES = "starstones"
+VISITED_RA_TREE = "visited_ra_tree"
 
 -- Watches / Adressen
 EVENT_FLAGS_ADDR = 0x7E06C4
@@ -30,6 +33,8 @@ CHEST_FLAGS_LEN  = 0x20
 
 CHEST_MISC_FLAGS_ADDR = 0x7E0620
 CHEST_MISC_FLAGS_LEN  = 0x20
+
+RA_TREE_ENTRY_MAP = 0x012C
 
 LOCATION_WATCHES = {
     { name="terra_event_flags", addr=EVENT_FLAGS_ADDR, length=EVENT_FLAGS_LEN, callback="autotracker_update_event_flags", interval_ms=250 },

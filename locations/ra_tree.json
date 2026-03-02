@@ -9,7 +9,7 @@
                 "sections": [
                     {
                         "name": "Chest",
-                        "access_rules": ["giantleaves"],
+                        "access_rules": ["giantleaves, visited_ra_tree"],
                         "item_count": 1
                     }
                 ],

@@ -38,6 +38,17 @@ function updateCurrentMap(_)
         terranigma_runstart_tick(mapId)
     end
 
+    do
+        local AT = terranigma_state()
+        AT.visited_maps = AT.visited_maps or {}
+
+        if mapId == RA_TREE_ENTRY_MAP and not AT.visited_maps[RA_TREE_ENTRY_MAP] then
+            AT.visited_maps[RA_TREE_ENTRY_MAP] = true
+            set_item_by_qty_or_done(VISITED_RA_TREE, 1, { mode="toggle" })
+            dbg("VISITED: Ra Tree (map=%04X) -> visited_ra_tree=1", mapId)
+        end
+    end
+
     -- UI Tab switching nur wenn Option aktiv
     if not is_auto_map_switch_enabled() then return end
 
