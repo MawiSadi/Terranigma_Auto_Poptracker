@@ -76,7 +76,7 @@ CHEST_GROUP_MAPPING = {
         checks = {
             { addr=0x7E0772, mask=0x01, codes={"@Louran/Inn/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0771, mask=0x80, codes={"@Louran/Red Scarf/Scarf"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
-            { addr=0x7E076C, mask=0x04, codes={"@Louran/Storage Chests/1"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
+            { addr=0x7E0777, mask=0x10, codes={"@Louran/Storage Chests/1"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0777, mask=0x08, codes={"@Louran/Storage Chests/2"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0772, mask=0x04, codes={"@Louran/Light Rod/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0772, mask=0x02, codes={"@Louran/Holy Seal/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
