@@ -1,5 +1,5 @@
 {
-  "shared_item_grid": {
+  "broadcast_item_grid": {
     "type":"array",
     "orientation": "horizontal",
     "content": [

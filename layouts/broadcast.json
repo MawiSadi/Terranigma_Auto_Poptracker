@@ -1,7 +1,10 @@
 ﻿{
 	"tracker_broadcast": {
-		"background": "#100e0e",
-		"type": "layout",
-		"key": "shared_item_grid"
+		"type": "container",
+		"background": "#FF3A3A3A",
+		"content": {
+			"type": "layout",
+			"key": "broadcast_item_grid"
+		}
 	}
 }

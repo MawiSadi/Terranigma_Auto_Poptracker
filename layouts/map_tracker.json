@@ -1,11 +1,26 @@
 ﻿{
   "tracker_default": {
     "type": "container",
-    "background": "#000000",
     "content": {
       "type": "dock",
       "dropshadow": true,
       "content": [
+        {
+          "type": "dock",
+          "dock": "bottom",
+          "max_height": 340,
+          "background": "#878787",
+          "header_content": {
+            "type": "button_popup",
+            "style": "settings",
+            "popup_background": "#877373",
+            "layout": "settings_popup"
+          },
+          "content": {
+            "type": "layout",
+            "key": "grouped_item_grid"
+          }
+        },
         {
           "type": "tabbed",
           "tabs": [
@@ -477,22 +492,6 @@
                     }
                   }
                 ]
-              }
-            }
-          ]
-        },
-        {
-          "type": "dock",
-          "content": [
-            {
-              "type": "group",
-              "header": "Items",
-              "orientation": "horizontal",
-              "h_alignment": "stretch",
-              "item_h_alignment": "center",
-              "content": {
-                "type": "layout",
-                "key": "shared_item_grid"
               }
             }
           ]

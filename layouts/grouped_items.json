@@ -1,0 +1,63 @@
+{
+  "grouped_item_grid": {
+    "type": "dock",
+    "content": [
+      { "type": "layout", "dock": "left", "key": "col_items" },
+      { "type": "layout", "dock": "left", "key": "col_boss" },
+      { "type": "layout", "dock": "left", "key": "col_event" },
+      { "type": "layout", "dock": "left", "key": "col_misc" }
+    ]
+  },
+
+  "col_items": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      { "type": "text", "text": "Items" },
+      { "type": "itemgrid", "item_margin": "4,4", "rows": [
+        [ "topaz", "radewdrop", "giantleaves", "sharpclaws", "airplane" ],
+        [ "sapphire", "holyseal", "redscarf", "snowgrassleaf", "starstones" ],
+        [ "ruby", "sewerkey", "airherb", "engagementring", "magicanchor" ],
+        [ "blackopal", "protectbell", "dogwhistle", "speedboots", "flower" ]
+      ] }
+    ]
+  },
+  "col_boss": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      { "type": "text", "text": "Boss Locations" },
+      { "type": "itemgrid", "item_margin": "4,4", "rows": [
+        [ "parasite", "rachests", "", "mermaidtower", "mermaidschest", ""],
+        [ "darktwins", "greatcliffchest", "", "bloodymary", "sylvainchest", ""],
+        [ "stormkeeper", "zuechest", "", "hitoderon", "greatlakeschest", ""],
+        [ "darkmorph", "eklamatachest", "", "robot", "berugaslabchest", ""]
+      ] }
+    ]
+  },
+
+  "col_event": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      { "type": "text", "text": "Event Locations" },
+      { "type": "itemgrid", "item_margin": "4,4", "rows": [
+        [ "louran", "louranchest", ""],
+        [ "neotokio", "neotokiochest", ""],
+        [ "penguinea", "airsrock", ""]
+      ] }
+    ]
+  },
+
+  "col_misc": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      { "type": "text", "text": "Misc Locations" },
+      { "type": "itemgrid", "item_margin": "4,4", "rows": [
+        [ "", "astarika", "norfest", "dragooncastle", "" ],
+        [ "castle", "astarikachest", "forestchest", "dragoonchest", "" ]
+      ] }
+    ]
+  }
+}

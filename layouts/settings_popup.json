@@ -1,0 +1,16 @@
+{
+  "settings_popup": {
+    "type": "array",
+    "margin": "0, 0",
+    "content": [
+      {
+        "type": "group",
+        "header": "Autotracking",
+        "header_background": "#3e4b57",
+        "content": [
+          { "type": "item", "item": "opt_auto_map_switch" }
+        ]
+      }
+    ]
+  }
+}
