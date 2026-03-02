@@ -139,18 +139,66 @@
                       "type": "tabbed",
                       "tabs": [
                         {
-                          "title": "Outside",
+                          "title": "Entrance",
                           "content": {
                             "type": "map",
-                            "maps": ["GreatCliffOutside"]
+                            "maps": ["GreatCliffEntrance"]
                           }
                         },
-
                         {
-                          "title": "Inside",
+                          "title": "Cave after climbing vine",
                           "content": {
                             "type": "map",
-                            "maps": ["GreatCliffInside"]
+                            "maps": ["GreatCliffInsideClimbingVine"]
+                          }
+                        },
+                        {
+                          "title": "Cave before Roc Spear",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffCaveBeforeRocSpear"]
+                          }
+                        },
+                        {
+                          "title": "Claw Climb Near Start",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffOutsideClawClimbNearStart"]
+                          }
+                        },
+                        {
+                          "title": "Cave Roc Spear",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffCaveRocSpear"]
+                          }
+                        },
+                        {
+                          "title": "Cave With Holes",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffCaveWithHoles"]
+                          }
+                        },
+                        {
+                          "title": "Outside Counterclockwise",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffOutsideCounterclockwise"]
+                          }
+                        },
+                        {
+                          "title": "Outside After Sharp Claws",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffOutsideAfterSharpClaws"]
+                          }
+                        },
+                        {
+                          "title": "Outside before final drop and Boss",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffOutsideLastChestAndBoss"]
                           }
                         }
                       ]

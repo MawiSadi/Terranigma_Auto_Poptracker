@@ -14,7 +14,7 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffInside",
+                        "map": "GreatCliffInsideClimbingVine",
                         "x": 960,
                         "y": 120
                     }
@@ -31,9 +31,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffInside",
+                        "map": "GreatCliffCaveRocSpear",
                         "x": 110,
-                        "y": 100
+                        "y": 150
                     }
                 ]
             },
@@ -48,9 +48,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffOutside",
-                        "x": 1220,
-                        "y": 1080
+                        "map": "GreatCliffOutsideCounterclockwise",
+                        "x": 190,
+                        "y": 600
                     }
                 ]
             },
@@ -66,9 +66,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffOutside",
-                        "x": 460,
-                        "y": 810
+                        "map": "GreatCliffOutsideAfterSharpClaws",
+                        "x": 320,
+                        "y": 50
                     }
                 ]
             },
@@ -84,9 +84,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffOutside",
-                        "x": 2060,
-                        "y": 960
+                        "map": "GreatCliffOutsideClawClimbNearStart",
+                        "x": 320,
+                        "y": 50
                     }
                 ]
             },
@@ -102,9 +102,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffOutside",
-                        "x": 2370,
-                        "y": 640
+                        "map": "GreatCliffOutsideLastChestAndBoss",
+                        "x": 980,
+                        "y": 300
                     }
                 ]
             },
@@ -120,8 +120,8 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffInside",
-                        "x": 1790,
+                        "map": "GreatCliffCaveBeforeRocSpear",
+                        "x": 440,
                         "y": 430
                     }
                 ]
@@ -138,9 +138,9 @@
                 ],
                 "map_locations": [
                     {
-                        "map": "GreatCliffOutside",
-                        "x": 2800,
-                        "y": 400
+                        "map": "GreatCliffOutsideLastChestAndBoss",
+                        "x": 1400,
+                        "y": 100
                     }
                 ]
             }

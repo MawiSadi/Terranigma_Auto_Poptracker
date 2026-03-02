@@ -15,8 +15,17 @@ TERRANIGMA_TAB_RANGES = {
     { from = 0x013E, to = 0x0140, tab = "Dungeons/Ra Tree/Cave 5" },
 
     -- Great Cliff (Grecliff)
-    { from = 0x0145, to = 0x014E, tab = "Dungeons/Great Cliff/Outside" },
-    { from = 0x014F, to = 0x015B, tab = "Dungeons/Great Cliff/Inside" },
+    { from = 0x0147, to = 0x0147, prev_any = { 0x0002, 0x014E, 0x014F}, tab = "Dungeons/Great Cliff/Entrance" },
+    { from = 0x014E, to = 0x014F, tab = "Dungeons/Great Cliff/Cave after climbing vine" },
+    { from = 0x0150, to = 0x0151, tab = "Dungeons/Great Cliff/Cave before Roc Spear" },
+    { from = 0x014B, to = 0x014B, prev_any = { 0x0150, 0x0158 }, tab = "Dungeons/Great Cliff/Claw Climb Near Start" },
+    { from = 0x0154, to = 0x0154, tab = "Dungeons/Great Cliff/Cave Roc Spear" },
+    { from = 0x0157, to = 0x0159, tab = "Dungeons/Great Cliff/Cave Roc Spear" },
+    { from = 0x0152, to = 0x0153, tab = "Dungeons/Great Cliff/Cave With Holes" },
+    { from = 0x0148, to = 0x0149, prev_any = { 0x0152, 0x0149, 0x0148, 0x0154}, tab = "Dungeons/Great Cliff/Outside Counterclockwise" },
+    { from = 0x0145, to = 0x0149, prev_any = { 0x0145, 0x0146, 0x0148, 0x015A}, tab = "Dungeons/Great Cliff/Outside After Sharp Claws" },
+    { from = 0x014A, to = 0x014D, tab = "Dungeons/Great Cliff/Outside before final drop and Boss" },
+    { from = 0x0147, to = 0x0147, prev_any = { 0x014B, 0x0151}, tab = "Dungeons/Great Cliff/Outside before final drop and Boss" },
 
     -- Zue
     { from = 0x015E, to = 0x0171, tab = "Dungeons/Zue" },

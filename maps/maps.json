@@ -60,13 +60,40 @@
     },
 
     {
-        "name": "GreatCliffOutside",
-        "img": "images/maps/great_cliff/Outside.png"
+        "name": "GreatCliffEntrance",
+        "img": "images/maps/great_cliff/Entrance.png"
     },
-
     {
-        "name": "GreatCliffInside",
-        "img": "images/maps/great_cliff/Inside.png"
+        "name": "GreatCliffInsideClimbingVine",
+        "img": "images/maps/great_cliff/InsideClimbingVine.png"
+    },
+    {
+        "name": "GreatCliffOutsideClawClimbNearStart",
+        "img": "images/maps/great_cliff/OutsideClawClimbNearStart.png"
+    },
+    {
+        "name": "GreatCliffCaveRocSpear",
+        "img": "images/maps/great_cliff/CaveRocSpear.png"
+    },
+    {
+        "name": "GreatCliffCaveWithHoles",
+        "img": "images/maps/great_cliff/CaveWithHoles.png"
+    },
+    {
+        "name": "GreatCliffOutsideCounterclockwise",
+        "img": "images/maps/great_cliff/OutsideCounterclockwise.png"
+    },
+    {
+        "name": "GreatCliffOutsideAfterSharpClaws",
+        "img": "images/maps/great_cliff/OutsideAfterSharpClaws.png"
+    },
+    {
+        "name": "GreatCliffOutsideLastChestAndBoss",
+        "img": "images/maps/great_cliff/OutsideLastChestAndBoss.png"
+    },
+    {
+        "name": "GreatCliffCaveBeforeRocSpear",
+        "img": "images/maps/great_cliff/CaveBeforeRocSpear.png"
     },
 
     {

@@ -13,11 +13,29 @@ local function activateTabPath(path)
     end
 end
 
-local function tab_for_mapid(mapId)
+local function tab_for_mapid(mapId, prevMapId)
     if TERRANIGMA_TAB_RANGES ~= nil then
         for _, r in ipairs(TERRANIGMA_TAB_RANGES) do
             if mapId >= r.from and mapId <= r.to then
-                return r.tab
+                -- 1) prev_any list
+                if type(r.prev_any) == "table" then
+                    if prevMapId ~= nil then
+                        for _, v in ipairs(r.prev_any) do
+                            if prevMapId == v then
+                                return r.tab
+                            end
+                        end
+                    end
+                    -- 2) prev range
+                elseif r.prev_from ~= nil then
+                    local pto = r.prev_to or r.prev_from  -- single value allowed
+                    if prevMapId ~= nil and prevMapId >= r.prev_from and prevMapId <= pto then
+                        return r.tab
+                    end
+                    -- 3) default
+                else
+                    return r.tab
+                end
             end
         end
     end
@@ -25,9 +43,9 @@ local function tab_for_mapid(mapId)
 end
 
 function terranigma_tab_for_mapid(mapId)
-    return tab_for_mapid(mapId)
+    local AT = terranigma_state()
+    return tab_for_mapid(mapId, AT and AT.prev_mapId)
 end
-
 
 function updateCurrentMap(_)
     local mapId = AutoTracker:ReadU16(CURRENT_MAP_ID_ADDR)
@@ -38,22 +56,29 @@ function updateCurrentMap(_)
         terranigma_runstart_tick(mapId)
     end
 
-    do
-        local AT = terranigma_state()
-        AT.visited_maps = AT.visited_maps or {}
+    local AT = terranigma_state()
+    AT.cur_mapId = AT.cur_mapId or mapId
+    AT.prev_mapId = AT.prev_mapId or mapId
 
-        if mapId == RA_TREE_ENTRY_MAP and not AT.visited_maps[RA_TREE_ENTRY_MAP] then
-            AT.visited_maps[RA_TREE_ENTRY_MAP] = true
-            set_item_by_qty_or_done(VISITED_RA_TREE, 1, { mode="toggle" })
-            dbg("VISITED: Ra Tree (map=%04X) -> visited_ra_tree=1", mapId)
-        end
+    -- prev nur dann updaten, wenn sich mapId ändert
+    if mapId ~= AT.cur_mapId then
+        AT.prev_mapId = AT.cur_mapId
+        AT.cur_mapId = mapId
+        dbg("MAP CHANGE prev=%04X cur=%04X", AT.prev_mapId, AT.cur_mapId)
+    end
+
+    AT.visited_maps = AT.visited_maps or {}
+
+    if mapId == RA_TREE_ENTRY_MAP and not AT.visited_maps[RA_TREE_ENTRY_MAP] then
+        AT.visited_maps[RA_TREE_ENTRY_MAP] = true
+        set_item_by_qty_or_done(VISITED_RA_TREE, 1, { mode="toggle" })
     end
 
     -- UI Tab switching nur wenn Option aktiv
     if not is_auto_map_switch_enabled() then return end
 
-    local tabPath = tab_for_mapid(mapId)
-    dbg("mapId=%04X -> tab=%s", mapId, tabPath)
+    local tabPath = tab_for_mapid(mapId, AT.prev_mapId)
+    dbg("mapId=%04X prev=%04X -> tab=%s", mapId, AT.prev_mapId, tabPath)
 
     if tabPath ~= _lastTab then
         activateTabPath(tabPath)
