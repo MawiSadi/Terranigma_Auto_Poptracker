@@ -4,7 +4,9 @@
       "package_version": "0.1.0",
       "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.0/Terranigma_Auto_PopTracker.zip",
       "sha256": "5f2fcc6a94979415717081eab74f1bd75ae9b46af54e3803d3a58078273c8a91",
-      "changelog": []
+      "changelog": [
+        "modified layout, removed speedboots and added towerkey"
+      ]
     },
     {
       "package_version": "0.0.7",
