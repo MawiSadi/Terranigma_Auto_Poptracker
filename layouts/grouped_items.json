@@ -13,12 +13,12 @@
     "type": "array",
     "orientation": "vertical",
     "content": [
-      { "type": "text", "text": "Items" },
+      { "type": "group", "header": "Items" },
       { "type": "itemgrid", "item_margin": "4,4", "rows": [
-        [ "topaz", "radewdrop", "giantleaves", "sharpclaws", "airplane" ],
-        [ "sapphire", "holyseal", "redscarf", "snowgrassleaf", "starstones" ],
-        [ "ruby", "sewerkey", "airherb", "engagementring", "magicanchor" ],
-        [ "blackopal", "protectbell", "dogwhistle", "speedboots", "flower" ]
+        [ "topaz", "radewdrop", "giantleaves", "sharpclaws", "airplane", "" ],
+        [ "sapphire", "holyseal", "redscarf", "snowgrassleaf", "starstones", "" ],
+        [ "ruby", "sewerkey", "airherb", "engagementring", "magicanchor", "" ],
+        [ "blackopal", "protectbell", "dogwhistle", "towerkey", "flower", "" ]
       ] }
     ]
   },
@@ -26,12 +26,12 @@
     "type": "array",
     "orientation": "vertical",
     "content": [
-      { "type": "text", "text": "Boss Locations" },
+      { "type": "group", "header": "Boss Locations" },
       { "type": "itemgrid", "item_margin": "4,4", "rows": [
-        [ "parasite", "rachests", "", "mermaidtower", "mermaidschest", ""],
-        [ "darktwins", "greatcliffchest", "", "bloodymary", "sylvainchest", ""],
-        [ "stormkeeper", "zuechest", "", "hitoderon", "greatlakeschest", ""],
-        [ "darkmorph", "eklamatachest", "", "robot", "berugaslabchest", ""]
+        [ "parasite", "rachests", "", "mermaidtower", "mermaidschest", "", ""],
+        [ "darktwins", "greatcliffchest", "", "bloodymary", "sylvainchest", "", ""],
+        [ "stormkeeper", "zuechest", "", "hitoderon", "greatlakeschest", "", ""],
+        [ "darkmorph", "eklamatachest", "", "robot", "berugaslabchest", "", ""]
       ] }
     ]
   },
@@ -40,11 +40,12 @@
     "type": "array",
     "orientation": "vertical",
     "content": [
-      { "type": "text", "text": "Event Locations" },
+      { "type": "group", "header": "Event Locations" },
       { "type": "itemgrid", "item_margin": "4,4", "rows": [
         [ "louran", "louranchest", ""],
         [ "neotokio", "neotokiochest", ""],
-        [ "penguinea", "airsrock", ""]
+        [ "penguinea", "", ""],
+        [ "airsrock", "", ""]
       ] }
     ]
   },
@@ -53,10 +54,12 @@
     "type": "array",
     "orientation": "vertical",
     "content": [
-      { "type": "text", "text": "Misc Locations" },
+      { "type": "group", "header": "Misc Locations" },
       { "type": "itemgrid", "item_margin": "4,4", "rows": [
-        [ "", "astarika", "norfest", "dragooncastle", "" ],
-        [ "castle", "astarikachest", "forestchest", "dragoonchest", "" ]
+        ["astarika", "astarikachest", ""],
+        ["norfest", "forestchest", ""],
+        ["dragooncastle", "dragoonchest", ""],
+        ["castle", "", ""]
       ] }
     ]
   }
