@@ -75,6 +75,8 @@ end
 function terranigma_sync_chest_groups()
     if type(CHEST_GROUP_MAPPING) ~= "table" then return end
 
+    local all_opened, all_total = 0, 0
+
     local AT = terranigma_state()
     AT.loc_cache = AT.loc_cache or {}
     AT.chest_stage_cache = AT.chest_stage_cache or {}
@@ -100,6 +102,27 @@ function terranigma_sync_chest_groups()
         end
 
         AT.loc_cache[code] = done
+        return true
+    end
+
+    local function set_consumable_cached(code, qty)
+        if type(code) ~= "string" then return false end
+        AT.loc_cache = AT.loc_cache or {}
+
+        local key = "qty:" .. code
+        local old = AT.loc_cache[key]
+        if old == qty then return false end
+
+        local obj = Tracker:FindObjectForCode(code)
+        if not obj or obj.AcquiredCount == nil then
+            if AUTOTRACKER_ENABLE_DEBUG_LOGGING then
+                dbg("SYNC WARN: consumable obj missing/not consumable code=%s", tostring(code))
+            end
+            return false
+        end
+
+        obj.AcquiredCount = qty
+        AT.loc_cache[key] = qty
         return true
     end
 
@@ -130,7 +153,12 @@ function terranigma_sync_chest_groups()
             total = total + 1
             local v = terranigma_read_u8_abs(e.addr)
             local isOpen = terranigma_is_flag_set(v, e.mask)
-            if isOpen then opened = opened + 1 end
+
+            all_total = all_total + 1
+            if isOpen then
+                opened = opened + 1
+                all_opened = all_opened + 1
+            end
 
             local loc_list, sec_list, reward_list = {}, {}, {}
             add_codes(loc_list, e.codes)
@@ -185,4 +213,6 @@ function terranigma_sync_chest_groups()
             end
         end
     end
+
+    set_consumable_cached("checks_done", all_opened)
 end

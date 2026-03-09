@@ -12,7 +12,7 @@
           [ "ruby", "sewerkey",  "airherb", "engagementring", "magicanchor", "", "", "stormkeeper", "zuechest" ],
           [ "blackopal", "protectbell", "dogwhistle", "speedboots", "flower", "", "", "darkmorph", "eklamatachest" ],
           [ "towerkey", "", "", "", "", "penguinea", "airsrock", "louran", "louranchest" ],
-          [ "", "mermaidtower", "bloodymary", "hitoderon", "robot", "neotokio", "astarika", "norfest", "dragooncastle" ],
+          [ "checks_done", "mermaidtower", "bloodymary", "hitoderon", "robot", "neotokio", "astarika", "norfest", "dragooncastle" ],
           [ "castle", "mermaidschest", "sylvainchest", "greatlakeschest", "berugaslabchest", "neotokiochest", "astarikachest", "forestchest", "dragoonchest" ]
         ]
       }

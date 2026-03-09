@@ -1,0 +1,15 @@
+[
+  {
+    "name": "Checks Done",
+    "type": "consumable",
+    "img": "images/Chest_Closed.png",
+    "codes": "checks_done",
+    "min_quantity": 0,
+    "max_quantity": 136,
+    "initial_quantity": 0,
+    "overlay_align": "center",
+    "overlay_background": "#FF3E4B57",
+    "increment": 1,
+    "decrement": 1
+  }
+]

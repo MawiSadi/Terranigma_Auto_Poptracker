@@ -59,7 +59,7 @@
         ["astarika", "astarikachest", ""],
         ["norfest", "forestchest", ""],
         ["dragooncastle", "dragoonchest", ""],
-        ["castle", "", ""]
+        ["castle", "checks_done", ""]
       ] }
     ]
   }

@@ -353,12 +353,5 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E076C, mask=0x08, codes={"@Zue/Swimming near the start/Chest"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
             { addr=0x7E0718, mask=0x10, codes={"@Zue/Storm Keeper/Boss"}, section_codes={"@Overworld_dungeons/Zue/Storm Keeper"}, reward_codes={"stormkeeper"} }
         },
-    },
-    {
-        id = "dark_gaia",
-        name = "Dark Gaia",
-        checks = {
-            { addr=0x7E06F6, mask=0x02, codes={} } -- death of dark gaia -> TIME
-        }
     }
 }
