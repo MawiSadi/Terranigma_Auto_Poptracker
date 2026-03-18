@@ -20,15 +20,16 @@ Dieses Repository enthält ein **PopTracker**-Package für den **Terranigma Rand
 
 ## Aktueller Stand / Einschränkungen
 
-- ✅ **Inventory-Diff Auto-Tracking** funktioniert stabil (keine „1 Chest später“ Zuordnung mehr), weil wir:
-    - Inventory als eigenen Watch cachen und
-    - “pending pickup” finalisieren, sobald der Inventory-Cache aktualisiert wird.
-- ✅ **Chest-Items** (Key Items) werden zuverlässig erkannt (inkl. **Starstones** als Stage/Qty).
-- ✅ **Event-Pickups** sind vom System her unterstützt (Pending-Mechanismus funktioniert auch für Events).
-- ⚠️ **Boss-Events / Boss-Flags** sind noch **nicht vollständig gemappt** (d. h. es fehlen addr/mask → Boss-Check Einträge).  
-  → Das System kann’s tracken, sobald die korrekten Flags bekannt sind.
-- ⚠️ Einige Spezialfälle brauchen ggf. eigene Logik (z. B. Items, die nicht in den beobachteten Inventory-Bereich geschrieben werden, oder mehrfach/komplex getriggerte Events).
-- ⚠️ **Parasite / Ra Tree**: Boss/Flag-Mapping noch offen (Beispiel: falsche ID im Mapping).
+- ✅ **Inventory-Diff Auto-Tracking** funktioniert im normalen Live-Run deutlich stabiler:
+  - Inventory läuft als eigener Watch
+  - Pickups werden über einen Pending-Mechanismus beim nächsten Inventory-Update finalisiert
+- ✅ **Chest-Items** werden in normalen Läufen überwiegend korrekt erkannt (inkl. problematischer Fälle wie Count-/u8-Formate und **Starstones** als Stage/Qty).
+- ✅ **Event-Pickups** sind systemseitig ebenfalls über den Pending-Mechanismus vorbereitet.
+- ⚠️ **Boss-Events / Boss-Flags** sind noch nicht vollständig gemappt.
+- ⚠️ **Savestate-Reload / Tracker-Neustart mitten im Run** sind weiterhin Sonderfälle:
+  vorhandene Items oder gerade aufgesammelte Pickups werden dabei nicht immer sauber nachgezogen.
+- ⚠️ Einige Spezialfälle brauchen ggf. eigene Logik, z. B. Items mit abweichendem Speicherformat, sehr späte Inventory-Updates oder mehrfach/komplex getriggerte Events.
+- ⚠️ **Parasite / Ra Tree**: Boss/Flag-Mapping noch offen bzw. teilweise noch nicht korrekt.
 
 ---
 
@@ -113,14 +114,16 @@ Das Package nutzt Memory-Watches (addr/length) + Mapping-Skripte, um:
 
 ## Troubleshooting (häufig)
 
-- **„Item wird 1 Chest später erkannt“**  
-  → sollte durch Inventory-Cache + Pending-Finalize behoben sein.  
-  Prüfe, ob der Inventory-Watch aktiv ist (`terra_inventory_cache`) und ausreichend schnell tickt (z. B. 50ms).
+- **Starstones zählen nicht hoch / bleiben auf altem Stand**  
+  → Prüfen, ob das betreffende Event oder Inventory-Update überhaupt im Log auftaucht.  
+  Starstones werden als Stage/Qty behandelt; wenn das zugrunde liegende Event oder der passende Inventory-Diff nicht sauber erkannt wird, bleibt der Wert stehen.
 
-- **Section/Overworld-Map zählt nicht runter, aber Itemgrid schon**  
-  → Meist zeigt ein Code auf ein anderes Objekt als gedacht (Location vs Section vs falscher Pfad),
-  oder das Zielobjekt hat keine `Available*Count` Felder.  
-  Debug: Missing-Code Logs prüfen + sicherstellen, dass die `@Overworld_dungeons/.../Section` exakt existiert.
+- **Ein Boss wird nicht abgehakt**  
+  → Meist fehlt noch das korrekte Boss-Flag-Mapping (`addr + mask`) oder es zeigt auf den falschen Check-Code.  
+  Debug-Logging aktivieren, Boss besiegen und die `EVENT SEEN ... -> paste: { addr=0x..., mask=0x.. }` Zeile übernehmen.
+- **Tracker mitten im Run eingeschaltet / nach Crash neu gestartet**
+  → vorhandene Items werden nicht in allen Fällen vollständig nachgezogen.
+  Der normale Live-Run funktioniert zuverlässiger als Reload-/Reattach-Szenarien.
 
 ---
 
@@ -129,6 +132,7 @@ Das Package nutzt Memory-Watches (addr/length) + Mapping-Skripte, um:
 - **RoodyOh**
 - **Darknesslink81**
 - **Wrex**
+- **Kretiar**
 - **PopTracker** von **black-sliver**: https://github.com/black-sliver/PopTracker
 
 Danke an alle, die getestet, geloggt und beim Reverse-Engineering geholfen haben. ❤️
