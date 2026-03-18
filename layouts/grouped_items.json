@@ -5,7 +5,8 @@
       { "type": "layout", "dock": "left", "key": "col_items" },
       { "type": "layout", "dock": "left", "key": "col_boss" },
       { "type": "layout", "dock": "left", "key": "col_event" },
-      { "type": "layout", "dock": "left", "key": "col_misc" }
+      { "type": "layout", "dock": "left", "key": "col_misc" },
+      { "type": "layout", "dock": "left", "key": "col_checks_done" }
     ]
   },
 
@@ -56,10 +57,21 @@
     "content": [
       { "type": "group", "header": "Misc Locations" },
       { "type": "itemgrid", "item_margin": "4,4", "rows": [
-        ["astarika", "astarikachest", ""],
-        ["norfest", "forestchest", ""],
-        ["dragooncastle", "dragoonchest", ""],
-        ["castle", "checks_done", ""]
+        ["astarikachest"],
+        ["forestchest"],
+        ["dragoonchest"],
+        ["castle"]
+      ] }
+    ]
+  },
+
+  "col_checks_done": {
+    "type": "array",
+    "orientation": "vertical",
+    "content": [
+      { "type": "group", "header": "Checks done" },
+      { "type": "itemgrid", "item_margin": "4,4", "rows": [
+        ["checks_done"]
       ] }
     ]
   }
