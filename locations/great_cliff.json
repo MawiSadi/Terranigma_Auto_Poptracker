@@ -5,7 +5,7 @@
         "chest_opened_img": "images/Chest_Open.png",
         "children": [
             {
-                "name": "Cave 1",
+                "name": "First Caves",
                 "sections": [
                     {
                         "name": "Chest",

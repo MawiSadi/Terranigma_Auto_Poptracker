@@ -161,7 +161,7 @@
                           }
                         },
                         {
-                          "title": "Cave 1",
+                          "title": "First Caves",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffInsideClimbingVine"]

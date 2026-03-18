@@ -46,7 +46,7 @@ CHEST_GROUP_MAPPING = {
         name = "Great Cliff",
         progress_code = "greatcliffchest",
         checks = {
-            { addr=0x7E0773, mask=0x20, codes={"@Great Cliff/Cave 1/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
+            { addr=0x7E0773, mask=0x20, codes={"@Great Cliff/First Caves/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
             { addr=0x7E0774, mask=0x08, codes={"@Great Cliff/Outside (Before Roc Spear Cave)/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
             { addr=0x7E0774, mask=0x02, codes={"@Great Cliff/Hold Left for final drop/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
             { addr=0x7E0771, mask=0x40, codes={"@Great Cliff/Roc Spear/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
@@ -76,8 +76,8 @@ CHEST_GROUP_MAPPING = {
         checks = {
             { addr=0x7E0772, mask=0x01, codes={"@Louran/Inn/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0771, mask=0x80, codes={"@Louran/Red Scarf/Scarf"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
-            { addr=0x7E0777, mask=0x10, codes={"@Louran/Storage Chests (2)/Chest 1"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
-            { addr=0x7E0777, mask=0x08, codes={"@Louran/Storage Chests (2)/Chest 2"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
+            { addr=0x7E0777, mask=0x10, codes={"@Louran/Storage Chests/Chest 1"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
+            { addr=0x7E0777, mask=0x08, codes={"@Louran/Storage Chests/Chest 2"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0772, mask=0x04, codes={"@Louran/Light Rod/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0772, mask=0x02, codes={"@Louran/Holy Seal/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0777, mask=0x80, codes={"@Louran/North House 1/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },

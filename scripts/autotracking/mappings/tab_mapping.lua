@@ -17,7 +17,7 @@ TERRANIGMA_TAB_RANGES = {
 
     -- Great Cliff (Grecliff)
     { from = 0x0147, to = 0x0147, prev_any = { 0x0002, 0x014E, 0x014F}, tab = "Dungeons/Great Cliff/Entrance" },
-    { from = 0x014E, to = 0x014F, tab = "Dungeons/Great Cliff/Cave 1" },
+    { from = 0x014E, to = 0x014F, tab = "Dungeons/Great Cliff/First Caves" },
     { from = 0x0150, to = 0x0151, tab = "Dungeons/Great Cliff/Cave 2 + Last Chest" },
     { from = 0x014B, to = 0x014B, prev_any = { 0x0150, 0x0158 }, tab = "Dungeons/Great Cliff/Outside (Before Roc Spear Cave)" },
     { from = 0x0154, to = 0x0154, tab = "Dungeons/Great Cliff/Roc Spear Cave + Cave 4" },
