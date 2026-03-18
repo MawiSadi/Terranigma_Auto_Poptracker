@@ -73,14 +73,14 @@
             },
 
             {
-                "name": "Storage Chests",
+                "name": "Storage Chests (2)",
                 "sections": [
                     {
-                        "name": "1",
+                        "name": "Chest 1",
                         "item_count": 1
                     },
                     {
-                        "name": "2",
+                        "name": "Chest 2",
                         "item_count": 1
                     }
                 ],

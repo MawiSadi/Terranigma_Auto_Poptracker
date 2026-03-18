@@ -161,35 +161,35 @@
                           }
                         },
                         {
-                          "title": "Cave after climbing vine",
+                          "title": "Cave 1",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffInsideClimbingVine"]
                           }
                         },
                         {
-                          "title": "Cave before Roc Spear",
+                          "title": "Cave 2 + Last Chest",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffCaveBeforeRocSpear"]
                           }
                         },
                         {
-                          "title": "Claw Climb Near Start",
+                          "title": "Outside (Before Roc Spear Cave)",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffOutsideClawClimbNearStart"]
                           }
                         },
                         {
-                          "title": "Cave Roc Spear",
+                          "title": "Roc Spear Cave + Cave 4",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffCaveRocSpear"]
                           }
                         },
                         {
-                          "title": "Cave With Holes",
+                          "title": "Cave 3 + 5",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffCaveWithHoles"]
@@ -203,14 +203,14 @@
                           }
                         },
                         {
-                          "title": "Tunnel 1",
+                          "title": "Slope 1",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffTunnel1"]
                           }
                         },
                         {
-                          "title": "Outside After Sharp Claws",
+                          "title": "Outside Sharp Claws",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffOutsideAfterSharpClaws"]
@@ -224,7 +224,7 @@
                           }
                         },
                         {
-                          "title": "Tunnel 2",
+                          "title": "Slope 2",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffTunnel2"]

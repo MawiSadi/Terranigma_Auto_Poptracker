@@ -44,7 +44,7 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Bloody Mary",
+                        "name": "Bloody Mary (Starstone only)",
                         "access_rules": ["ruby, topaz, sapphire, blackopal"],
                         "capture_item": true,
                         "item_count": 1
@@ -70,7 +70,7 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Talk to Meilin",
+                        "name": "Talk to Meilin (Starstone only)",
                         "access_rules": ["holyseal, redscarf"],
                         "capture_item": true,
                         "item_count": 1
@@ -95,7 +95,7 @@
                         "item_count": 7
                     },
                     {
-                        "name": "Dark Morph",
+                        "name": "Dark Morph (Starstone only)",
                         "access_rules": ["snowgrassleaf"],
                         "capture_item": true,
                         "item_count": 1
@@ -120,7 +120,7 @@
                         "item_count": 8
                     },
                     {
-                        "name": "Storm Keeper",
+                        "name": "Storm Keeper (Starstone only)",
                         "access_rules": ["giantleaves, sharpclaws"],
                         "capture_item": true,
                         "item_count": 1
@@ -137,7 +137,7 @@
                 "sections": [
                     { "name": "1F Chest", "access_rules": ["airplane"], "item_count": 1 },
                     { "name": "B2F Chest", "access_rules": ["airplane"], "item_count": 1 },
-                    { "name": "Security Robot", "access_rules": ["airplane"], "item_count": 1 }
+                    { "name": "Security Robot (Starstone only)", "access_rules": ["airplane"], "item_count": 1 }
                 ],
                 "map_locations": [
                     {
@@ -222,7 +222,7 @@
                 "overlay_background": "#80000000",
                 "sections": [
                     {
-                        "name": "Boss",
+                        "name": "Boss (Starstone only)",
                         "item_count": 1
                     },
                     {
@@ -268,7 +268,7 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Parasite",
+                        "name": "Parasite (Starstone only)",
                         "access_rules": ["giantleaves, radewdrop"],
                         "capture_item": true,
                         "item_count": 1
@@ -293,7 +293,7 @@
                         "item_count": 4
                     },
                     {
-                        "name": "Dark Twins",
+                        "name": "Dark Twins (Starstone only)",
                         "access_rules": ["sharpclaws"],
                         "capture_item": true,
                         "item_count": 1
@@ -309,17 +309,22 @@
                 "overlay_background": "#80000000",
                 "sections": [
                     {
-                        "name": "Air Herb",
+                        "name": "Air Herb (With Mermaid Ring)",
                         "access_rules": ["engagementring"],
                         "item_count": 1
                     },
                     {
-                        "name": "Dungeon",
-                        "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
-                        "item_count": 4
+                        "name": "Dungeon (With Ring, Air Herb, Giant Leaves)",
+                        "access_rules": ["engagementring, giantleaves, airherb"],
+                        "item_count": 3
                     },
                     {
-                        "name": "Hitoderon",
+                        "name": "Dungeon (With Ring, Air Herb, Giant Leaves, Magicanchor)",
+                        "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
+                        "item_count": 1
+                    },
+                    {
+                        "name": "Hitoderon (Starstone only)",
                         "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
                         "capture_item": true,
                         "item_count": 1

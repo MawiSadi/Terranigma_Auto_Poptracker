@@ -6,7 +6,7 @@ CHEST_GROUP_MAPPING = {
         checks = {
             { addr=0x7E0778, mask=0x01, codes={"@Berugas Lab/1F/Chest", "@Overworld_dungeons/Berugas Lab/1F Chest"} },
             { addr=0x7E077F, mask=0x10, codes={"@Berugas Lab/B2F/Chest", "@Overworld_dungeons/Berugas Lab/B2F Chest"} },
-            { addr=0x7E06F4, mask=0x20, codes={"@Berugas Lab/Security Robot/Boss", "@Overworld_dungeons/Berugas Lab/Security Robot"}, reward_codes={"robot"} } -- oder addr=0x7E0718, mask=0x04
+            { addr=0x7E06F4, mask=0x20, codes={"@Berugas Lab/Security Robot/Boss", "@Overworld_dungeons/Berugas Lab/Security Robot (Starstone only)"}, reward_codes={"robot"} } -- oder addr=0x7E0718, mask=0x04
         },
     },
     {
@@ -38,7 +38,7 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0775, mask=0x04, codes={"@Eklamata/Outside Leaf 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x08, codes={"@Eklamata/Inside Leaf 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x20, codes={"@Eklamata/Inside Leaf 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
-            { addr=0x7E06EC, mask=0x02, codes={"@Eklamata/Dark Morph/Boss"}, section_codes={"@Overworld_dungeons/Eklamata/Dark Morph"}, reward_codes={"darkmorph"} }
+            { addr=0x7E06EC, mask=0x02, codes={"@Eklamata/Dark Morph/Boss"}, section_codes={"@Overworld_dungeons/Eklamata/Dark Morph (Starstone only)"}, reward_codes={"darkmorph"} }
         },
     },
     {
@@ -46,14 +46,14 @@ CHEST_GROUP_MAPPING = {
         name = "Great Cliff",
         progress_code = "greatcliffchest",
         checks = {
-            { addr=0x7E0773, mask=0x20, codes={"@Great Cliff/Cave after climbing vine/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
-            { addr=0x7E0774, mask=0x08, codes={"@Great Cliff/Claw Climb near start/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
+            { addr=0x7E0773, mask=0x20, codes={"@Great Cliff/Cave 1/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
+            { addr=0x7E0774, mask=0x08, codes={"@Great Cliff/Outside (Before Roc Spear Cave)/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
             { addr=0x7E0774, mask=0x02, codes={"@Great Cliff/Hold Left for final drop/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (Without Claws)"} },
             { addr=0x7E0771, mask=0x40, codes={"@Great Cliff/Roc Spear/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
             { addr=0x7E0774, mask=0x01, codes={"@Great Cliff/Claw climb after Sharp Claws/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
             { addr=0x7E0774, mask=0x04, codes={"@Great Cliff/Claw Climb before final drop/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
             { addr=0x7E0773, mask=0x40, codes={"@Great Cliff/Cave to left of final drop/Chest"}, section_codes={"@Overworld_dungeons/Great Cliff/Dungeon (With Claws)"} },
-            { addr=0x7E06EB, mask=0x80, codes={"@Great Cliff/Dark Twins/Boss"}, section_codes={"@Overworld_dungeons/Great Cliff/Dark Twins"}, reward_codes={"darktwins"} }
+            { addr=0x7E06EB, mask=0x80, codes={"@Great Cliff/Dark Twins/Boss"}, section_codes={"@Overworld_dungeons/Great Cliff/Dark Twins (Starstone only)"}, reward_codes={"darktwins"} }
         },
     },
     {
@@ -61,12 +61,12 @@ CHEST_GROUP_MAPPING = {
         name = "Great Lakes",
         progress_code = "greatlakeschest",
         checks = {
-            { addr=0x7E0779, mask=0x40, codes={"@Great Lakes/Air Herb/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Air Herb"} },
-            { addr=0x7E0773, mask=0x01, codes={"@Great Lakes/Magic Anchor/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
-            { addr=0x7E0779, mask=0x20, codes={"@Great Lakes/Waterfall/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
-            { addr=0x7E0779, mask=0x80, codes={"@Great Lakes/Stairs/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
-            { addr=0x7E077B, mask=0x08, codes={"@Great Lakes/Diving/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon"} },
-            { addr=0x7E06F4, mask=0x02, codes={"@Great Lakes/Hitoderon/Boss"}, section_codes={"@Overworld_dungeons/Great Lakes/Hitoderon"}, reward_codes={"hitoderon"} },
+            { addr=0x7E0779, mask=0x40, codes={"@Great Lakes/Air Herb/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Air Herb (With Mermaid Ring)"} },
+            { addr=0x7E0773, mask=0x01, codes={"@Great Lakes/Magic Anchor/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon (With Ring, Air Herb, Giant Leaves)"} },
+            { addr=0x7E0779, mask=0x20, codes={"@Great Lakes/Waterfall/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon (With Ring, Air Herb, Giant Leaves)"} },
+            { addr=0x7E0779, mask=0x80, codes={"@Great Lakes/Stairs/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon (With Ring, Air Herb, Giant Leaves)"} },
+            { addr=0x7E077B, mask=0x08, codes={"@Great Lakes/Diving/Chest"}, section_codes={"@Overworld_dungeons/Great Lakes/Dungeon (With Ring, Air Herb, Giant Leaves, Magicanchor)"} },
+            { addr=0x7E06F4, mask=0x02, codes={"@Great Lakes/Hitoderon/Boss"}, section_codes={"@Overworld_dungeons/Great Lakes/Hitoderon (Starstone only)"}, reward_codes={"hitoderon"} },
         },
     },
     {
@@ -76,14 +76,14 @@ CHEST_GROUP_MAPPING = {
         checks = {
             { addr=0x7E0772, mask=0x01, codes={"@Louran/Inn/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0771, mask=0x80, codes={"@Louran/Red Scarf/Scarf"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
-            { addr=0x7E0777, mask=0x10, codes={"@Louran/Storage Chests/1"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
-            { addr=0x7E0777, mask=0x08, codes={"@Louran/Storage Chests/2"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
+            { addr=0x7E0777, mask=0x10, codes={"@Louran/Storage Chests (2)/Chest 1"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
+            { addr=0x7E0777, mask=0x08, codes={"@Louran/Storage Chests (2)/Chest 2"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0772, mask=0x04, codes={"@Louran/Light Rod/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0772, mask=0x02, codes={"@Louran/Holy Seal/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (Without Holy Seal)"} },
             { addr=0x7E0777, mask=0x80, codes={"@Louran/North House 1/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },
             { addr=0x7E0777, mask=0x40, codes={"@Louran/North House 2/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },
             { addr=0x7E077F, mask=0x08, codes={"@Louran/Outside/Chest"}, section_codes={"@Overworld_dungeons/Louran/Dungeon (With Holy Seal)"} },
-            { addr=0x7E06EA, mask=0x04, codes={"@Louran/Talk to/Meilin"}, section_codes={"@Overworld_dungeons/Louran/Talk to Meilin"}, reward_codes={"louran"} } -- oder addr=0x7E06E6, mask=0x08 oder addr=0x7E06E8, mask=0x80
+            { addr=0x7E06EA, mask=0x04, codes={"@Louran/Talk to/Meilin"}, section_codes={"@Overworld_dungeons/Louran/Talk to Meilin (Starstone only)"}, reward_codes={"louran"} } -- oder addr=0x7E06E6, mask=0x08 oder addr=0x7E06E8, mask=0x80
         },
     },
     {
@@ -91,7 +91,7 @@ CHEST_GROUP_MAPPING = {
         name = "Mermaid Tower",
         progress_code = "mermaidschest",
         checks = {
-            { addr=0x7E0718, mask=0x40, codes={"@Overworld_dungeons/Mermaid Tower/Boss"}, reward_codes={"mermaidtower"} },
+            { addr=0x7E0718, mask=0x40, codes={"@Overworld_dungeons/Mermaid Tower/Boss (Starstone only)"}, reward_codes={"mermaidtower"} },
             { addr=0x7E06ED, mask=0x04, codes={"@Overworld_dungeons/Mermaid Tower/Talk to the mermaid"} },
             { addr=0x7E077F, mask=0x80, codes={"@Overworld_dungeons/Mermaid Tower/Chest"} }
         },
@@ -244,7 +244,7 @@ CHEST_GROUP_MAPPING = {
         id = "overworld_nirlake",
         name = "Nirlake",
         checks = {
-            { addr=0x7E0762, mask=0x02, codes={"@Overworld/Nirlake/Chest in house"} },
+            { addr=0x7E0762, mask=0x02, codes={"@Overworld/Nirlake/Down Left House Chest"} },
             { addr=0x7E0761, mask=0x10, codes={"@Overworld/Nirlake/Metal piece"} }
         },
     },
@@ -252,14 +252,14 @@ CHEST_GROUP_MAPPING = {
         id = "overworld_penguinea_starstone",
         name = "Penguinea Starstone",
         checks = {
-            { addr=0x7E06DC, mask=0x01, codes={"@Overworld/Penguinea (Starstone only)/Penguin"}, reward_codes={"penguinea"} }
+            { addr=0x7E06DC, mask=0x01, codes={"@Overworld/Penguinea (Starstone only)/Penguin (Starstone only)"}, reward_codes={"penguinea"} }
         },
     },
     {
         id = "overworld_sahara_skeleton",
         name = "Sahara (Skeleton)",
         checks = {
-            { addr=0x7E06F0, mask=0x01, codes={"@Overworld/Sahara (Skeleton)/Chest"}}
+            { addr=0x7E06F0, mask=0x01, codes={"@Overworld/Sahara (Skeleton)/Skeleton"}}
         },
     },
     {
@@ -313,7 +313,7 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0771, mask=0x10, codes={"@Ra Tree/Cave 4/Giant Leaves"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
             { addr=0x7E0760, mask=0x80, codes={"@Ra Tree/Cave 5 12/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
             { addr=0x7E0771, mask=0x20, codes={"@Ra Tree/Cave 5 13/Chest"}, section_codes={"@Overworld_dungeons/Ra Tree/Cave 5 and Giant Leaves"} },
-            { addr=0x7E06F4, mask=0x02, codes={"@Ra Tree/Parasite/Boss"}, section_codes={"@Overworld_dungeons/Ra Tree/Parasite"}, reward_codes={"parasite"} }
+            { addr=0x7E06F4, mask=0x02, codes={"@Ra Tree/Parasite/Boss"}, section_codes={"@Overworld_dungeons/Ra Tree/Parasite (Starstone only)"}, reward_codes={"parasite"} }
         },
     },
     {
@@ -325,15 +325,15 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0777, mask=0x04, codes={"@Sylvain Castle/Outside/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
             { addr=0x7E0777, mask=0x02, codes={"@Sylvain Castle/1st Floor West Side/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
             { addr=0x7E0776, mask=0x40, codes={"@Sylvain Castle/1st Floor North Side/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
-            { addr=0x7E0772, mask=0x10, codes={"@Sylvain Castle/Back Room 1/Guard Left"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
-            { addr=0x7E0772, mask=0x08, codes={"@Sylvain Castle/Back Room 1/Guard Top"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
-            { addr=0x7E06E7, mask=0x02, codes={"@Sylvain Castle/Back Room 1/Black Opal"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
-            { addr=0x7E06E7, mask=0x08, codes={"@Sylvain Castle/Topaz/Outside"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
+            { addr=0x7E0772, mask=0x10, codes={"@Sylvain Castle/Back Room 1 Guard Left/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
+            { addr=0x7E0772, mask=0x08, codes={"@Sylvain Castle/Back Room 1 Guard Top/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
+            { addr=0x7E06E7, mask=0x02, codes={"@Sylvain Castle/Back Room 1 Black Opal/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
+            { addr=0x7E06E7, mask=0x08, codes={"@Sylvain Castle/Outside (Topaz)/Topaz"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
             { addr=0x7E0777, mask=0x01, codes={"@Sylvain Castle/Back Room 2/Chest"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (Without Tower Key)"} },
             { addr=0x7E06E7, mask=0x01, codes={"@Sylvain Castle/Courtyard/Sapphire"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (With Tower Key)"} },
             { addr=0x7E0772, mask=0x20, codes={"@Sylvain Castle/1st Floor South Side/Chest 1"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (With Tower Key)"} },
             { addr=0x7E0776, mask=0x80, codes={"@Sylvain Castle/1st Floor South Side/Chest 2"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Dungeon (With Tower Key)"} },
-            { addr=0x7E06EC, mask=0x08, codes={"@Sylvain Castle/Bloody Mary/Boss"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Bloody Mary"}, reward_codes={"bloodymary"} }
+            { addr=0x7E06EC, mask=0x08, codes={"@Sylvain Castle/Bloody Mary/Boss"}, section_codes={"@Overworld_dungeons/Sylvain Castle/Bloody Mary (Starstone only)"}, reward_codes={"bloodymary"} }
         },
     },
     {
@@ -348,10 +348,10 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E077F, mask=0x04, codes={"@Zue/Crawl space/Chest 2"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
             { addr=0x7E0774, mask=0x20, codes={"@Zue/North of swimming/Chest"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
             { addr=0x7E0775, mask=0x01, codes={"@Zue/Crawl space after swimming/Chest"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
-            { addr=0x7E0774, mask=0x40, codes={"@Zue/Swimming before Storm Keeper/Chest 1"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
-            { addr=0x7E0774, mask=0x80, codes={"@Zue/Swimming before Storm Keeper/Chest 2"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
-            { addr=0x7E076C, mask=0x08, codes={"@Zue/Swimming near the start/Chest"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
-            { addr=0x7E0718, mask=0x10, codes={"@Zue/Storm Keeper/Boss"}, section_codes={"@Overworld_dungeons/Zue/Storm Keeper"}, reward_codes={"stormkeeper"} }
+            { addr=0x7E0774, mask=0x40, codes={"@Zue/Swimming After Second Altar/Chest 1"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
+            { addr=0x7E0774, mask=0x80, codes={"@Zue/Swimming After Second Altar/Chest 2"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
+            { addr=0x7E076C, mask=0x08, codes={"@Zue/Swimming Near Start/Chest"}, section_codes={"@Overworld_dungeons/Zue/Dungeon (With Giant Leaves and Sharp Claws)"} },
+            { addr=0x7E0718, mask=0x10, codes={"@Zue/Storm Keeper/Boss"}, section_codes={"@Overworld_dungeons/Zue/Storm Keeper (Starstone only)"}, reward_codes={"stormkeeper"} }
         },
     }
 }

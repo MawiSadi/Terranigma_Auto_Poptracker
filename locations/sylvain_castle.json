@@ -93,10 +93,10 @@
                 ]
             },
 			{
-                "name": "Topaz",
+                "name": "Outside (Topaz)",
                 "sections": [
                     {
-                        "name": "Outside",
+                        "name": "Topaz",
                         "access_rules": ["towerkey"],
                         "item_count": 1
                     }
@@ -111,21 +111,10 @@
             },
 
             {
-                "name": "Back Room 1",
+                "name": "Back Room 1 Black Opal",
                 "sections": [
                     {
-                        "name": "Black Opal",
-                        "clear_as_group": true,
-                        "item_count": 1
-                    },
-                    {
-                        "name": "Guard Left",
-                        "clear_as_group": true,
-                        "item_count": 1
-                    },
-                    {
-                        "name": "Guard Top",
-                        "clear_as_group": true,
+                        "name": "Chest",
                         "item_count": 1
                     }
                 ],
@@ -134,12 +123,34 @@
                         "map": "SylvainCastleBackRoom1",
                         "x": 875,
                         "y": 110
-                    },
+                    }
+                ]
+            },
+            {
+                "name": "Back Room 1 Guard Left",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
                     {
                         "map": "SylvainCastleBackRoom1",
                         "x": 100,
                         "y": 150
-                    },
+                    }
+                ]
+            },
+            {
+                "name": "Back Room 1 Guard Top",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
                     {
                         "map": "SylvainCastleBackRoom1",
                         "x": 120,

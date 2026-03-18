@@ -71,7 +71,7 @@
                 "name": "Sahara (Skeleton)",
                 "sections": [
                     {
-                        "name": "Chest",
+                        "name": "Skeleton",
                         "item_count": 1
                     }
                 ],
@@ -297,7 +297,7 @@
                 "name": "Nirlake",
                 "sections": [
                     {
-                        "name": "Chest in house",
+                        "name": "Down Left House Chest",
                         "item_count": 1
                     },
                     {
@@ -368,10 +368,10 @@
             },
 			
 			{
-                "name": "Penguinea (Starstone only)",
+                "name": "Penguinea",
                 "sections": [
                     {
-                        "name": "Penguin",
+                        "name": "Penguin (Starstone only)",
                         "access_rules": ["flower"],
                         "item_count": 1
                     }
