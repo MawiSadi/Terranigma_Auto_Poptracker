@@ -7,6 +7,11 @@
         "stages": [
             {
                 "img": "images/nanachest.png",
+                "img_mods": "overlay|images/3.png",
+                "codes": "mermaidschest"
+            },
+            {
+                "img": "images/nanachest.png",
                 "img_mods": "overlay|images/2.png",
                 "codes": "mermaidschest"
             },

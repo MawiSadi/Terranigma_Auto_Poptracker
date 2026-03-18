@@ -7,6 +7,11 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/8.png",
+                "codes": "greatcliffchest, greatcliff8"
+            },
+            {
+                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/7.png",
                 "codes": "greatcliffchest, greatcliff7"
             },
