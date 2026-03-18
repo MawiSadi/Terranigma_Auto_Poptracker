@@ -252,7 +252,7 @@ CHEST_GROUP_MAPPING = {
         id = "overworld_penguinea_starstone",
         name = "Penguinea Starstone",
         checks = {
-            { addr=0x7E06DC, mask=0x01, codes={"@Overworld/Penguinea (Starstone only)/Penguin (Starstone only)"}, reward_codes={"penguinea"} }
+            { addr=0x7E06DC, mask=0x01, codes={"@Overworld/Penguinea/Penguin (Starstone only)"}, reward_codes={"penguinea"} }
         },
     },
     {
