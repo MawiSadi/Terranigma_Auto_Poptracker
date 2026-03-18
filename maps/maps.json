@@ -80,6 +80,14 @@
         "img": "images/maps/great_cliff/CaveWithHoles.png"
     },
     {
+        "name": "GreatCliffTunnel1",
+        "img": "images/maps/great_cliff/tunnel_1.png"
+    },
+    {
+        "name": "GreatCliffTunnel2",
+        "img": "images/maps/great_cliff/tunnel_2.png"
+    },
+    {
         "name": "GreatCliffOutsideCounterclockwise",
         "img": "images/maps/great_cliff/OutsideCounterclockwise.png"
     },

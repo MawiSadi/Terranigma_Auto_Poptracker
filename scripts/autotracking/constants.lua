@@ -41,6 +41,7 @@ CHEST_MISC_FLAGS_LEN  = 0x20
 
 RA_TREE_ENTRY_MAP = 0x012C
 DEFEATED_SYLVAIN_SOUL_GUARD_EVENT = { addr=0x7E0713, mask=0x01}
+OPENED_GRECLIFF_CHEST_HOLD_LEFT_FOR_FINAL_DROP = { addr=0x7E0774, mask=0x02}
 
 LOCATION_WATCHES = {
     { name="terra_event_flags", addr=EVENT_FLAGS_ADDR, length=EVENT_FLAGS_LEN, callback="autotracker_update_event_flags", interval_ms=250 },

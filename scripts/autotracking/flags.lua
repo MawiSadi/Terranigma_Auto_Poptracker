@@ -5,6 +5,12 @@ local function flag_matches(def, addr, mask)
     return def and addr == def.addr and mask == def.mask
 end
 
+function terranigma_flag_def_is_set(def)
+    if not def then return false end
+    local b = terranigma_read_u8_abs(def.addr) or 0
+    return terranigma_is_flag_set(b, def.mask)
+end
+
 local function terranigma_event_id_from_flag(addr, mask)
     local bit = mask_to_bit(mask)
     if bit == nil then return nil end

@@ -203,6 +203,13 @@
                           }
                         },
                         {
+                          "title": "Tunnel 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffTunnel1"]
+                          }
+                        },
+                        {
                           "title": "Outside After Sharp Claws",
                           "content": {
                             "type": "map",
@@ -214,6 +221,13 @@
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffOutsideLastChestAndBoss"]
+                          }
+                        },
+                        {
+                          "title": "Tunnel 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["GreatCliffTunnel2"]
                           }
                         }
                       ]

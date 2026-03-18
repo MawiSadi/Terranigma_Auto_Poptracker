@@ -13,6 +13,17 @@ local function activateTabPath(path)
     end
 end
 
+function great_cliff_hold_left_done()
+    return terranigma_flag_def_is_set(OPENED_GRECLIFF_CHEST_HOLD_LEFT_FOR_FINAL_DROP)
+end
+
+local function rule_when_ok(r)
+    if type(r.when) == "function" then
+        return r.when() == true
+    end
+    return true
+end
+
 local function tab_for_mapid(mapId, prevMapId)
     if TERRANIGMA_TAB_RANGES ~= nil then
         for _, r in ipairs(TERRANIGMA_TAB_RANGES) do
@@ -21,24 +32,29 @@ local function tab_for_mapid(mapId, prevMapId)
                 if type(r.prev_any) == "table" then
                     if prevMapId ~= nil then
                         for _, v in ipairs(r.prev_any) do
-                            if prevMapId == v then
+                            if prevMapId == v and rule_when_ok(r) then
                                 return r.tab
                             end
                         end
                     end
-                    -- 2) prev range
+
+                -- 2) prev range
                 elseif r.prev_from ~= nil then
-                    local pto = r.prev_to or r.prev_from  -- single value allowed
-                    if prevMapId ~= nil and prevMapId >= r.prev_from and prevMapId <= pto then
+                    local pto = r.prev_to or r.prev_from
+                    if prevMapId ~= nil and prevMapId >= r.prev_from and prevMapId <= pto and rule_when_ok(r) then
                         return r.tab
                     end
-                    -- 3) default
+
+                -- 3) default
                 else
-                    return r.tab
+                    if rule_when_ok(r) then
+                        return r.tab
+                    end
                 end
             end
         end
     end
+
     return "Overworld"
 end
 

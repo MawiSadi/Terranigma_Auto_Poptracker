@@ -22,8 +22,10 @@ TERRANIGMA_TAB_RANGES = {
     { from = 0x0154, to = 0x0154, tab = "Dungeons/Great Cliff/Cave Roc Spear" },
     { from = 0x0157, to = 0x0159, tab = "Dungeons/Great Cliff/Cave Roc Spear" },
     { from = 0x0152, to = 0x0153, tab = "Dungeons/Great Cliff/Cave With Holes" },
-    { from = 0x0148, to = 0x0149, prev_any = { 0x0152, 0x0149, 0x0148, 0x0154}, tab = "Dungeons/Great Cliff/Outside Counterclockwise" },
-    { from = 0x0145, to = 0x0149, prev_any = { 0x0145, 0x0146, 0x0148, 0x015A}, tab = "Dungeons/Great Cliff/Outside After Sharp Claws" },
+    { from = 0x015A, to = 0x015A, tab = "Dungeons/Great Cliff/Tunnel 1" },
+    { from = 0x015B, to = 0x015B, tab = "Dungeons/Great Cliff/Tunnel 2" },
+    { from = 0x0148, to = 0x0149, prev_any = { 0x0152, 0x0149, 0x0148, 0x0154}, when = function() return not great_cliff_hold_left_done() end, tab = "Dungeons/Great Cliff/Outside Counterclockwise" },
+    { from = 0x0145, to = 0x0149, prev_any = { 0x0145, 0x0146, 0x0148, 0x015A}, when = function() return great_cliff_hold_left_done() end, tab = "Dungeons/Great Cliff/Outside After Sharp Claws" },
     { from = 0x014A, to = 0x014D, tab = "Dungeons/Great Cliff/Outside before final drop and Boss" },
     { from = 0x0147, to = 0x0147, prev_any = { 0x014B, 0x0151}, tab = "Dungeons/Great Cliff/Outside before final drop and Boss" },
 
