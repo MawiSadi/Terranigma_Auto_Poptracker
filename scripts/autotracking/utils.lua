@@ -36,6 +36,10 @@ function terranigma_seg_u8(seg, offset)
     return seg:ReadUInt8(offset) or 0
 end
 
+function terranigma_seg_u16(seg, offset)
+    if not seg then return 0 end
+    return seg:ReadUInt16(offset) or 0
+end
 
 function terranigma_clear_tracker_items()
     -- Inventory toggles: alles aus
@@ -71,12 +75,16 @@ function terranigma_clear_tracker_items()
 
     local AT = terranigma_state()
     AT.visited_maps = {}
+    AT.inv_present_streak = {}
 end
 
 function terranigma_state()
     TERRA_AT = TERRA_AT or {}
 
     if TERRA_AT.run_started == nil then TERRA_AT.run_started = false end
+    if TERRA_AT.inv_ready == nil then TERRA_AT.inv_ready = false end
+    if TERRA_AT.inv_ready_ticks == nil then TERRA_AT.inv_ready_ticks = 0 end
+    if TERRA_AT.inv_reconcile_done == nil then TERRA_AT.inv_reconcile_done = false end
 
     TERRA_AT.reset = TERRA_AT.reset or {
         session_id = 0,

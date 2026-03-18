@@ -66,8 +66,7 @@ function terranigma_set_done_for_code(code, done)
             changed = true
         end
 
-        if (not changed) and AUTOTRACKER_ENABLE_DEBUG_LOGGING and (not _no_effect_codes[code]) then
-            _no_effect_codes[code] = true
+        if (not changed) and AUTOTRACKER_ENABLE_DEBUG_LOGGING then
             dbg(
                     "WARN: @code '%s' gefunden, aber NICHT setzbar. hasActive=%s ChestCount=%s AvChest=%s ItemCount=%s AvItem=%s Count=%s Av=%s",
                     tostring(code),

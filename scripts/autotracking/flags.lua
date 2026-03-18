@@ -1,6 +1,5 @@
 -- scripts/autotracking/flags.lua
 local _PENDING_PICKUP = nil  -- { kind="chest"/"event", mapId=..., id=..., ts=..., prev=... }
-local _SEG_INV = nil
 
 local function flag_matches(def, addr, mask)
     return def and addr == def.addr and mask == def.mask
@@ -12,18 +11,17 @@ local function terranigma_event_id_from_flag(addr, mask)
     return ((addr - (EVENT_FLAGS_ADDR or 0)) * 8) + bit
 end
 
-local function snapshot_inventory_u16()
+local function snapshot_inventory_u16(seg)
     local base = INVENTORY_BASE_ADDR
     local len  = INVENTORY_WATCH_LEN
     local t = {}
 
     for off = 0, len - 2, 2 do
-        local addr = base + off
         local v
-        if _SEG_INV and type(_SEG_INV.ReadUInt16) == "function" then
-            v = _SEG_INV:ReadUInt16(addr)
+        if seg and type(seg.ReadUInt16) == "function" then
+            v = terranigma_seg_u16(seg, off)
         else
-            v = terranigma_read_u16_abs(addr)
+            v = terranigma_read_u16_abs(base + off)
         end
         t[#t+1] = v or 0
     end
@@ -41,8 +39,18 @@ local function chest_value_to_item(value)
     local lo_ok = (INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[lo]) ~= nil
     local hi_ok = (INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[hi]) ~= nil
 
+    -- direkter u8-Fall
     if value <= 0xFF and lo_ok then
         return lo, 0, "u8"
+    end
+
+    -- konservativer Count-Fall: Item-ID + kleiner Stackcount (0..9)
+    -- verhindert alte False Positives wie 0D34, weil 0x0D > 9
+    if lo_ok and hi <= 9 then
+        return lo, hi, "lo(count)"
+    end
+    if hi_ok and lo <= 9 then
+        return hi, lo, "hi(count)"
     end
 
     local strobe = INVENTORY_KEYITEM_META_STROBE
@@ -51,52 +59,192 @@ local function chest_value_to_item(value)
         if hi == strobe and lo_ok then return lo, hi, "lo(strobe)" end
     end
 
-    -- Eindeutig: genau eins ist ein bekanntes Item
-    if hi_ok and (not lo_ok) then return hi, lo, "hi" end
-    if lo_ok and (not hi_ok) then return lo, hi, "lo" end
+    return nil
+end
 
-    -- Ambiguous: beide Bytes sind bekannte Item-IDs
-    -- Default: ID im hi-Byte, Meta/Qty im lo-Byte
-    if hi_ok and lo_ok then
-        return hi, lo, "ambig->hi"
+local function fmt_u16(v)
+    v = tonumber(v) or 0
+    return string.format("%04X(lo=%02X hi=%02X)", v & 0xFFFF, v & 0xFF, (v >> 8) & 0xFF)
+end
+
+local function dbg_dump_inventory_diff(label, prev, cur)
+    if not AUTOTRACKER_ENABLE_DEBUG_LOGGING then return end
+
+    local maxn = math.max(prev and #prev or 0, cur and #cur or 0)
+    local base = INVENTORY_BASE_ADDR or 0
+    local changed = 0
+
+    for idx = 1, maxn do
+        local oldv = (prev and prev[idx]) or 0
+        local newv = (cur and cur[idx]) or 0
+        if oldv ~= newv then
+            changed = changed + 1
+
+            local lo = newv & 0xFF
+            local hi = (newv >> 8) & 0xFF
+            local loCode = INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[lo] or nil
+            local hiCode = INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[hi] or nil
+
+            local addr = base + (idx - 1) * 2
+            local itemId, meta, pick = chest_value_to_item(newv)
+            local code = itemId and INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[itemId] or nil
+
+            dbg(
+                    "%s diff @%06X %s -> %s item=%s meta=%s pick=%s code=%s lo=%02X loCode=%s hi=%02X hiCode=%s",
+                    label,
+                    (base + (idx - 1) * 2) & 0xFFFFFF,
+                    fmt_u16(oldv),
+                    fmt_u16(newv),
+                    itemId and string.format("%02X", itemId) or "nil",
+                    meta and string.format("%02X", meta & 0xFF) or "nil",
+                    tostring(pick),
+                    tostring(code),
+                    lo,
+                    tostring(loCode),
+                    hi,
+                    tostring(hiCode)
+            )
+        end
     end
 
-    return nil
+    if changed == 0 then
+        dbg("%s diff: <none>", label)
+    end
+end
+
+local function dbg_pending(label, p)
+    if not AUTOTRACKER_ENABLE_DEBUG_LOGGING or not p then return end
+    dbg(
+            "%s kind=%s map=%04X id=%04X age=%.3f",
+            label,
+            tostring(p.kind),
+            tonumber(p.mapId or 0),
+            tonumber(p.id or 0),
+            os.clock() - tonumber(p.ts or 0)
+    )
+end
+
+local function drop_pending(reason, cur_now, preserve_prev)
+    if not _PENDING_PICKUP then return end
+    local AT = terranigma_state()
+    local p = _PENDING_PICKUP
+    local cur = cur_now or snapshot_inventory_u16()
+
+    dbg_pending("PENDING DROP", p)
+    dbg("%s PICKUP miss map=%04X id=%04X reason=%s",
+            string.upper(p.kind), p.mapId or 0, p.id or 0, tostring(reason))
+    dbg_dump_inventory_diff(
+            string.format("%s/%04X/%04X drop:%s", p.kind, p.mapId or 0, p.id or 0, tostring(reason)),
+            p.prev,
+            cur
+    )
+
+    if not preserve_prev then
+        AT.inv_prev = cur
+    end
+    _PENDING_PICKUP = nil
+end
+
+function terranigma_clear_pending_pickup(reason)
+    if not _PENDING_PICKUP then return end
+    drop_pending(reason or "external_clear", snapshot_inventory_u16(), false)
+end
+
+local function make_pending(kind, mapId, id, prev)
+    return {
+        kind = kind,
+        mapId = mapId,
+        id = id,
+        ts = os.clock(),
+        prev = prev,
+        candidate_code = nil,
+        candidate_addr = nil,
+        candidate_pick = nil,
+        candidate_hits = 0,
+    }
 end
 
 local function try_pickup_from_inventory_diff(kind, mapId, id, prev, cur_now)
     local base = INVENTORY_BASE_ADDR or 0
     local candidates = {}
+    local changed_words = 0
 
     for idx = 1, #cur_now do
-        if cur_now[idx] ~= ((prev and prev[idx]) or 0) then
-            local value = cur_now[idx] & 0xFFFF
+        local oldv = (prev and prev[idx]) or 0
+        local newv = cur_now[idx] or 0
+        if newv ~= oldv then
+            changed_words = changed_words + 1
+
+            local addr = base + (idx-1)*2
+            local value = newv & 0xFFFF
             local itemId, meta, pick = chest_value_to_item(value)
             local code = itemId and INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[itemId] or nil
+
             if code then
                 candidates[#candidates+1] = {
-                    addr  = base + (idx-1)*2,
-                    value = value,
+                    addr   = addr,
+                    oldv   = oldv,
+                    value  = value,
                     itemId = itemId,
-                    meta  = meta or 0,
-                    pick  = pick,
-                    code  = code,
+                    meta   = meta or 0,
+                    pick   = pick,
+                    code   = code,
                 }
             end
         end
     end
 
     if #candidates == 0 then
+        dbg("%s PICKUP miss map=%04X id=%04X reason=no_mapped changed_words=%d",
+                string.upper(kind), mapId, id, changed_words)
+        dbg_dump_inventory_diff(string.format("%s/%04X/%04X no_mapped", kind, mapId, id), prev, cur_now)
         return false, "no_mapped"
     end
+
     if #candidates > 1 then
-        dbg("%s PICKUP miss map=%04X id=%04X (inv diff ambig, candidates=%d)", string.upper(kind), mapId, id, #candidates)
+        dbg("%s PICKUP miss map=%04X id=%04X reason=ambig candidates=%d changed_words=%d",
+                string.upper(kind), mapId, id, #candidates, changed_words)
+
+        for _, c in ipairs(candidates) do
+            dbg("%s PICKUP cand @%06X %s -> %s item=%02X meta=%02X pick=%s code=%s",
+                    string.upper(kind),
+                    c.addr & 0xFFFFFF,
+                    fmt_u16(c.oldv),
+                    fmt_u16(c.value),
+                    c.itemId,
+                    c.meta,
+                    tostring(c.pick),
+                    tostring(c.code))
+        end
+
+        dbg_dump_inventory_diff(string.format("%s/%04X/%04X ambig", kind, mapId, id), prev, cur_now)
         return false, "ambig"
     end
 
     local c = candidates[1]
-    dbg("%s PICKUP map=%04X id=%04X inv@%06X value=%04X -> item=%02X meta=%02X pick=%s code=%s",
-            string.upper(kind), mapId, id, c.addr & 0xFFFFFF, c.value, c.itemId, c.meta, tostring(c.pick), tostring(c.code))
+
+    local p = _PENDING_PICKUP
+    if p and p.kind == kind and p.mapId == mapId and p.id == id then
+        if p.candidate_code == c.code and p.candidate_addr == c.addr and p.candidate_pick == c.pick then
+            p.candidate_hits = (p.candidate_hits or 0) + 1
+        else
+            p.candidate_code = c.code
+            p.candidate_addr = c.addr
+            p.candidate_pick = c.pick
+            p.candidate_hits = 1
+        end
+
+        local need = (c.pick == "u8") and 2 or 1
+        if p.candidate_hits < need then
+            dbg("%s PICKUP candidate_wait map=%04X id=%04X inv@%06X item=%02X pick=%s code=%s hits=%d/%d",
+                    string.upper(kind), mapId, id, c.addr & 0xFFFFFF, c.itemId, tostring(c.pick), tostring(c.code),
+                    p.candidate_hits, need)
+            return false, "candidate_wait"
+        end
+    end
+
+    dbg("%s PICKUP map=%04X id=%04X inv@%06X %s -> item=%02X meta=%02X pick=%s code=%s",
+            string.upper(kind), mapId, id, c.addr & 0xFFFFFF, fmt_u16(c.value), c.itemId, c.meta, tostring(c.pick), tostring(c.code))
 
     if c.code == STARSTONES then
         local qty = tonumber(c.meta) or 0
@@ -110,50 +258,178 @@ local function try_pickup_from_inventory_diff(kind, mapId, id, prev, cur_now)
     return true, "ok"
 end
 
-local function drop_pending(reason, cur_now)
+local function terranigma_try_finalize_pending(cur_now)
     if not _PENDING_PICKUP then return end
+
     local AT = terranigma_state()
     local p = _PENDING_PICKUP
-    local cur = cur_now or snapshot_inventory_u16()
-
-    dbg("%s PICKUP miss map=%04X id=%04X reason=%s",
-            string.upper(p.kind), p.mapId or 0, p.id or 0, tostring(reason))
-
-    AT.inv_prev = cur
-    _PENDING_PICKUP = nil
-end
-
-local function terranigma_try_finalize_pending()
-    if not _PENDING_PICKUP then return end
-    local AT = terranigma_state()
-    local p = _PENDING_PICKUP
-    local cur = snapshot_inventory_u16()
+    local cur = cur_now or terranigma_snapshot_inventory_u16()
 
     local ttl = (p.kind == "event") and PENDING_TTL_EVENT or PENDING_TTL_CHEST
+    local age = os.clock() - (p.ts or 0)
 
-    if (os.clock() - (p.ts or 0)) > ttl then
-        drop_pending("timeout", cur)
+    local ok, why = try_pickup_from_inventory_diff(
+            p.kind,
+            p.mapId or 0,
+            p.id or 0,
+            p.prev,
+            cur
+    )
+
+    if ok then
         AT.inv_prev = cur
         _PENDING_PICKUP = nil
         return
     end
 
-    local ok = select(1, try_pickup_from_inventory_diff(p.kind, p.mapId or 0, p.id or 0, p.prev, cur))
-    if ok then
-        AT.inv_prev = cur
-        _PENDING_PICKUP = nil
+    if age > ttl then
+        dbg("%s PICKUP timeout_final map=%04X id=%04X age=%.3f last_reason=%s",
+                string.upper(p.kind),
+                p.mapId or 0,
+                p.id or 0,
+                age,
+                tostring(why))
+        drop_pending("timeout", cur, false)
+        return
+    end
+end
+
+local function inv_u16_to_item_info(value)
+    local itemId, meta, pick = chest_value_to_item(value)
+    if not itemId then return nil end
+
+    local code = INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[itemId] or nil
+    if not code then return nil end
+
+    local qty = 1
+    if code == STARSTONES then
+        qty = tonumber(meta) or 0
+        if qty <= 0 then qty = 1 end
+        qty = math.min(qty, 5)
+    end
+
+    return itemId, code, qty, meta or 0, pick
+end
+
+function terranigma_inventory_backfill(cur_now)
+    if type(cur_now) ~= "table" then return end
+    local AT = terranigma_state()
+    AT.inv_present_streak = AT.inv_present_streak or {}
+
+    local present = {} -- [itemId] = { code=..., qty=... }
+
+    -- aktuelles Presence-Set + Qty ermitteln
+    for i = 1, #cur_now do
+        local itemId, code, qty = inv_u16_to_item_info(cur_now[i])
+        if itemId and code then
+            local old = present[itemId]
+            if not old or qty > old.qty then
+                present[itemId] = { code = code, qty = qty }
+            end
+        end
+    end
+
+    -- Streaks pflegen / anwenden
+    for itemId, info in pairs(present) do
+        local s = (AT.inv_present_streak[itemId] or 0) + 1
+        AT.inv_present_streak[itemId] = s
+
+        if info.code == STARSTONES then
+            -- Starstones dürfen auch später noch hochgezogen werden
+            if s >= 2 then
+                local obj = Tracker:FindObjectForCode(info.code)
+                local have = (obj and tonumber(obj.CurrentStage)) or 0
+                if info.qty > have then
+                    set_item_by_qty_or_done(info.code, info.qty, {
+                        mode = "stage",
+                        never_decrease = true,
+                        clamp_max = 5
+                    })
+                    dbg("INV BACKFILL STAGE: code=%s qty=%d", tostring(info.code), info.qty)
+                end
+            end
+        end
+    end
+
+    -- Nicht mehr present => streak reset
+    for itemId, _ in pairs(AT.inv_present_streak) do
+        if not present[itemId] then
+            AT.inv_present_streak[itemId] = 0
+        end
+    end
+end
+
+function terranigma_inventory_reconcile_once(cur_now)
+    if type(cur_now) ~= "table" then return end
+
+    for i = 1, #cur_now do
+        local itemId, code, qty = inv_u16_to_item_info(cur_now[i])
+        if itemId and code then
+            if code == STARSTONES then
+                set_item_by_qty_or_done(code, qty, {
+                    mode = "stage",
+                    never_decrease = true,
+                    clamp_max = 5
+                })
+            else
+                if Tracker:ProviderCountForCode(code) == 0 then
+                    set_item_by_qty_or_done(code, 1, { mode = "toggle" })
+                    dbg("INV RECONCILE: set code=%s (id=%02X)", tostring(code), itemId)
+                end
+            end
+        end
     end
 end
 
 function autotracker_update_inventory_cache(seg, _def)
-    _SEG_INV = seg
-    terranigma_try_finalize_pending()
+    local cur_now = snapshot_inventory_u16()
+    local AT = terranigma_state()
+
+    if not AT.inv_ready then
+        AT.inv_ready_ticks = (AT.inv_ready_ticks or 0) + 1
+        AT.inv_prev = cur_now
+
+        if AT.inv_ready_ticks >= 2 then
+            AT.inv_ready = true
+            dbg("INV READY after %d ticks", AT.inv_ready_ticks)
+        end
+
+        terranigma_inventory_backfill(cur_now)
+        return true
+    end
+
+    if not AT.inv_reconcile_done then
+        terranigma_inventory_reconcile_once(cur_now)
+        AT.inv_reconcile_done = true
+    end
+
+    terranigma_try_finalize_pending(cur_now)
+    terranigma_inventory_backfill(cur_now)
     return true
 end
 
-local function reset_inventory_snapshot()
+function terranigma_reset_inventory_tracking()
     local AT = terranigma_state()
-    AT.inv_prev = snapshot_inventory_u16()
+    _PENDING_PICKUP = nil
+    AT.inv_prev = nil
+    AT.inv_present_streak = {}
+    AT.inv_ready = false
+    AT.inv_ready_ticks = 0
+    AT.inv_reconcile_done = false
+end
+
+function terranigma_reset_flag_snapshots()
+    terranigma_reset_inventory_tracking()
+
+    if type(terranigma_reset_chest_snapshot) == "function" then
+        terranigma_reset_chest_snapshot()
+    end
+    if type(terranigma_reset_event_snapshot) == "function" then
+        terranigma_reset_event_snapshot()
+    end
+    if type(terranigma_reset_chest_snapshot_misc) == "function" then
+        terranigma_reset_chest_snapshot_misc()
+    end
 end
 
 local function terranigma_flag_key(addr, mask)
@@ -167,17 +443,29 @@ local function finalize_or_drop_pending_on_override(newKind, newMap, newId, cur_
     end
 
     cur_now = cur_now or snapshot_inventory_u16()
-    -- Versuch: passt evtl. inzwischen
+
     local p = _PENDING_PICKUP
-    local ok_now = select(1, try_pickup_from_inventory_diff(p.kind, p.mapId or 0, p.id or 0, p.prev, cur_now))
+    local ttl = (p.kind == "event") and PENDING_TTL_EVENT or PENDING_TTL_CHEST
+    local age = os.clock() - (p.ts or 0)
+
+    dbg_pending("PENDING OVERRIDE old", p)
+    dbg("PENDING OVERRIDE new kind=%s map=%04X id=%04X", tostring(newKind), newMap or 0, newId or 0)
+
+    if age > ttl then
+        dbg("PENDING OVERRIDE old expired age=%.3f ttl=%.3f -> drop", age, ttl)
+        drop_pending("expired_before_override", cur_now, true)
+        return
+    end
+
+    local ok_now, why_now = try_pickup_from_inventory_diff(p.kind, p.mapId or 0, p.id or 0, p.prev, cur_now)
     if ok_now then
         terranigma_state().inv_prev = cur_now
         _PENDING_PICKUP = nil
         return
     end
 
-    -- sonst: droppen, aber baseline auf cur_now ziehen (sonst “klingelt’s” später wieder)
-    drop_pending("overridden", cur_now)
+    dbg("PENDING OVERRIDE finalize failed reason=%s", tostring(why_now))
+    drop_pending("override", cur_now, true)
 end
 
 function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_seen)
@@ -187,7 +475,7 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
     if log_seen == nil then log_seen = true end
 
     local AT = terranigma_state()
-
+    AT.seen_flags = AT.seen_flags or { chest = {}, event = {}, chest_misc = {} }
     local bucket = AT.seen_flags[kind] or {}
     local k = terranigma_flag_key(addr, mask)
     if bucket[k] then return end
@@ -223,7 +511,7 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
 
         AT.inv_prev = AT.inv_prev or cur_now
 
-        _PENDING_PICKUP = { kind="chest", mapId=map, id=chestId, ts=os.clock(), prev=AT.inv_prev }
+        _PENDING_PICKUP = make_pending("chest", map, chestId, AT.inv_prev)
 
         local ok, why = try_pickup_from_inventory_diff(_PENDING_PICKUP.kind, map, chestId, _PENDING_PICKUP.prev, cur_now)
         if ok then
@@ -236,7 +524,13 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
 
     if kind == "event" then
         local map = mapId or 0
-        local eventId = terranigma_event_id_from_flag(addr, mask) -- <- das ist genau wofür die Funktion da ist
+        local eventId = terranigma_event_id_from_flag(addr, mask)
+
+        local menu_max = AUTOTRACKER_RESET_MENU_MAX_MAPID or 0x0010
+        if map <= menu_max then
+            dbg("EVENT PICKUP skip map=%04X eventId=%04X reason=menuish_map", map, eventId)
+            return
+        end
 
         if eventId == nil then
             dbg("EVENT SEEN map=%04X @%06X mask=%02X -> eventId=nil (ignored)", map, addr, mask)
@@ -253,7 +547,7 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
 
         AT.inv_prev = AT.inv_prev or cur_now
 
-        _PENDING_PICKUP = { kind="event", mapId=map, id=eventId, ts=os.clock(), prev=AT.inv_prev }
+        _PENDING_PICKUP = make_pending("event", map, eventId, AT.inv_prev)
 
         local ok, why = try_pickup_from_inventory_diff(_PENDING_PICKUP.kind, map, eventId, _PENDING_PICKUP.prev, cur_now)
         if ok then
@@ -293,9 +587,6 @@ local function make_flag_watcher(kind, base_addr, length, opts)
         if prev == nil then
             prev = snapshot_abs()
             dbg("%s flags ARMED (baseline gesetzt)", kind)
-            if kind == "chest" then
-                reset_inventory_snapshot()
-            end
             terranigma_sync_chest_groups()
             return
         end

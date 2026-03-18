@@ -11,6 +11,7 @@ function terranigma_mark_session_start()
 
     AT.loc_cache = {}
     AT.chest_stage_cache = {}
+    AT.seen_flags = { chest = {}, event = {}, chest_misc = {} }
 
     r.above_menu_streak = 0
     r.run_started = false
@@ -22,6 +23,10 @@ function terranigma_mark_session_start()
         dbg("FORCE CLEAR tracker items (override loaded state)")
         terranigma_clear_tracker_items()
     end
+
+    if type(terranigma_reset_flag_snapshots) == "function" then
+        terranigma_reset_flag_snapshots()
+    end
 end
 
 -- Debounce: run_started=true erst nach 2 Ticks > menu_max
@@ -29,7 +34,6 @@ function terranigma_runstart_tick(mapId)
     local AT = terranigma_state()
     AT.reset = AT.reset or {}
     local r = AT.reset
-    AT.seen_flags = { chest = {}, event = {}, chest_misc = {} }
 
     local menu_max = AUTOTRACKER_RESET_MENU_MAX_MAPID or 0x0010
     local need = 2
