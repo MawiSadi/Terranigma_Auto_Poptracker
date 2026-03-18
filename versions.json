@@ -4,13 +4,23 @@
       "package_version": "0.1.2",
       "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.2/Terranigma_Auto_PopTracker.zip",
       "sha256": "762258f24125fca1c0869f3adf5ef8348384c85347a8002d3e105846758640be",
-      "changelog": []
+      "changelog": [
+        "changed some item icons and item layout",
+        "hopefully fixed item tracking",
+        "added missing grecliff maps",
+        "added missing chests for counter",
+        "turned off default debuggin",
+        "renamed some maps"
+      ]
     },
     {
       "package_version": "0.1.1",
       "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.1/Terranigma_Auto_PopTracker.zip",
       "sha256": "914fd6a04ab612954a6001d5024e96a2f9bdaefae5957718ad091909005ed3ca",
-      "changelog": []
+      "changelog": [
+        "added check counter",
+        "enlarged grecliff letters"
+      ]
     },
     {
       "package_version": "0.1.0",
