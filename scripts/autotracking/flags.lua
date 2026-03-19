@@ -269,7 +269,7 @@ local function terranigma_try_finalize_pending(cur_now)
 
     local AT = terranigma_state()
     local p = _PENDING_PICKUP
-    local cur = cur_now or terranigma_snapshot_inventory_u16()
+    local cur = cur_now or snapshot_inventory_u16()
 
     local ttl = (p.kind == "event") and PENDING_TTL_EVENT or PENDING_TTL_CHEST
     local age = os.clock() - (p.ts or 0)
@@ -474,6 +474,24 @@ local function finalize_or_drop_pending_on_override(newKind, newMap, newId, cur_
     drop_pending("override", cur_now, true)
 end
 
+local function begin_pending_pickup(kind, mapId, id, cur_now)
+    local AT = terranigma_state()
+
+    finalize_or_drop_pending_on_override(kind, mapId, id, cur_now)
+
+    AT.inv_prev = AT.inv_prev or cur_now
+    _PENDING_PICKUP = make_pending(kind, mapId, id, AT.inv_prev)
+
+    local ok, why = try_pickup_from_inventory_diff(kind, mapId, id, _PENDING_PICKUP.prev, cur_now)
+    if ok then
+        AT.inv_prev = cur_now
+        _PENDING_PICKUP = nil
+    else
+        dbg("%s PICKUP pending map=%04X id=%04X reason=%s",
+                string.upper(kind), mapId or 0, id or 0, tostring(why))
+    end
+end
+
 function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_seen)
     if oldByte == nil or newByte == nil then return end
     if terranigma_is_flag_set(oldByte, mask) then return end
@@ -482,6 +500,7 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
 
     local AT = terranigma_state()
     AT.seen_flags = AT.seen_flags or { chest = {}, event = {}, chest_misc = {} }
+
     local bucket = AT.seen_flags[kind] or {}
     local k = terranigma_flag_key(addr, mask)
     if bucket[k] then return end
@@ -489,52 +508,39 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
     bucket[k] = { mapId = mapId or 0, addr = addr, mask = mask }
     AT.seen_flags[kind] = bucket
 
-    local tab = (terranigma_tab_for_mapid and terranigma_tab_for_mapid(mapId or 0)) or "?"
+    local map = mapId or 0
+    local tab = (terranigma_tab_for_mapid and terranigma_tab_for_mapid(map)) or "?"
 
-    local chestId_for_log = nil
     local extra = ""
     if kind == "chest" then
-        chestId_for_log = terranigma_chest_id_from_flag(addr, mask)
-        extra = string.format(" chestId=%s", chestId_for_log and string.format("%04X", chestId_for_log) or "nil")
+        local chestId = terranigma_chest_id_from_flag(addr, mask)
+        extra = string.format(" chestId=%s", chestId and string.format("%04X", chestId) or "nil")
     end
 
     if AUTOTRACKER_ENABLE_DEBUG_LOGGING and log_seen then
         dbg("%s SEEN map=%04X tab=%s @%06X mask=%02X%s  -> paste: { addr=0x%06X, mask=0x%02X },",
-                string.upper(kind), mapId or 0, tab, addr, mask, extra, addr, mask)
+                string.upper(kind), map, tab, addr, mask, extra, addr, mask)
     end
 
     if kind == "chest_misc" then
         if MISC_CAPTURE_LEFT <= 0 then return end
-        if MISC_CAPTURE_MAP ~= 0 and mapId ~= MISC_CAPTURE_MAP then return end
+        if MISC_CAPTURE_MAP ~= 0 and map ~= MISC_CAPTURE_MAP then return end
         MISC_CAPTURE_LEFT = MISC_CAPTURE_LEFT - 1
+        return
     end
 
     if kind == "chest" then
-        local map = mapId or 0
         local chestId = terranigma_chest_id_from_flag(addr, mask)
-        local cur_now = snapshot_inventory_u16()
-        finalize_or_drop_pending_on_override("chest", map, chestId, cur_now)
-
-        AT.inv_prev = AT.inv_prev or cur_now
-
-        _PENDING_PICKUP = make_pending("chest", map, chestId, AT.inv_prev)
-
-        local ok, why = try_pickup_from_inventory_diff(_PENDING_PICKUP.kind, map, chestId, _PENDING_PICKUP.prev, cur_now)
-        if ok then
-            AT.inv_prev = cur_now
-            _PENDING_PICKUP = nil
-        else
-            dbg("CHEST PICKUP pending map=%04X chestId=%04X reason=%s", map, chestId, tostring(why))
-        end
+        begin_pending_pickup("chest", map, chestId, snapshot_inventory_u16())
+        return
     end
 
     if kind == "event" then
-        local map = mapId or 0
         local eventId = terranigma_event_id_from_flag(addr, mask)
 
         local menu_max = AUTOTRACKER_RESET_MENU_MAX_MAPID or 0x0010
         if map <= menu_max then
-            dbg("EVENT PICKUP skip map=%04X eventId=%04X reason=menuish_map", map, eventId)
+            dbg("EVENT PICKUP skip map=%04X eventId=%04X reason=menuish_map", map, eventId or 0)
             return
         end
 
@@ -543,25 +549,12 @@ function terranigma_note_flag(kind, mapId, addr, mask, oldByte, newByte, log_see
             return
         end
 
-        if  flag_matches(DEFEATED_SYLVAIN_SOUL_GUARD_EVENT, addr, mask) then
+        if flag_matches(DEFEATED_SYLVAIN_SOUL_GUARD_EVENT, addr, mask) then
             set_item_by_qty_or_done(DEFEATED_SYLVAIN_SOUL_GUARD, 1, { mode="toggle" })
         end
 
-        local cur_now = snapshot_inventory_u16()
-
-        finalize_or_drop_pending_on_override("event", map, eventId, cur_now)
-
-        AT.inv_prev = AT.inv_prev or cur_now
-
-        _PENDING_PICKUP = make_pending("event", map, eventId, AT.inv_prev)
-
-        local ok, why = try_pickup_from_inventory_diff(_PENDING_PICKUP.kind, map, eventId, _PENDING_PICKUP.prev, cur_now)
-        if ok then
-            AT.inv_prev = cur_now
-            _PENDING_PICKUP = nil
-        else
-            dbg("EVENT PICKUP pending map=%04X eventId=%04X reason=%s", map, eventId, tostring(why))
-        end
+        begin_pending_pickup("event", map, eventId, snapshot_inventory_u16())
+        return
     end
 end
 
