@@ -18,7 +18,7 @@ TERRANIGMA_TAB_RANGES = {
     -- Great Cliff (Grecliff)
     { from = 0x0147, to = 0x0147, prev_any = { 0x0002, 0x014E, 0x014F}, tab = "Dungeons/Great Cliff/Entrance" },
     { from = 0x014E, to = 0x014F, tab = "Dungeons/Great Cliff/First Caves" },
-    { from = 0x0150, to = 0x0151, tab = "Dungeons/Great Cliff/Cave 2 + Last Chest" },
+    { from = 0x0150, to = 0x0151, tab = "Dungeons/Great Cliff/Second Caves + Last Chest" },
     { from = 0x014B, to = 0x014B, prev_any = { 0x0150, 0x0158 }, tab = "Dungeons/Great Cliff/Outside (Before Roc Spear Cave)" },
     { from = 0x0154, to = 0x0154, tab = "Dungeons/Great Cliff/Roc Spear Cave + Cave 4" },
     { from = 0x0157, to = 0x0159, tab = "Dungeons/Great Cliff/Roc Spear Cave + Cave 4" },
@@ -36,7 +36,11 @@ TERRANIGMA_TAB_RANGES = {
     -- Eklamata (Eklemata)
     { from = 0x0172, to = 0x0172, tab = "Dungeons/Eklamata/Outside 1" },
     { from = 0x0189, to = 0x018A, tab = "Dungeons/Eklamata/Outside 1" },
-    { from = 0x017D, to = 0x0188, tab = "Dungeons/Eklamata/Inside" },
+    { from = 0x017D, to = 0x0180, tab = "Dungeons/Eklamata/Inside" },
+    { from = 0x0182, to = 0x0182, tab = "Dungeons/Eklamata/Inside" },
+    { from = 0x0184, to = 0x0188, tab = "Dungeons/Eklamata/Inside" },
+    { from = 0x0181, to = 0x0181, tab = "Dungeons/Eklamata/Rando Cave 1" },
+    { from = 0x0183, to = 0x0183, tab = "Dungeons/Eklamata/Rando Cave 2" },
     { from = 0x0173, to = 0x0179, tab = "Dungeons/Eklamata/Outside 2" },
     { from = 0x018B, to = 0x018B, tab = "Dungeons/Eklamata/Outside 2" },
 

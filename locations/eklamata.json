@@ -92,29 +92,55 @@
             },
 
             {
-                "name": "Rando Cave",
+                "name": "Rando Cave 1",
                 "sections": [
                     {
-                        "name": "Chest 1",
-                        "access_rules": ["snowgrassleaf"],
-                        "item_count": 1
-                    },
-                    {
-                        "name": "Chest 2",
-                        "access_rules": ["snowgrassleaf"],
-                        "item_count": 1
-                    },
-                    {
-                        "name": "Chest 3",
+                        "name": "Chest",
                         "access_rules": ["snowgrassleaf"],
                         "item_count": 1
                     }
                 ],
                 "map_locations": [
                     {
-                        "map": "EklamataOutside2",
-                        "x": 980,
-                        "y": 1180
+                        "map": "EklamataRandoCave1",
+                        "x": 200,
+                        "y": 300
+                    }
+                ]
+            },
+
+            {
+                "name": "Rando Cave 2 Chest 1",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["snowgrassleaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataRandoCave2",
+                        "x": 270,
+                        "y": 100
+                    }
+                ]
+            },
+
+            {
+                "name": "Rando Cave 2 Chest 2",
+                "sections": [
+                    {
+                        "name": "Chest",
+                        "access_rules": ["snowgrassleaf"],
+                        "item_count": 1
+                    }
+                ],
+                "map_locations": [
+                    {
+                        "map": "EklamataRandoCave2",
+                        "x": 670,
+                        "y": 130
                     }
                 ]
             },

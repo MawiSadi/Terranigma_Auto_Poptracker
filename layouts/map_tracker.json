@@ -143,6 +143,20 @@
                             "type": "map",
                             "maps": ["EklamataOutside2"]
                           }
+                        },
+                        {
+                          "title": "Rando Cave 1",
+                          "content": {
+                            "type": "map",
+                            "maps": ["EklamataRandoCave1"]
+                          }
+                        },
+                        {
+                          "title": "Rando Cave 2",
+                          "content": {
+                            "type": "map",
+                            "maps": ["EklamataRandoCave2"]
+                          }
                         }
                       ]
                     }
@@ -168,7 +182,7 @@
                           }
                         },
                         {
-                          "title": "Cave 2 + Last Chest",
+                          "title": "Second Caves + Last Chest",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffCaveBeforeRocSpear"]

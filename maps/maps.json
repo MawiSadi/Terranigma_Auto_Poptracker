@@ -53,6 +53,14 @@
         "name": "EklamataOutside2",
         "img": "images/maps/eklamata/Outside2.png"
     },
+    {
+        "name": "EklamataRandoCave1",
+        "img": "images/maps/eklamata/Rando_cave_1.png"
+    },
+    {
+        "name": "EklamataRandoCave2",
+        "img": "images/maps/eklamata/Rando_cave_2.png"
+    },
 
     {
         "name": "EklamataInside",

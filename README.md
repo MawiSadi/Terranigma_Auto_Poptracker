@@ -135,4 +135,7 @@ Das Package nutzt Memory-Watches (addr/length) + Mapping-Skripte, um:
 - **Kretiar**
 - **PopTracker** von **black-sliver**: https://github.com/black-sliver/PopTracker
 
+Ein ganz besonderer Dank geht an **Exec**, dass wir auf Basis seiner **EmoTracker-Version** arbeiten dürfen.  
+Das war extrem hilfsbereit und großzügig – riesiges Dankeschön dafür.
+
 Danke an alle, die getestet, geloggt und beim Reverse-Engineering geholfen haben. ❤️
