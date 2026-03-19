@@ -1,6 +1,12 @@
 {
   "versions": [
     {
+      "package_version": "0.1.6",
+      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.6/Terranigma_Auto_PopTracker.zip",
+      "sha256": "0dc5a3e83b3f914a003870d7e883d3b942d9b8c91e77a7c889caafd198dc903f",
+      "changelog": []
+    },
+    {
       "package_version": "0.1.5",
       "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.5/Terranigma_Auto_PopTracker.zip",
       "sha256": "139b7e8781c0f6b9fefc436d8275ae96624271c8bbfe0cc2c723102e6b4577ab",
