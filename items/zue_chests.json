@@ -7,6 +7,11 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
+                "img_mods": "overlay|images/11.png",
+                "codes": "zuechest, zue11"
+            },
+            {
+                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/10.png",
                 "codes": "zuechest, zue10"
             },
