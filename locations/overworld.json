@@ -7,8 +7,8 @@
             {
                 "name": "Mushroom Forest",
                 "sections": [
-                    { "name": "Chest 1", "item_count": 1 },
-                    { "name": "Chest 2", "item_count": 1 },
+                    { "name": "Top Chest", "item_count": 1 },
+                    { "name": "Middle Chest", "item_count": 1 },
                     { "name": "Mushroom", "item_count": 1 }
                 ],
                 "map_locations": [
@@ -31,7 +31,7 @@
                 "name": "Litz",
                 "sections": [
                     {
-                        "name": "Top Left",
+                        "name": "Top Left Chest",
                         "item_count": 1
                     }
                 ],
@@ -150,7 +150,7 @@
                 "name": "Airs Rock",
                 "sections": [
                     {
-                        "name": "Old Man (Starstone only)",
+                        "name": "Old Man (Starstone Only)",
                         "access_rules": ["sharpclaws, airplane"],
                         "item_count": 1
                     }
@@ -301,7 +301,7 @@
                         "item_count": 1
                     },
                     {
-                        "name": "Metal piece",
+                        "name": "Metal Piece",
                         "item_count": 1
                     }
                 ],
@@ -371,7 +371,7 @@
                 "name": "Penguinea",
                 "sections": [
                     {
-                        "name": "Penguin (Starstone only)",
+                        "name": "Penguin (Starstone Only)",
                         "access_rules": ["flower"],
                         "item_count": 1
                     }

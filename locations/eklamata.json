@@ -5,7 +5,7 @@
         "chest_opened_img": "images/Chest_Open.png",
         "children": [
             {
-                "name": "Smash the wall",
+                "name": "Smash The Wall",
                 "sections": [
                     {
                         "name": "Chest",
@@ -22,7 +22,7 @@
             },
 
             {
-                "name": "Drop down the hole",
+                "name": "Drop Down The Hole",
                 "sections": [
                     {
                         "name": "Chest",
@@ -121,8 +121,8 @@
                 "map_locations": [
                     {
                         "map": "EklamataRandoCave2",
-                        "x": 270,
-                        "y": 100
+                        "x": 670,
+                        "y": 130
                     }
                 ]
             },
@@ -139,8 +139,8 @@
                 "map_locations": [
                     {
                         "map": "EklamataRandoCave2",
-                        "x": 670,
-                        "y": 130
+                        "x": 270,
+                        "y": 100
                     }
                 ]
             },

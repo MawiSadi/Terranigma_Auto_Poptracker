@@ -13,7 +13,7 @@
                         "item_count": 1
                     },
                     {
-                        "name": "Throughout the forest",
+                        "name": "Throughout The Forest",
                         "access_rules": ["protectbell"],
                         "item_count": 4
                     },
@@ -44,7 +44,7 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Bloody Mary (Starstone only)",
+                        "name": "Bloody Mary (Starstone Only)",
                         "access_rules": ["ruby, topaz, sapphire, blackopal"],
                         "capture_item": true,
                         "item_count": 1
@@ -70,7 +70,7 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Talk to Meilin (Starstone only)",
+                        "name": "Talk To Meilin (Starstone Only)",
                         "access_rules": ["holyseal, redscarf"],
                         "capture_item": true,
                         "item_count": 1
@@ -95,7 +95,7 @@
                         "item_count": 7
                     },
                     {
-                        "name": "Dark Morph (Starstone only)",
+                        "name": "Dark Morph (Starstone Only)",
                         "access_rules": ["snowgrassleaf"],
                         "capture_item": true,
                         "item_count": 1
@@ -111,7 +111,7 @@
                 "overlay_background": "#80000000",
                 "sections": [
                     {
-                        "name": "Dungeon (Without Giant Leaves)",
+                        "name": "Dungeon",
                         "item_count": 2
                     },
                     {
@@ -120,7 +120,7 @@
                         "item_count": 8
                     },
                     {
-                        "name": "Storm Keeper (Starstone only)",
+                        "name": "Storm Keeper (Starstone Only)",
                         "access_rules": ["giantleaves, sharpclaws"],
                         "capture_item": true,
                         "item_count": 1
@@ -137,7 +137,7 @@
                 "sections": [
                     { "name": "1F Chest", "access_rules": ["airplane"], "item_count": 1 },
                     { "name": "B2F Chest", "access_rules": ["airplane"], "item_count": 1 },
-                    { "name": "Security Robot (Starstone only)", "access_rules": ["airplane"], "item_count": 1 }
+                    { "name": "Security Robot (Starstone Only)", "access_rules": ["airplane"], "item_count": 1 }
                 ],
                 "map_locations": [
                     {
@@ -162,7 +162,7 @@
                         "item_count": 4
                     },
                     {
-                        "name": "Save the girl",
+                        "name": "Save The Girl (Starstone Only)",
                         "access_rules": ["sewerkey"],
                         "capture_item": true,
                         "item_count": 1
@@ -222,11 +222,11 @@
                 "overlay_background": "#80000000",
                 "sections": [
                     {
-                        "name": "Boss (Starstone only)",
+                        "name": "Boss (Starstone Only)",
                         "item_count": 1
                     },
                     {
-                        "name": "Talk to the mermaid",
+                        "name": "Talk To The Mermaid",
                         "item_count": 1
                     },
                     {
@@ -248,7 +248,7 @@
                 "overlay_background": "#80000000",
                 "sections": [
                     {
-                        "name": "Before and Cave 1",
+                        "name": "Before And Cave 1",
                         "access_rules": ["giantleaves"],
                         "item_count": 6
                     },
@@ -263,12 +263,12 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Cave 5 and Giant Leaves",
+                        "name": "Cave 5 And Giant Leaves",
                         "access_rules": ["giantleaves"],
                         "item_count": 3
                     },
                     {
-                        "name": "Parasite (Starstone only)",
+                        "name": "Parasite (Starstone Only)",
                         "access_rules": ["giantleaves, radewdrop"],
                         "capture_item": true,
                         "item_count": 1
@@ -293,7 +293,7 @@
                         "item_count": 4
                     },
                     {
-                        "name": "Dark Twins (Starstone only)",
+                        "name": "Dark Twins (Starstone Only)",
                         "access_rules": ["sharpclaws"],
                         "capture_item": true,
                         "item_count": 1
@@ -319,12 +319,12 @@
                         "item_count": 3
                     },
                     {
-                        "name": "Dungeon (With Ring, Air Herb, Giant Leaves, Magicanchor)",
+                        "name": "Dungeon (With Ring, Air Herb, Giant Leaves, Magic Anchor)",
                         "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
                         "item_count": 1
                     },
                     {
-                        "name": "Hitoderon (Starstone only)",
+                        "name": "Hitoderon (Starstone Only)",
                         "access_rules": ["engagementring, giantleaves, airherb, magicanchor"],
                         "capture_item": true,
                         "item_count": 1

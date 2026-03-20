@@ -56,7 +56,7 @@
             },
             
             {
-                "name": "Claw climb after Sharp Claws",
+                "name": "Claw Climb After Sharp Claws",
                 "sections": [
                     {
                         "name": "Chest",
@@ -92,7 +92,7 @@
             },
 
             {
-                "name": "Claw Climb before final drop",
+                "name": "Claw Climb Before Final Drop",
                 "sections": [
                     {
                         "name": "Chest",
@@ -110,7 +110,7 @@
             },
 
             {
-                "name": "Cave to left of final drop",
+                "name": "Cave To Left Of Final Drop",
                 "sections": [
                     {
                         "name": "Chest",

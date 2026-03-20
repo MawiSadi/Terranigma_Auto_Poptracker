@@ -39,7 +39,7 @@
             },
 
             {
-                "name": "1st Floor South Side",
+                "name": "1st Floor After Chandelier Code",
                 "sections": [
                     {
                         "name": "Chest 1",
@@ -111,10 +111,10 @@
             },
 
             {
-                "name": "Back Room 1 Black Opal",
+                "name": "Back Room 1 Chimney",
                 "sections": [
                     {
-                        "name": "Chest",
+                        "name": "Black Opal",
                         "item_count": 1
                     }
                 ],

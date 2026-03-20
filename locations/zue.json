@@ -5,7 +5,7 @@
         "chest_opened_img": "images/Chest_Open.png",
         "children": [
             {
-                "name": "Chests by Rocks",
+                "name": "Chests By Rocks",
                 "sections": [
                     {
                         "name": "Chest 1",
@@ -26,7 +26,7 @@
             },
 
             {
-                "name": "Crawl space",
+                "name": "Crawl Space",
                 "sections": [
                     {
                         "name": "Chest 1",
@@ -49,7 +49,7 @@
             },
 
             {
-                "name": "Swimming after Giant Leaves",
+                "name": "Swimming After First Altar",
                 "sections": [
                     {
                         "name": "Chest",
@@ -67,7 +67,7 @@
             },
 
             {
-                "name": "Swimming Near Start",
+                "name": "Swimming Near Start After Third Altar",
                 "sections": [
                     {
                         "name": "Chest",
@@ -85,7 +85,7 @@
             },
 
             {
-                "name": "North of swimming",
+                "name": "North Of Swimming",
                 "sections": [
                     {
                         "name": "Chest",
@@ -103,7 +103,7 @@
             },
 
             {
-                "name": "Crawl space after swimming",
+                "name": "Crawl Space After Swimming",
                 "sections": [
                     {
                         "name": "Chest",
