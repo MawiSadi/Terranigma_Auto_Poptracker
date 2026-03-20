@@ -196,14 +196,14 @@
                           }
                         },
                         {
-                          "title": "Roc Spear Cave + Cave 4",
+                          "title": "Roc Spear Cave + Fourth Cave",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffCaveRocSpear"]
                           }
                         },
                         {
-                          "title": "Cave 3 + 5",
+                          "title": "Third + Fifth Cave",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffCaveWithHoles"]
@@ -231,7 +231,7 @@
                           }
                         },
                         {
-                          "title": "Outside before final drop and Boss",
+                          "title": "Outside Before Final Drop And Boss",
                           "content": {
                             "type": "map",
                             "maps": ["GreatCliffOutsideLastChestAndBoss"]
