@@ -34,7 +34,7 @@ CHEST_GROUP_MAPPING = {
             { addr=0x7E0775, mask=0x02, codes={"@Eklamata/Outside Leaf 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x80, codes={"@Eklamata/Rando Cave 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0776, mask=0x08, codes={"@Eklamata/Rando Cave 2 Chest 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
-            { addr=0x7E0776, mask=0x02, codes={"@Eklamata/Rando Cave 2 Chest 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
+            { addr=0x7E0776, mask=0x02, codes={"@Eklamata/Rando Cave 2 Chest 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x04, codes={"@Eklamata/Outside Leaf 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x08, codes={"@Eklamata/Inside Leaf 1/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
             { addr=0x7E0775, mask=0x20, codes={"@Eklamata/Inside Leaf 2/Chest"}, section_codes={"@Overworld_dungeons/Eklamata/Dungeon (With Snowgrass Leaf)"} },
