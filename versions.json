@@ -4,7 +4,9 @@
       "package_version": "0.2.1",
       "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.2.1/Terranigma_Auto_PopTracker.zip",
       "sha256": "52d746f4f9827e468ad0cd68383243f586d3945bca079fab923e3e4cadf87aef",
-      "changelog": []
+      "changelog": [
+        "fixed eklemata random cave chest"
+      ]
     },
     {
       "package_version": "0.2.0",
