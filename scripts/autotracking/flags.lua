@@ -17,6 +17,28 @@ local function terranigma_event_id_from_flag(addr, mask)
     return ((addr - (EVENT_FLAGS_ADDR or 0)) * 8) + bit
 end
 
+local function inv_word_index_for_off(off)
+    return math.floor(off / 2) + 1
+end
+
+local function count_progressive_slots(cur_now, off, len)
+    local first = inv_word_index_for_off(off)
+    local last  = inv_word_index_for_off(off + len - 2)
+
+    local count = 0
+    for i = first, last do
+        local v = cur_now[i] or 0
+        local itemId = v & 0xFF
+        local itemCount = (v >> 8) & 0xFF
+
+        if itemId ~= 0 and itemCount > 0 then
+            count = count + 1
+        end
+    end
+
+    return count
+end
+
 local function snapshot_inventory_u16(seg)
     local base = INVENTORY_BASE_ADDR
     local len  = INVENTORY_WATCH_LEN
@@ -33,6 +55,29 @@ local function snapshot_inventory_u16(seg)
     end
 
     return t
+end
+
+local function terranigma_sync_weapon_armor_progress(cur_now)
+    local weapon_count = count_progressive_slots(cur_now, INVENTORY_WEAPONS_OFF, INVENTORY_WEAPONS_LEN)
+    local armor_count  = count_progressive_slots(cur_now, INVENTORY_ARMOR_OFF, INVENTORY_ARMOR_LEN)
+
+    local weapon_stage = math.max(0, weapon_count - 1)
+    local armor_stage  = math.max(0, armor_count - 1)
+
+    set_item_by_qty_or_done("weapon", weapon_stage, {
+        mode = "stage",
+        never_decrease = true,
+        clamp_max = 5
+    })
+
+    set_item_by_qty_or_done("armor", armor_stage, {
+        mode = "stage",
+        never_decrease = true,
+        clamp_max = 7
+    })
+
+    dbg("GEAR WEAPON count=%d stage=%d", weapon_count, weapon_stage)
+    dbg("GEAR ARMOR count=%d stage=%d", armor_count, armor_stage)
 end
 
 local function chest_value_to_item(value)
@@ -91,7 +136,6 @@ local function dbg_dump_inventory_diff(label, prev, cur)
             local loCode = INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[lo] or nil
             local hiCode = INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[hi] or nil
 
-            local addr = base + (idx - 1) * 2
             local itemId, meta, pick = chest_value_to_item(newv)
             local code = itemId and INVENTORY_ID_TO_CODE and INVENTORY_ID_TO_CODE[itemId] or nil
 
@@ -390,6 +434,8 @@ end
 function autotracker_update_inventory_cache(seg, _def)
     local cur_now = snapshot_inventory_u16()
     local AT = terranigma_state()
+
+    terranigma_sync_weapon_armor_progress(cur_now)
 
     if not AT.inv_ready then
         AT.inv_ready_ticks = (AT.inv_ready_ticks or 0) + 1

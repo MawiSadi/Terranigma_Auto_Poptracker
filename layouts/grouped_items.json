@@ -72,6 +72,11 @@
       { "type": "group", "header": "Checks done" },
       { "type": "itemgrid", "item_margin": "1,1", "rows": [
         ["","checks_done",""]
+      ] },
+      { "type": "group", "header": "Equipment" },
+      { "type": "itemgrid", "item_margin": "3,3", "rows": [
+        ["","weapon",""],
+        ["","armor",""]
       ] }
     ]
   }

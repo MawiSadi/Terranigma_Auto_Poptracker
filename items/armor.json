@@ -1,0 +1,46 @@
+[
+  {
+    "name": "Armor",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/armor/ellecape.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/leafsuit.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/furcoat.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/silvervest.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/silverarmor.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/seamail.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/soularmor.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/kingarmor.png",
+        "codes": "armor"
+      },
+      {
+        "img": "images/armor/proarmor.png",
+        "codes": "armor"
+      }
+    ]
+  }
+]

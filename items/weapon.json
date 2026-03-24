@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Weapon",
+    "type": "progressive",
+    "loop": true,
+    "allow_disabled": false,
+    "stages": [
+      {
+        "img": "images/weapon/cryspear.png",
+        "codes": "weapon"
+      },
+      {
+        "img": "images/weapon/raspear.png",
+        "codes": "weapon"
+      },
+      {
+        "img": "images/weapon/neofang.png",
+        "codes": "weapon"
+      },
+      {
+        "img": "images/weapon/trident.png",
+        "codes": "weapon"
+      },
+      {
+        "img": "images/weapon/dragonpike.png",
+        "codes": "weapon"
+      },
+      {
+        "img": "images/weapon/3partrod.png",
+        "codes": "weapon"
+      },
+      {
+        "img": "images/weapon/fauchard.png",
+        "codes": "weapon"
+      }
+    ]
+  }
+]
