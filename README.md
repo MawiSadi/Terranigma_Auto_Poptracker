@@ -11,10 +11,11 @@ Dieses Repository enthält ein **PopTracker**-Package für den **Terranigma Rand
 - **Overworld & Dungeons** als Tabs/Maps (je nach Package-Layout)
 - **Locations/Checks** nach Bereichen strukturiert (Overworld-Spots, Dungeon-Abschnitte, Bosse/Events)
 - **Auto-Tracking (SNI / Memory-Watches)**
-    - erkennt **Key Items** über **Inventory-Diff** (u16-Werte in WRAM)
-    - setzt **Chest-Checks** über **Flag-Auswertung** (addr + mask aus `chest_groups.lua`)
-    - setzt **Event-Checks** über **Event-Flags** (addr + mask → eventId) und kann daraus ebenfalls Items erkennen
-    - unterstützt “aufgeteilte” Checks oder **progressive Sections** (item_count) – je nachdem, wie du deine JSON/Map strukturierst
+  - erkennt **Key Items** über **Inventory-Diff** (u16-Werte in WRAM)
+  - setzt **Chest-Checks** über **Flag-Auswertung** (addr + mask aus `chest_groups.lua`)
+  - setzt **Event-Checks** über **Event-Flags** (addr + mask → eventId) und kann daraus ebenfalls Items erkennen
+  - erkennt zusätzlich **Weapon- und Armor-Progression** automatisch über die entsprechenden Inventory-Slots
+  - unterstützt “aufgeteilte” Checks oder **progressive Sections**
 
 ---
 
@@ -25,11 +26,11 @@ Dieses Repository enthält ein **PopTracker**-Package für den **Terranigma Rand
   - Pickups werden über einen Pending-Mechanismus beim nächsten Inventory-Update finalisiert
 - ✅ **Chest-Items** werden in normalen Läufen überwiegend korrekt erkannt (inkl. problematischer Fälle wie Count-/u8-Formate und **Starstones** als Stage/Qty).
 - ✅ **Event-Pickups** sind systemseitig ebenfalls über den Pending-Mechanismus vorbereitet.
-- ⚠️ **Boss-Events / Boss-Flags** sind noch nicht vollständig gemappt.
-- ⚠️ **Savestate-Reload / Tracker-Neustart mitten im Run** sind weiterhin Sonderfälle:
-  vorhandene Items oder gerade aufgesammelte Pickups werden dabei nicht immer sauber nachgezogen.
-- ⚠️ Einige Spezialfälle brauchen ggf. eigene Logik, z. B. Items mit abweichendem Speicherformat, sehr späte Inventory-Updates oder mehrfach/komplex getriggerte Events.
-- ⚠️ **Parasite / Ra Tree**: Boss/Flag-Mapping noch offen bzw. teilweise noch nicht korrekt.
+- ✅ **Boss-Events / Boss-Flags** sind inzwischen gemappt und werden automatisch erkannt.
+- ✅ **Weapon- und Armor-Progression** wird automatisch aus dem Inventory ermittelt.
+- ⚠️ **Itemtracking bleibt heuristisch** und ist daher nicht in jedem Einzelfall perfekt.
+- ⚠️ **Tracker-Neustart mitten im Run** ist weiterhin ein Sonderfall:
+  vorhandene Items oder gerade aufgesammelte Pickups werden dabei nicht immer vollständig sauber nachgezogen.
 
 ---
 
@@ -88,6 +89,7 @@ Das Package nutzt Memory-Watches (addr/length) + Mapping-Skripte, um:
     - bekannte ItemIDs werden über `INVENTORY_ID_TO_CODE` gemappt
     - Tracker-Objekte werden gesetzt (Toggle/Stage)
 - TTL (z. B. 2s) verhindert Hänger und resynct Baseline, damit nichts „nachklingelt“.
+- Die Zuordnung zwischen Flag-Events und Inventory-Änderungen basiert dabei auf einer **Heuristik** und ist deshalb im normalen Live-Run robust, aber nicht in jedem Sonderfall 100 % perfekt.
 
 ### Debugging / Logs
 - `AUTOTRACKER_ENABLE_DEBUG_LOGGING=true` aktiviert ausführliche Logs.
@@ -114,16 +116,18 @@ Das Package nutzt Memory-Watches (addr/length) + Mapping-Skripte, um:
 
 ## Troubleshooting (häufig)
 
-- **Starstones zählen nicht hoch / bleiben auf altem Stand**  
-  → Prüfen, ob das betreffende Event oder Inventory-Update überhaupt im Log auftaucht.  
+- **Ein Item wurde nicht korrekt erkannt**
+  → Das Itemtracking arbeitet heuristisch über Inventory-Diffs und Event-/Chest-Timing.
+  In seltenen Fällen können einzelne Pickups deshalb verspätet oder nicht exakt erkannt werden.
+  Debug-Logging aktivieren und prüfen, ob das zugehörige Flag oder Inventory-Update im Log auftaucht.
+
+- **Starstones zählen nicht hoch / bleiben auf altem Stand**
+  → Prüfen, ob das betreffende Event oder Inventory-Update überhaupt im Log auftaucht.
   Starstones werden als Stage/Qty behandelt; wenn das zugrunde liegende Event oder der passende Inventory-Diff nicht sauber erkannt wird, bleibt der Wert stehen.
 
-- **Ein Boss wird nicht abgehakt**  
-  → Meist fehlt noch das korrekte Boss-Flag-Mapping (`addr + mask`) oder es zeigt auf den falschen Check-Code.  
-  Debug-Logging aktivieren, Boss besiegen und die `EVENT SEEN ... -> paste: { addr=0x..., mask=0x.. }` Zeile übernehmen.
-- **Tracker mitten im Run eingeschaltet / nach Crash neu gestartet**
+- **Tracker mitten im Run neu gestartet**
   → vorhandene Items werden nicht in allen Fällen vollständig nachgezogen.
-  Der normale Live-Run funktioniert zuverlässiger als Reload-/Reattach-Szenarien.
+  Der normale Live-Run funktioniert zuverlässiger als ein Neustart mitten im Run.
 
 ---
 
