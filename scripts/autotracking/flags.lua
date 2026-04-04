@@ -432,10 +432,9 @@ function terranigma_inventory_reconcile_once(cur_now)
 end
 
 function autotracker_update_inventory_cache(seg, _def)
-    local cur_now = snapshot_inventory_u16()
+    local cur_now = snapshot_inventory_u16(seg)
     local AT = terranigma_state()
 
-    terranigma_sync_weapon_armor_progress(cur_now)
 
     if not AT.inv_ready then
         AT.inv_ready_ticks = (AT.inv_ready_ticks or 0) + 1
@@ -450,6 +449,8 @@ function autotracker_update_inventory_cache(seg, _def)
         return true
     end
 
+    terranigma_sync_weapon_armor_progress(cur_now)
+
     if not AT.inv_reconcile_done then
         terranigma_inventory_reconcile_once(cur_now)
         AT.inv_reconcile_done = true
@@ -457,6 +458,10 @@ function autotracker_update_inventory_cache(seg, _def)
 
     terranigma_try_finalize_pending(cur_now)
     terranigma_inventory_backfill(cur_now)
+
+    if not _PENDING_PICKUP then
+        AT.inv_prev = cur_now
+    end
     return true
 end
 

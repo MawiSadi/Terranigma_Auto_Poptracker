@@ -104,7 +104,6 @@ function terranigma_set_stage(code, stage, opts)
     end
 
     local old = obj.CurrentStage or 0
-
     local s = tonumber(stage) or 0
     if s < 0 then s = 0 end
     if opts.clamp_max then s = math.min(s, opts.clamp_max) end
@@ -114,22 +113,15 @@ function terranigma_set_stage(code, stage, opts)
 
     if old ~= s then
         obj.CurrentStage = s
-
-        -- optional: manche Items “wachen” erst sichtbar auf
         if obj.Active ~= nil then obj.Active = true end
-
-        dbg("SET STAGE OK  code=%s %d -> %d", tostring(code), old, s)
+        dbg("SET STAGE OK code=%s %d -> %d", tostring(code), old, s)
         return true
     end
 
-    if obj.CurrentStage == stage then
-        dbg("SET STAGE NOOP code=%s bleibt bei %d", code, old)
-        return true  -- NOOP ist Erfolg, nicht Fehler
-    end
-    return false
+    dbg("SET STAGE NOOP code=%s bleibt bei %d", code, old)
+    return true
 end
 
--- ZENTRALE Stelle (Name bleibt so wie bei dir!)
 function set_item_by_qty_or_done(code, qty, opts)
     opts = opts or {}
 

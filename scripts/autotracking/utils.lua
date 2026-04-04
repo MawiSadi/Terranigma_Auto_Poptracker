@@ -52,6 +52,9 @@ function terranigma_clear_tracker_items()
     -- Starstones stage auf 0
     set_item_by_qty_or_done(STARSTONES, 0, { mode="stage" })
 
+    set_item_by_qty_or_done("weapon", 0, { mode="stage" })
+    set_item_by_qty_or_done("armor", 0, { mode="stage" })
+
     -- Chest-group progressives auf 0 (wenn vorhanden)
     if type(CHEST_GROUP_MAPPING) == "table" then
         for _, g in ipairs(CHEST_GROUP_MAPPING) do
