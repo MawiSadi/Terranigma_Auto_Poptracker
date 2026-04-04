@@ -7,11 +7,6 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
-                "img_mods": "overlay|images/16.png",
-                "codes": "rachests, ra16"
-            },
-            {
-                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/15.png",
                 "codes": "rachests, ra15"
             },

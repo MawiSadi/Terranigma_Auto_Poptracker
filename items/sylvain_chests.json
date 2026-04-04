@@ -7,11 +7,6 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
-                "img_mods": "overlay|images/13.png",
-                "codes": "sylvainchest"
-            },
-            {
-                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/12.png",
                 "codes": "sylvainchest"
             },

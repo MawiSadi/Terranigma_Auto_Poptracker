@@ -7,11 +7,6 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
-                "img_mods": "overlay|images/6.png",
-                "codes": "neotokiochest, sewers6"
-            },
-            {
-                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/5.png",
                 "codes": "neotokiochest, sewers5"
             },

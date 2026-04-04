@@ -7,11 +7,6 @@
         "stages": [
             {
                 "img": "images/Chest_Closed.png",
-                "img_mods": "overlay|images/3.png",
-                "codes": "berugaslabchest, lab3"
-            },
-            {
-                "img": "images/Chest_Closed.png",
                 "img_mods": "overlay|images/2.png",
                 "codes": "berugaslabchest, lab2"
             },
