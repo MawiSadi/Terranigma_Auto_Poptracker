@@ -5,8 +5,7 @@ CHEST_GROUP_MAPPING = {
         progress_code = "berugaslabchest",
         checks = {
             { addr=0x7E0778, mask=0x01, codes={"@Berugas Lab/1F/Chest", "@Overworld_dungeons/Berugas Lab/1F Chest"} },
-            { addr=0x7E077F, mask=0x10, codes={"@Berugas Lab/B2F/Chest", "@Overworld_dungeons/Berugas Lab/B2F Chest"} },
-            { addr=0x7E06F4, mask=0x20, codes={"@Berugas Lab/Security Robot/Boss", "@Overworld_dungeons/Berugas Lab/Security Robot (Starstone Only)"}, reward_codes={"robot"} } -- oder addr=0x7E0718, mask=0x04
+            { addr=0x7E077F, mask=0x10, codes={"@Berugas Lab/B2F/Chest", "@Overworld_dungeons/Berugas Lab/B2F Chest"} }
         },
     },
     {
