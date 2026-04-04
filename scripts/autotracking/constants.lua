@@ -34,6 +34,13 @@ RESET_TOGGLE_CODES = {
     DEFEATED_SYLVAIN_SOUL_GUARD
 }
 
+RESET_STARSTONE_LOCATIONS = {
+    "robot", "darkmorph", "darktwins", "hitoderon", "louran",
+    "mermaidtower", "neotokio", "parasite", "bloodymary",
+    "stormkeeper", "dragooncastle", "norfest", "airsrock",
+    "astarika", "penguinea"
+}
+
 -- Watches / Adressen
 EVENT_FLAGS_ADDR = 0x7E06C4
 EVENT_FLAGS_LEN  = 0x7C

@@ -73,6 +73,12 @@ function terranigma_clear_tracker_items()
         end
     end
 
+    for _, code in ipairs(RESET_STARSTONE_LOCATIONS or {}) do
+        if type(code) == "string" then
+            set_item_by_qty_or_done(code, 0, { mode="toggle" })
+        end
+    end
+
     local AT = terranigma_state()
     AT.visited_maps = {}
     AT.inv_present_streak = {}
