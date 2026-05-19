@@ -2,7 +2,7 @@
   "versions": [
     {
       "package_version": "0.2.1",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.2.1/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.2.1/Terranigma_Auto_PopTracker.zip",
       "sha256": "52d746f4f9827e468ad0cd68383243f586d3945bca079fab923e3e4cadf87aef",
       "changelog": [
         "fixed eklemata random cave chest"
@@ -10,7 +10,7 @@
     },
     {
       "package_version": "0.2.0",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.2.0/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.2.0/Terranigma_Auto_PopTracker.zip",
       "sha256": "8bae5a7803cdf958ae534c887f7e62d84de2a5fd2f194f1f9b42b63994eff7fd",
       "changelog": [
         "fixed map and chest names to uppercase",
@@ -19,25 +19,25 @@
     },
     {
       "package_version": "0.1.6",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.6/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.6/Terranigma_Auto_PopTracker.zip",
       "sha256": "0dc5a3e83b3f914a003870d7e883d3b942d9b8c91e77a7c889caafd198dc903f",
       "changelog": []
     },
     {
       "package_version": "0.1.5",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.5/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.5/Terranigma_Auto_PopTracker.zip",
       "sha256": "139b7e8781c0f6b9fefc436d8275ae96624271c8bbfe0cc2c723102e6b4577ab",
       "changelog": []
     },
     {
       "package_version": "0.1.4",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.4/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.4/Terranigma_Auto_PopTracker.zip",
       "sha256": "e0b04dc72dcd40a2c0372fa1708b445eed72a916a4235370ebbd208f31285039",
       "changelog": []
     },
     {
       "package_version": "0.1.3",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.3/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.3/Terranigma_Auto_PopTracker.zip",
       "sha256": "c445ff130ac04eeb2147d741daff83e350122da9d2e7f9ae44b5838bfe004bc1",
       "changelog": [
         "fixed some map names"
@@ -45,7 +45,7 @@
     },
     {
       "package_version": "0.1.2",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.2/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.2/Terranigma_Auto_PopTracker.zip",
       "sha256": "762258f24125fca1c0869f3adf5ef8348384c85347a8002d3e105846758640be",
       "changelog": [
         "changed some item icons and item layout",
@@ -58,7 +58,7 @@
     },
     {
       "package_version": "0.1.1",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.1/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.1/Terranigma_Auto_PopTracker.zip",
       "sha256": "914fd6a04ab612954a6001d5024e96a2f9bdaefae5957718ad091909005ed3ca",
       "changelog": [
         "added check counter",
@@ -67,7 +67,7 @@
     },
     {
       "package_version": "0.1.0",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.1.0/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.1.0/Terranigma_Auto_PopTracker.zip",
       "sha256": "5f2fcc6a94979415717081eab74f1bd75ae9b46af54e3803d3a58078273c8a91",
       "changelog": [
         "modified layout, removed speedboots and added towerkey"
@@ -75,7 +75,7 @@
     },
     {
       "package_version": "0.0.7",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.0.7/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.0.7/Terranigma_Auto_PopTracker.zip",
       "sha256": "b19df1aebca1df416513734f303fe631b91ccfe4082e3c52e5edbc68b8b8c37b",
       "changelog": [
         "added rule for first chest before Ra Tree",
@@ -87,7 +87,7 @@
     },
     {
       "package_version": "0.0.6",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.0.6/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.0.6/Terranigma_Auto_PopTracker.zip",
       "sha256": "fafce95dc45062986dda9b8f7c344b34c8889c665a18ba60d28240119a905a74",
       "changelog": [
         "fixed some addresses",
@@ -99,7 +99,7 @@
     },
     {
       "package_version": "0.0.5",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.0.5/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.0.5/Terranigma_Auto_PopTracker.zip",
       "sha256": "b897bfefdff0c8ecd8eab69def30558e9f4ad200ec48fe20e399cfb470365fa5",
       "changelog": [
         "fixed random item tracking",
@@ -110,7 +110,7 @@
     },
     {
       "package_version": "0.0.4",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.0.4/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.0.4/Terranigma_Auto_PopTracker.zip",
       "sha256": "7c11bc03ae3817330d924d346daa421841e797e49c6e55864a2f944273ad8702",
       "changelog": [
         "Added Auto Map Switch"
@@ -118,7 +118,7 @@
     },
     {
       "package_version": "0.0.3",
-      "download_url": "https://github.com/MawiSadi/Terranigma_Auto_Poptracker/releases/download/v0.0.3/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_Poptracker/releases/download/v0.0.3/Terranigma_Auto_PopTracker.zip",
       "sha256": "d6a45d3f8c3761d71f9dee2cf6fdefd5b720e93a9adfb3622dbe05f3ec99a6d0",
       "changelog": [
         "most items and maps are tracked automatically. Scarf is always tracked, don't know why."
@@ -126,7 +126,7 @@
     },
     {
       "package_version": "0.0.1",
-      "download_url": "https://github.com/mawisadi/Terranigma_Auto_PopTracker/releases/download/v0.0.1/Terranigma_Auto_PopTracker.zip",
+      "download_url": "https://github.com/Sacko-AuSdL/Terranigma_Auto_PopTracker/releases/download/v0.0.1/Terranigma_Auto_PopTracker.zip",
       "sha256": "2bf204b841a4520a5206f7043d7b98aa60cc85d2f76d159ee33ce70bd927f165",
       "changelog": [
         "Initial version on the way to autotracking with debug logging"
